@@ -8,6 +8,7 @@ const Home: React.FC = () => {
   const [dataMacbook, setDataMacbook] = useState<any[]>([]);
   const [dataIpads, setDataIpads] = useState<any[]>([]);
   const [dataWatches, setDataWatches] = useState<any[]>([]);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -26,12 +27,15 @@ const Home: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:3001/iphones");
+        const response = await fetch(
+          "https://store-phone-1t1i2ahu7-thanh-hais-projects-0e39a8d1.vercel.app/api/iphones"
+        );
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
         const result = await response.json();
-        setDataIphone(result);
+        console.log(result);
+        setDataIphone(result[0].iphones);
       } catch (error) {}
     };
 
@@ -89,6 +93,7 @@ const Home: React.FC = () => {
       <div>
         <div className="flex justify-center items-center text-[40px] text-[#ffff] mt-[30px] mb-[30px]">
           <FaApple />
+
           <p>iPhone</p>
         </div>
         <SlideProduct dataPhone={dataIphone} />
