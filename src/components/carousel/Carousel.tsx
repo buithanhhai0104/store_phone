@@ -47,7 +47,7 @@ const Carousel: React.FC<CarouselProps> = ({ dataImg }) => {
       <div
         ref={sliderRef}
         className={`flex overflow-auto overflow-x-hidden shadow-lg rounded-2xl ${
-          isTabletOrMobile ? "mt-[20px] w-[95%] m-auto" : ""
+          isTabletOrMobile ? "mt-3.5 w-[95%] m-auto" : ""
         } `}
       >
         {dataImg.map((item) => {
