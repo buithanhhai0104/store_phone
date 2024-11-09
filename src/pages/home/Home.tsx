@@ -27,15 +27,13 @@ const Home: React.FC = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(
-          "https://store-phone-1t1i2ahu7-thanh-hais-projects-0e39a8d1.vercel.app/api/iphones"
-        );
+        const response = await fetch("http://localhost:3001/iphones");
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
         const result = await response.json();
         console.log(result);
-        setDataIphone(result[0].iphones);
+        setDataIphone(result);
       } catch (error) {}
     };
 
