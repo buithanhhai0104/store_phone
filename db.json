@@ -1,0 +1,1105 @@
+{
+  "iphones": [
+    {
+      "id": 1,
+      "version": "iPhone 15",
+      "model": "iPhone 15 Pro Max",
+      "colors": [
+        {
+          "color_id": "#4f5765",
+          "color_name": "Titan Xanh",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/42/305658/s16/iphone-15-pro-max-blue-1-2-650x650.png"
+        },
+        {
+          "color_id": "#f2f1ec",
+          "color_name": "Titan Trắng",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/42/305658/s16/iphone-15-pro-max-white-1-2-650x650.png"
+        },
+        {
+          "color_id": "#333",
+          "color_name": "Titan Đen",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/42/305659/s16/iphone-15-pro-max-black-1-2-650x650.png"
+        }
+      ],
+      "configuration": {
+        "screen": "6.7 inch OLED",
+        "chip": "Apple A17 Pro",
+        "ram": "8GB",
+        "storage": ["256GB", "512GB", "1TB"],
+        "camera": "48MP + 12MP + 12MP",
+        "battery": "4,400 mAh"
+      },
+      "price_usd": 1399,
+      "price_vnd": "33.576.000đ",
+      "promotion_online": true,
+      "image": "https://cdn.tgdd.vn/Products/Images/42/305658/s16/iphone-15-pro-max-gold-1-2-650x650.png"
+    },
+    {
+      "id": 2,
+      "version": "iPhone 15",
+      "model": "iPhone 15 Pro",
+      "colors": [
+        {
+          "color_id": "#4f5765",
+          "color_name": "Titan Xanh",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/42/305658/s16/iphone-15-pro-max-blue-1-2-650x650.png"
+        },
+        {
+          "color_id": "#f2f1ec",
+          "color_name": "Titan Trắng",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/42/305658/s16/iphone-15-pro-max-white-1-2-650x650.png"
+        },
+        {
+          "color_id": "#333",
+          "color_name": "Titan Đen",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/42/305659/s16/iphone-15-pro-max-black-1-2-650x650.png"
+        }
+      ],
+      "configuration": {
+        "screen": "6.1 inch OLED",
+        "chip": "Apple A17 Pro",
+        "ram": "8GB",
+        "storage": ["256GB", "512GB", "1TB"],
+        "camera": "48MP + 12MP + 12MP",
+        "battery": "3,700 mAh"
+      },
+      "price_usd": 1299,
+      "price_vnd": "31.176.000đ",
+      "promotion_online": false,
+      "image": "https://cdn.tgdd.vn/Products/Images/42/303831/s16/iphone-15-pro-black-1-2-650x650.png"
+    },
+    {
+      "id": 3,
+      "version": "iPhone 15",
+      "model": "iPhone 15",
+      "colors": [
+        {
+          "color_id": "#4f5765",
+          "color_name": "Titan Xanh",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/42/305658/s16/iphone-15-pro-max-blue-1-2-650x650.png"
+        },
+        {
+          "color_id": "#f2f1ec",
+          "color_name": "Titan Trắng",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/42/305658/s16/iphone-15-pro-max-white-1-2-650x650.png"
+        },
+        {
+          "color_id": "#333",
+          "color_name": "Titan Đen",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/42/305659/s16/iphone-15-pro-max-black-1-2-650x650.png"
+        }
+      ],
+      "configuration": {
+        "screen": "6.1 inch OLED",
+        "chip": "Apple A16 Bionic",
+        "ram": "6GB",
+        "storage": ["256GB", "512GB", "1TB"],
+        "camera": "48MP + 12MP",
+        "battery": "3,800 mAh"
+      },
+      "price_usd": 899,
+      "price_vnd": "21.576.000đ",
+      "promotion_online": true,
+      "image": "https://cdn.tgdd.vn/Products/Images/42/303891/s16/iphone-15-plus-blue-1-2-650x650.png"
+    },
+    {
+      "id": 4,
+      "version": "iPhone 15",
+      "model": "iPhone 15 Plus",
+      "colors": [
+        {
+          "color_id": "#4f5765",
+          "color_name": "Titan Xanh",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/42/305658/s16/iphone-15-pro-max-blue-1-2-650x650.png"
+        },
+        {
+          "color_id": "#f2f1ec",
+          "color_name": "Titan Trắng",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/42/305658/s16/iphone-15-pro-max-white-1-2-650x650.png"
+        },
+        {
+          "color_id": "#333",
+          "color_name": "Titan Đen",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/42/305659/s16/iphone-15-pro-max-black-1-2-650x650.png"
+        }
+      ],
+      "configuration": {
+        "screen": "6.7 inch OLED",
+        "chip": "Apple A16 Bionic",
+        "ram": "6GB",
+        "storage": ["256GB", "512GB", "1TB"],
+        "camera": "48MP + 12MP",
+        "battery": "4,300 mAh"
+      },
+      "price_usd": 999,
+      "price_vnd": "23.976.000đ",
+      "promotion_online": true,
+      "image": "https://cdn.tgdd.vn/Products/Images/42/303891/s16/iphone-15-plus-blue-1-2-650x650.png"
+    },
+    {
+      "id": 5,
+      "version": "iPhone 14",
+      "model": "iPhone 14 Pro Max",
+      "colors": [
+        {
+          "color_id": "#4f5765",
+          "color_name": "Titan Xanh",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/42/305658/s16/iphone-15-pro-max-blue-1-2-650x650.png"
+        },
+        {
+          "color_id": "#f2f1ec",
+          "color_name": "Titan Trắng",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/42/305658/s16/iphone-15-pro-max-white-1-2-650x650.png"
+        },
+        {
+          "color_id": "#333",
+          "color_name": "Titan Đen",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/42/305659/s16/iphone-15-pro-max-black-1-2-650x650.png"
+        }
+      ],
+      "configuration": {
+        "screen": "6.7 inch OLED",
+        "chip": "Apple A16 Bionic",
+        "ram": "6GB",
+        "storage": ["256GB", "512GB", "1TB"],
+        "camera": "48MP + 12MP + 12MP",
+        "battery": "4,323 mAh"
+      },
+      "price_usd": 1199,
+      "price_vnd": "28.776.000đ",
+      "promotion_online": true,
+      "image": "https://cdn.tgdd.vn/Products/Images/42/245545/s16/iphone-14-plus-gold-1-650x650.png"
+    },
+    {
+      "id": 6,
+      "version": "iPhone 14",
+      "model": "iPhone 14",
+      "colors": [
+        {
+          "color_id": "#4f5765",
+          "color_name": "Titan Xanh",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/42/305658/s16/iphone-15-pro-max-blue-1-2-650x650.png"
+        },
+        {
+          "color_id": "#f2f1ec",
+          "color_name": "Titan Trắng",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/42/305658/s16/iphone-15-pro-max-white-1-2-650x650.png"
+        },
+        {
+          "color_id": "#333",
+          "color_name": "Titan Đen",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/42/305659/s16/iphone-15-pro-max-black-1-2-650x650.png"
+        }
+      ],
+      "configuration": {
+        "screen": "6.1 inch OLED",
+        "chip": "Apple A15 Bionic",
+        "ram": "6GB",
+        "storage": ["256GB", "512GB", "1TB"],
+        "camera": "12MP + 12MP",
+        "battery": "3,279 mAh"
+      },
+      "price_usd": 799,
+      "price_vnd": "19.176.000đ",
+      "promotion_online": true,
+      "image": "https://cdn.tgdd.vn/Products/Images/42/240259/s16/iphone-14-purple-650x650.png"
+    },
+    {
+      "id": 7,
+      "version": "iPhone 14",
+      "model": "iPhone 14",
+      "colors": [
+        {
+          "color_id": "#4f5765",
+          "color_name": "Titan Xanh",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/42/305658/s16/iphone-15-pro-max-blue-1-2-650x650.png"
+        },
+        {
+          "color_id": "#f2f1ec",
+          "color_name": "Titan Trắng",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/42/305658/s16/iphone-15-pro-max-white-1-2-650x650.png"
+        },
+        {
+          "color_id": "#333",
+          "color_name": "Titan Đen",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/42/305659/s16/iphone-15-pro-max-black-1-2-650x650.png"
+        }
+      ],
+      "configuration": {
+        "screen": "6.1 inch OLED",
+        "chip": "Apple A15 Bionic",
+        "ram": "6GB",
+        "storage": ["256GB", "512GB", "1TB"],
+        "camera": "12MP + 12MP",
+        "battery": "3,279 mAh"
+      },
+      "price_usd": 799,
+      "price_vnd": "19.176.000đ",
+      "promotion_online": true,
+      "image": "https://cdn.tgdd.vn/Products/Images/42/240259/s16/iphone-14-purple-650x650.png"
+    },
+    {
+      "id": 8,
+      "version": "iPhone 14",
+      "model": "iPhone 14",
+      "colors": [
+        {
+          "color_id": "#4f5765",
+          "color_name": "Titan Xanh",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/42/305658/s16/iphone-15-pro-max-blue-1-2-650x650.png"
+        },
+        {
+          "color_id": "#f2f1ec",
+          "color_name": "Titan Trắng",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/42/305658/s16/iphone-15-pro-max-white-1-2-650x650.png"
+        },
+        {
+          "color_id": "#333",
+          "color_name": "Titan Đen",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/42/305659/s16/iphone-15-pro-max-black-1-2-650x650.png"
+        }
+      ],
+      "configuration": {
+        "screen": "6.1 inch OLED",
+        "chip": "Apple A15 Bionic",
+        "ram": "6GB",
+        "storage": ["256GB", "512GB", "1TB"],
+        "camera": "12MP + 12MP",
+        "battery": "3,279 mAh"
+      },
+      "price_usd": 799,
+      "price_vnd": "19.176.000đ",
+      "promotion_online": true,
+      "image": "https://cdn.tgdd.vn/Products/Images/42/240259/s16/iphone-14-purple-650x650.png"
+    },
+    {
+      "id": 9,
+      "version": "iPhone 14",
+      "model": "iPhone 14",
+      "colors": [
+        {
+          "color_id": "#4f5765",
+          "color_name": "Titan Xanh",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/42/305658/s16/iphone-15-pro-max-blue-1-2-650x650.png"
+        },
+        {
+          "color_id": "#f2f1ec",
+          "color_name": "Titan Trắng",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/42/305658/s16/iphone-15-pro-max-white-1-2-650x650.png"
+        },
+        {
+          "color_id": "#333",
+          "color_name": "Titan Đen",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/42/305659/s16/iphone-15-pro-max-black-1-2-650x650.png"
+        }
+      ],
+      "configuration": {
+        "screen": "6.1 inch OLED",
+        "chip": "Apple A15 Bionic",
+        "ram": "6GB",
+        "storage": ["256GB", "512GB", "1TB"],
+        "camera": "12MP + 12MP",
+        "battery": "3,279 mAh"
+      },
+      "price_usd": 799,
+      "price_vnd": "19.176.000đ",
+      "promotion_online": true,
+      "image": "https://cdn.tgdd.vn/Products/Images/42/240259/s16/iphone-14-purple-650x650.png"
+    },
+    {
+      "id": 10,
+      "version": "iPhone 14",
+      "model": "iPhone 14",
+      "colors": [
+        {
+          "color_id": "#4f5765",
+          "color_name": "Titan Xanh",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/42/305658/s16/iphone-15-pro-max-blue-1-2-650x650.png"
+        },
+        {
+          "color_id": "#f2f1ec",
+          "color_name": "Titan Trắng",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/42/305658/s16/iphone-15-pro-max-white-1-2-650x650.png"
+        },
+        {
+          "color_id": "#333",
+          "color_name": "Titan Đen",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/42/305659/s16/iphone-15-pro-max-black-1-2-650x650.png"
+        }
+      ],
+      "configuration": {
+        "screen": "6.1 inch OLED",
+        "chip": "Apple A15 Bionic",
+        "ram": "6GB",
+        "storage": ["256GB", "512GB", "1TB"],
+        "camera": "12MP + 12MP",
+        "battery": "3,279 mAh"
+      },
+      "price_usd": 799,
+      "price_vnd": "19.176.000đ",
+      "promotion_online": true,
+      "image": "https://cdn.tgdd.vn/Products/Images/42/240259/s16/iphone-14-purple-650x650.png"
+    },
+    {
+      "id": 11,
+      "version": "iPhone 14",
+      "model": "iPhone 14",
+      "colors": [
+        {
+          "color_id": "#4f5765",
+          "color_name": "Titan Xanh",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/42/305658/s16/iphone-15-pro-max-blue-1-2-650x650.png"
+        },
+        {
+          "color_id": "#f2f1ec",
+          "color_name": "Titan Trắng",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/42/305658/s16/iphone-15-pro-max-white-1-2-650x650.png"
+        },
+        {
+          "color_id": "#333",
+          "color_name": "Titan Đen",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/42/305659/s16/iphone-15-pro-max-black-1-2-650x650.png"
+        }
+      ],
+      "configuration": {
+        "screen": "6.1 inch OLED",
+        "chip": "Apple A15 Bionic",
+        "ram": "6GB",
+        "storage": ["256GB", "512GB", "1TB"],
+        "camera": "12MP + 12MP",
+        "battery": "3,279 mAh"
+      },
+      "price_usd": 799,
+      "price_vnd": "19.176.000đ",
+      "promotion_online": true,
+      "image": "https://cdn.tgdd.vn/Products/Images/42/240259/s16/iphone-14-purple-650x650.png"
+    }
+  ],
+  "macbooks": [
+    {
+      "id": 1,
+      "version": "Macbook Pro",
+      "model": "MacBook Pro 16-inch (2023)",
+      "colors": [
+        {
+          "color_id": "#a3a3a3",
+          "color_name": "Space Gray",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/44/282827/s16/mac-air-m2-13-bac-new-650x650.png"
+        },
+        {
+          "color_id": "#f1f1f1",
+          "color_name": "Silver",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/44/282827/s16/mac-air-m2-13-xanh-new-650x650.png"
+        }
+      ],
+      "configuration": {
+        "screen": "16.2 inch Liquid Retina XDR",
+        "chip": "Apple M2 Pro",
+        "ram": "16GB",
+        "storage": ["256GB", "512GB", "1TB"],
+        "graphics": "Integrated 16-core GPU",
+        "battery": "100 Wh"
+      },
+      "price_usd": 2499,
+      "price_vnd": "59.976.000đ",
+      "promotion_online": true,
+      "image": "https://cdn.tgdd.vn/Products/Images/44/318233/s16/mac16-topzone-silver-650x650.png"
+    },
+    {
+      "id": 2,
+      "version": "Macbook Pro",
+      "model": "MacBook Pro 14-inch (2023)",
+      "colors": [
+        {
+          "color_id": "#a3a3a3",
+          "color_name": "Space Gray",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/44/282827/s16/mac-air-m2-13-xanh-new-650x650.png"
+        },
+        {
+          "color_id": "#f1f1f1",
+          "color_name": "Silver",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/44/282827/s16/mac-air-m2-13-xam-new-650x650.png"
+        }
+      ],
+      "configuration": {
+        "screen": "14.2 inch Liquid Retina XDR",
+        "chip": "Apple M2 Pro",
+        "ram": "16GB",
+        "storage": ["256GB", "512GB", "1TB"],
+        "graphics": "Integrated 16-core GPU",
+        "battery": "70 Wh"
+      },
+      "price_usd": 1999,
+      "price_vnd": "47.976.000đ",
+      "promotion_online": true,
+      "image": "https://cdn.tgdd.vn/Products/Images/44/309017/s16/mac-air-15-midnight-new-650x650.png"
+    },
+    {
+      "id": 3,
+      "version": "Macbook Air",
+      "model": "MacBook Air 13-inch (M2, 2022)",
+      "colors": [
+        {
+          "color_id": "#a3a3a3",
+          "color_name": "Space Gray",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/44/309016/s16/mac-air-15-midnight-new-650x650.png"
+        },
+        {
+          "color_id": "#f1f1f1",
+          "color_name": "Silver",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/44/309016/s16/mac-air-15-xam-new-650x650.png"
+        },
+        {
+          "color_id": "#b87e2b",
+          "color_name": "Gold",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/44/318228/s16/mac-topzone-silver-650x650.png"
+        }
+      ],
+      "configuration": {
+        "screen": "13.6 inch Liquid Retina",
+        "chip": "Apple M2",
+        "ram": "8GB",
+        "storage": ["256GB", "512GB", "1TB"],
+        "graphics": "Integrated 8-core GPU",
+        "battery": "52.6 Wh"
+      },
+      "price_usd": 1199,
+      "price_vnd": "28.776.000đ",
+      "promotion_online": false,
+      "image": "https://cdn.tgdd.vn/Products/Images/44/282847/s16/mac-air-m2-13-vang-new-650x650.png"
+    },
+    {
+      "id": 4,
+      "version": "Macbook Air",
+      "model": "MacBook Air 15-inch (M2, 2023)",
+      "colors": [
+        {
+          "color_id": "#a3a3a3",
+          "color_name": "Space Gray",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/44/318228/s16/mac-topzone-silver-650x650.png"
+        },
+        {
+          "color_id": "#f1f1f1",
+          "color_name": "Silver",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/44/318228/s16/mac-topzone-spacegray-650x650.png"
+        },
+        {
+          "color_id": "#b87e2b",
+          "color_name": "Gold",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/44/322939/s16/mac-air-15-midnight-new-650x650.png"
+        }
+      ],
+      "configuration": {
+        "screen": "15.3 inch Liquid Retina",
+        "chip": "Apple M2",
+        "ram": "8GB",
+        "storage": ["256GB", "512GB", "1TB"],
+        "graphics": "Integrated 10-core GPU",
+        "battery": "66.5 Wh"
+      },
+      "price_usd": 1299,
+      "price_vnd": "31.176.000đ",
+      "promotion_online": true,
+      "image": "https://cdn.tgdd.vn/Products/Images/44/309016/s16/mac-air-15-xam-new-650x650.png"
+    },
+    {
+      "id": 5,
+      "version": "Macbook Air",
+      "model": "MacBook Air 13-inch (M2, 2022)",
+      "colors": [
+        {
+          "color_id": "#a3a3a3",
+          "color_name": "Space Gray",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/44/309016/s16/mac-air-15-midnight-new-650x650.png"
+        },
+        {
+          "color_id": "#f1f1f1",
+          "color_name": "Silver",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/44/309016/s16/mac-air-15-xam-new-650x650.png"
+        },
+        {
+          "color_id": "#b87e2b",
+          "color_name": "Gold",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/44/318228/s16/mac-topzone-silver-650x650.png"
+        }
+      ],
+      "configuration": {
+        "screen": "13.6 inch Liquid Retina",
+        "chip": "Apple M2",
+        "ram": "8GB",
+        "storage": ["256GB", "512GB", "1TB"],
+        "graphics": "Integrated 8-core GPU",
+        "battery": "52.6 Wh"
+      },
+      "price_usd": 1199,
+      "price_vnd": "28.776.000đ",
+      "promotion_online": false,
+      "image": "https://cdn.tgdd.vn/Products/Images/44/282847/s16/mac-air-m2-13-vang-new-650x650.png"
+    },
+    {
+      "id": 6,
+      "version": "Macbook Pro",
+      "model": "MacBook Pro 14-inch (2023)",
+      "colors": [
+        {
+          "color_id": "#a3a3a3",
+          "color_name": "Space Gray",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/44/282827/s16/mac-air-m2-13-xanh-new-650x650.png"
+        },
+        {
+          "color_id": "#f1f1f1",
+          "color_name": "Silver",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/44/282827/s16/mac-air-m2-13-xam-new-650x650.png"
+        }
+      ],
+      "configuration": {
+        "screen": "14.2 inch Liquid Retina XDR",
+        "chip": "Apple M2 Pro",
+        "ram": "16GB",
+        "storage": ["256GB", "512GB", "1TB"],
+        "graphics": "Integrated 16-core GPU",
+        "battery": "70 Wh"
+      },
+      "price_usd": 1999,
+      "price_vnd": "47.976.000đ",
+      "promotion_online": true,
+      "image": "https://cdn.tgdd.vn/Products/Images/44/309017/s16/mac-air-15-midnight-new-650x650.png"
+    },
+    {
+      "id": 7,
+      "version": "Macbook Pro",
+      "model": "MacBook Pro 14-inch (2023)",
+      "colors": [
+        {
+          "color_id": "#a3a3a3",
+          "color_name": "Space Gray",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/44/282827/s16/mac-air-m2-13-xanh-new-650x650.png"
+        },
+        {
+          "color_id": "#f1f1f1",
+          "color_name": "Silver",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/44/282827/s16/mac-air-m2-13-xam-new-650x650.png"
+        }
+      ],
+      "configuration": {
+        "screen": "14.2 inch Liquid Retina XDR",
+        "chip": "Apple M2 Pro",
+        "ram": "16GB",
+        "storage": ["256GB", "512GB", "1TB"],
+        "graphics": "Integrated 16-core GPU",
+        "battery": "70 Wh"
+      },
+      "price_usd": 1999,
+      "price_vnd": "47.976.000đ",
+      "promotion_online": true,
+      "image": "https://cdn.tgdd.vn/Products/Images/44/309017/s16/mac-air-15-midnight-new-650x650.png"
+    }
+  ],
+
+  "ipads": [
+    {
+      "id": 1,
+      "version": "iPad Pro",
+      "model": "iPad Pro 12.9-inch (2023)",
+      "colors": [
+        {
+          "color_id": "#a3a3a3",
+          "color_name": "Space Gray",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/522/325513/s16/ipad-pro-11-inch-wifi-silver-thumb-650x650.png"
+        },
+        {
+          "color_id": "#f1f1f1",
+          "color_name": "Silver",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/522/325513/s16/ipad-pro-11-inch-wifi-black-thumb-650x650.png"
+        }
+      ],
+      "configuration": {
+        "screen": "12.9-inch Liquid Retina XDR",
+        "chip": "Apple M2",
+        "ram": "8GB",
+        "storage": ["256GB", "512GB", "1TB"],
+        "battery": "40.88 Wh"
+      },
+      "price_usd": 1099,
+      "price_vnd": "25.976.000đ",
+      "promotion_online": true,
+      "image": "https://cdn.tgdd.vn/Products/Images/522/325513/s16/ipad-pro-11-inch-wifi-black-thumb-650x650.png"
+    },
+    {
+      "id": 2,
+      "version": "iPad Air",
+      "model": "iPad Air 10.9-inch (2023)",
+      "colors": [
+        {
+          "color_id": "#a3a3a3",
+          "color_name": "Space Gray",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/522/325501/s16/ipad-air-m2-11-inch-wifi-blue-thumb-650x650.png"
+        },
+        {
+          "color_id": "#f1f1f1",
+          "color_name": "Silver",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/522/325501/s16/ipad-air-m2-11-inch-wifi-purple-thumb-650x650.png"
+        }
+      ],
+      "configuration": {
+        "screen": "10.9-inch Liquid Retina",
+        "chip": "Apple M1",
+        "ram": "8GB",
+        "storage": ["256GB", "512GB", "1TB"],
+        "battery": "28.6 Wh"
+      },
+      "price_usd": 599,
+      "price_vnd": "13.976.000đ",
+      "promotion_online": true,
+      "image": "https://cdn.tgdd.vn/Products/Images/522/325501/s16/ipad-air-m2-11-inch-wifi-gray-650x650.png"
+    },
+    {
+      "id": 3,
+      "version": "iPad Mini",
+      "model": "iPad Mini 8.3-inch (2022)",
+      "colors": [
+        {
+          "color_id": "#a3a3a3",
+          "color_name": "Space Gray",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/522/325501/s16/ipad-air-m2-11-inch-wifi-gray-650x650.png"
+        },
+        {
+          "color_id": "#f1f1f1",
+          "color_name": "Pink",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/522/248091/s16/ipad-mini-6-startlight-1-650x650.png"
+        }
+      ],
+      "configuration": {
+        "screen": "8.3-inch Liquid Retina",
+        "chip": "Apple A15 Bionic",
+        "ram": "4GB",
+        "storage": ["256GB", "512GB", "1TB"],
+        "battery": "19.3 Wh"
+      },
+      "price_usd": 499,
+      "price_vnd": "11.976.000đ",
+      "promotion_online": false,
+      "image": "https://cdn.tgdd.vn/Products/Images/522/248091/s16/ipad-mini-6-startlight-1-650x650.png"
+    },
+    {
+      "id": 4,
+      "version": "iPad Air",
+      "model": "iPad 10.2-inch (2023)",
+      "colors": [
+        {
+          "color_id": "#a3a3a3",
+          "color_name": "Space Gray",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/522/293543/s16/ipad-10-yellow-650x650.png"
+        },
+        {
+          "color_id": "#f1f1f1",
+          "color_name": "Silver",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/522/293543/s16/ipad-10-blue-650x650.png"
+        }
+      ],
+      "configuration": {
+        "screen": "10.2-inch Retina",
+        "chip": "Apple A13 Bionic",
+        "ram": "3GB",
+        "storage": ["256GB", "512GB", "1TB"],
+        "battery": "32.4 Wh"
+      },
+      "price_usd": 329,
+      "price_vnd": "7.976.000đ",
+      "promotion_online": true,
+      "image": "https://cdn.tgdd.vn/Products/Images/522/293543/s16/iPad-gen-10-pink-1-650x650.png"
+    },
+    {
+      "id": 5,
+      "version": "iPad Pro",
+      "model": "iPad Pro 12.9-inch (2023)",
+      "colors": [
+        {
+          "color_id": "#a3a3a3",
+          "color_name": "Space Gray",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/522/325513/s16/ipad-pro-11-inch-wifi-silver-thumb-650x650.png"
+        },
+        {
+          "color_id": "#f1f1f1",
+          "color_name": "Silver",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/522/325513/s16/ipad-pro-11-inch-wifi-black-thumb-650x650.png"
+        }
+      ],
+      "configuration": {
+        "screen": "12.9-inch Liquid Retina XDR",
+        "chip": "Apple M2",
+        "ram": "8GB",
+        "storage": ["256GB", "512GB", "1TB"],
+        "battery": "40.88 Wh"
+      },
+      "price_usd": 1099,
+      "price_vnd": "25.976.000đ",
+      "promotion_online": true,
+      "image": "https://cdn.tgdd.vn/Products/Images/522/325513/s16/ipad-pro-11-inch-wifi-black-thumb-650x650.png"
+    },
+    {
+      "id": 6,
+      "version": "iPad Pro",
+      "model": "iPad Pro 12.9-inch (2023)",
+      "colors": [
+        {
+          "color_id": "#a3a3a3",
+          "color_name": "Space Gray",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/522/325513/s16/ipad-pro-11-inch-wifi-silver-thumb-650x650.png"
+        },
+        {
+          "color_id": "#f1f1f1",
+          "color_name": "Silver",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/522/325513/s16/ipad-pro-11-inch-wifi-black-thumb-650x650.png"
+        }
+      ],
+      "configuration": {
+        "screen": "12.9-inch Liquid Retina XDR",
+        "chip": "Apple M2",
+        "ram": "8GB",
+        "storage": ["256GB", "512GB", "1TB"],
+        "battery": "40.88 Wh"
+      },
+      "price_usd": 1099,
+      "price_vnd": "25.976.000đ",
+      "promotion_online": true,
+      "image": "https://cdn.tgdd.vn/Products/Images/522/325513/s16/ipad-pro-11-inch-wifi-black-thumb-650x650.png"
+    },
+    {
+      "id": 7,
+      "version": "iPad Mini",
+      "model": "iPad Mini 8.3-inch (2022)",
+      "colors": [
+        {
+          "color_id": "#a3a3a3",
+          "color_name": "Space Gray",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/522/325501/s16/ipad-air-m2-11-inch-wifi-gray-650x650.png"
+        },
+        {
+          "color_id": "#f1f1f1",
+          "color_name": "Pink",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/522/248091/s16/ipad-mini-6-startlight-1-650x650.png"
+        }
+      ],
+      "configuration": {
+        "screen": "8.3-inch Liquid Retina",
+        "chip": "Apple A15 Bionic",
+        "ram": "4GB",
+        "storage": ["256GB", "512GB", "1TB"],
+        "battery": "19.3 Wh"
+      },
+      "price_usd": 499,
+      "price_vnd": "11.976.000đ",
+      "promotion_online": false,
+      "image": "https://cdn.tgdd.vn/Products/Images/522/248091/s16/ipad-mini-6-startlight-1-650x650.png"
+    },
+    {
+      "id": 8,
+      "version": "iPad Mini",
+      "model": "iPad Mini 8.3-inch (2022)",
+      "colors": [
+        {
+          "color_id": "#a3a3a3",
+          "color_name": "Space Gray",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/522/325501/s16/ipad-air-m2-11-inch-wifi-gray-650x650.png"
+        },
+        {
+          "color_id": "#f1f1f1",
+          "color_name": "Pink",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/522/248091/s16/ipad-mini-6-startlight-1-650x650.png"
+        }
+      ],
+      "configuration": {
+        "screen": "8.3-inch Liquid Retina",
+        "chip": "Apple A15 Bionic",
+        "ram": "4GB",
+        "storage": ["256GB", "512GB", "1TB"],
+        "battery": "19.3 Wh"
+      },
+      "price_usd": 499,
+      "price_vnd": "11.976.000đ",
+      "promotion_online": false,
+      "image": "https://cdn.tgdd.vn/Products/Images/522/248091/s16/ipad-mini-6-startlight-1-650x650.png"
+    }
+  ],
+
+  "watches": [
+    {
+      "id": 1,
+      "version": "Apple Watch Ultra",
+      "model": "Apple Watch Ultra (2023)",
+      "colors": [
+        {
+          "color_id": "#a3a3a3",
+          "color_name": "Titanium",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/7077/329155/s16/apple-watch-s10-den-tb-650x650.png"
+        },
+        {
+          "color_id": "#f1f1f1",
+          "color_name": "Alpine Loop",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/7077/329155/s16/apple-watch-s10-xanh-nhat-tn-650x650.png"
+        }
+      ],
+      "configuration": {
+        "screen": "49mm Retina Display",
+        "chip": "Apple S8",
+        "ram": "1GB",
+        "storage": ["32GB"],
+        "battery": "36 hours"
+      },
+      "price_usd": 799,
+      "price_vnd": "18.976.000đ",
+      "promotion_online": true,
+      "image": "https://cdn.tgdd.vn/Products/Images/7077/329155/s16/apple-watch-s10-hong-nhat-tn-650x650.png"
+    },
+    {
+      "id": 2,
+      "version": "Apple Watch Series 8",
+      "model": "Apple Watch Series 8 (2023)",
+      "colors": [
+        {
+          "color_id": "#a3a3a3",
+          "color_name": "Midnight",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/7077/314705/s16/apple-watch-s9-gps-41mm-vien-nhom-day-silicone-hong-tn-1-650x650.png"
+        },
+        {
+          "color_id": "#f1f1f1",
+          "color_name": "Starlight",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/7077/314690/s16/apple-watch-s9-lte-41mm-vien-nhom-day-silicone-xanh-nhat-thumb-1-650x650.png"
+        }
+      ],
+      "configuration": {
+        "screen": "41mm/45mm Retina Display",
+        "chip": "Apple S8",
+        "ram": "1GB",
+        "storage": ["32GB"],
+        "battery": "18 hours"
+      },
+      "price_usd": 399,
+      "price_vnd": "9.976.000đ",
+      "promotion_online": true,
+      "image": "https://cdn.tgdd.vn/Products/Images/7077/314696/s16/apple-watch-s9-lte-vien-thep-khong-gi-day-thep-1-1-650x650.png"
+    },
+    {
+      "id": 3,
+      "version": "Apple Watch SE",
+      "model": "Apple Watch SE (2022)",
+      "colors": [
+        {
+          "color_id": "#a3a3a3",
+          "color_name": "Space Gray",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/7077/315995/s16/apple-watch-s9-vien-nhom-day-vai-xanh-nhat-tb-1-2-650x650.png"
+        },
+        {
+          "color_id": "#f1f1f1",
+          "color_name": "Silver",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/7077/314937/s16/t%C3%A1ch%20n%E1%BB%81n%20site%2016-650x650.png"
+        }
+      ],
+      "configuration": {
+        "screen": "40mm/44mm Retina Display",
+        "chip": "Apple S8",
+        "ram": "1GB",
+        "storage": ["32GB"],
+        "battery": "18 hours"
+      },
+      "price_usd": 249,
+      "price_vnd": "5.976.000đ",
+      "promotion_online": true,
+      "image": "https://cdn.tgdd.vn/Products/Images/7077/314714/s16/apple-watch-ultra-lte-49mm-vien-titanium-day-trail-xanh-650x650.png"
+    },
+    {
+      "id": 4,
+      "version": "Apple Watch Series 7",
+      "model": "Apple Watch Series 7 (2021)",
+      "colors": [
+        {
+          "color_id": "#a3a3a3",
+          "color_name": "Midnight",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/7077/315995/s16/apple-watch-s9-vien-nhom-day-vai-xanh-nhat-tb-1-2-650x650.png"
+        },
+        {
+          "color_id": "#f1f1f1",
+          "color_name": "Green",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/7077/314708/s16/apple-watch-s9-45mm-vien-nhom-day-silicone-xanh-den-tn-650x650.png"
+        }
+      ],
+      "configuration": {
+        "screen": "41mm/45mm Retina Display",
+        "chip": "Apple S6",
+        "ram": "1GB",
+        "storage": ["32GB"],
+        "battery": "18 hours"
+      },
+      "price_usd": 399,
+      "price_vnd": "9.976.000đ",
+      "promotion_online": false,
+      "image": "https://cdn.tgdd.vn/Products/Images/7077/316002/s16/apple-watch-s9-vien-nhom-day-silicone-do-tb-1-650x650.png"
+    },
+    {
+      "id": 5,
+      "version": "Apple Watch SE",
+      "model": "Apple Watch SE (2022)",
+      "colors": [
+        {
+          "color_id": "#a3a3a3",
+          "color_name": "Space Gray",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/7077/316002/s16/apple-watch-s9-vien-nhom-day-silicone-do-tb-1-650x650.png"
+        },
+        {
+          "color_id": "#f1f1f1",
+          "color_name": "Silver",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/7077/315998/s16/apple-watch-s9-vien-nhom-day-vai-xanh-den-tb-1-1-650x650.png"
+        }
+      ],
+      "configuration": {
+        "screen": "40mm/44mm Retina Display",
+        "chip": "Apple S8",
+        "ram": "1GB",
+        "storage": ["32GB"],
+        "battery": "18 hours"
+      },
+      "price_usd": 249,
+      "price_vnd": "5.976.000đ",
+      "promotion_online": true,
+      "image": "https://cdn.tgdd.vn/Products/Images/7077/315998/s16/apple-watch-s9-vien-nhom-day-vai-xanh-den-tb-1-1-650x650.png"
+    },
+    {
+      "id": 6,
+      "version": "Apple Watch Series 8",
+      "model": "Apple Watch Series 8 (2023)",
+      "colors": [
+        {
+          "color_id": "#a3a3a3",
+          "color_name": "Midnight",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/7077/316003/s16/t%C3%A1ch%20n%E1%BB%81n%20site%2016-650x650.png"
+        },
+        {
+          "color_id": "#f1f1f1",
+          "color_name": "Starlight",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/7077/316003/s16/t%C3%A1ch%20n%E1%BB%81n%20site%2016%20(2)-650x650.png"
+        }
+      ],
+      "configuration": {
+        "screen": "41mm/45mm Retina Display",
+        "chip": "Apple S8",
+        "ram": "1GB",
+        "storage": ["32GB"],
+        "battery": "18 hours"
+      },
+      "price_usd": 399,
+      "price_vnd": "9.976.000đ",
+      "promotion_online": true,
+      "image": "https://cdn.tgdd.vn/Products/Images/7077/316003/s16/t%C3%A1ch%20n%E1%BB%81n%20site%2016%20(1)-650x650.png"
+    },
+    {
+      "id": 7,
+      "version": "Apple Watch SE",
+      "model": "Apple Watch SE (2022)",
+      "colors": [
+        {
+          "color_id": "#a3a3a3",
+          "color_name": "Space Gray",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/7077/316002/s16/apple-watch-s9-vien-nhom-day-silicone-do-tb-1-650x650.png"
+        },
+        {
+          "color_id": "#f1f1f1",
+          "color_name": "Silver",
+          "color_img": "https://cdn.tgdd.vn/Products/Images/7077/315998/s16/apple-watch-s9-vien-nhom-day-vai-xanh-den-tb-1-1-650x650.png"
+        }
+      ],
+      "configuration": {
+        "screen": "40mm/44mm Retina Display",
+        "chip": "Apple S8",
+        "ram": "1GB",
+        "storage": ["32GB"],
+        "battery": "18 hours"
+      },
+      "price_usd": 249,
+      "price_vnd": "5.976.000đ",
+      "promotion_online": true,
+      "image": "https://cdn.tgdd.vn/Products/Images/7077/315998/s16/apple-watch-s9-vien-nhom-day-vai-xanh-den-tb-1-1-650x650.png"
+    }
+  ],
+
+  "carouselhome": [
+    {
+      "id": 1,
+      "carousel_img": "https://cdnv2.tgdd.vn/mwg-static/topzone/Banner/30/51/30512b9286aa60273933891bcfc2fb2d.jpg"
+    },
+    {
+      "id": 2,
+      "carousel_img": "https://cdnv2.tgdd.vn/mwg-static/topzone/Banner/b4/c9/b4c9b3e71872b0d1a7d58b95a5a0be20.png"
+    },
+    {
+      "id": 3,
+      "carousel_img": "https://cdnv2.tgdd.vn/mwg-static/topzone/Banner/95/1f/951fcf455fabd314d19e23c4b355dc02.png"
+    },
+    {
+      "id": 4,
+      "carousel_img": "https://cdnv2.tgdd.vn/mwg-static/topzone/Banner/b6/27/b6274bafb470e9e998add0c2ac0706df.jpg"
+    },
+    {
+      "id": 5,
+      "carousel_img": "https://cdnv2.tgdd.vn/mwg-static/topzone/Banner/87/31/8731e0f352ab9ab88e42ba114387a0d5.jpg"
+    }
+  ],
+  "carousel_iphones": [
+    {
+      "id": 1,
+      "carousel_img": "https://cdnv2.tgdd.vn/mwg-static/topzone/Banner/04/1d/041dff8d9810b558f0f05b6134816bf2.png"
+    },
+    {
+      "id": 2,
+      "carousel_img": "https://cdnv2.tgdd.vn/mwg-static/topzone/Banner/4e/9d/4e9daa0d03c9661cbbaa060b60ffb062.png"
+    },
+    {
+      "id": 3,
+      "carousel_img": "https://cdnv2.tgdd.vn/mwg-static/topzone/Banner/aa/c2/aac28c02bcbd991ef1deefb739e6b2e4.png"
+    }
+  ],
+  "carousel_macbooks": [
+    {
+      "id": 1,
+      "carousel_img": "https://cdnv2.tgdd.vn/mwg-static/topzone/Banner/52/d5/52d51168bb31b5df7ae0ef466a377230.png"
+    },
+    {
+      "id": 2,
+      "carousel_img": "https://cdnv2.tgdd.vn/mwg-static/topzone/Banner/1a/71/1a713570cd3c1f8112e60cd980bf29cf.png"
+    }
+  ],
+  "carousel_ipads": [
+    {
+      "id": 1,
+      "carousel_img": "https://cdnv2.tgdd.vn/mwg-static/topzone/Banner/8b/ee/8beea45a4976d47f68235de823ffeb56.png"
+    },
+    {
+      "id": 2,
+      "carousel_img": "https://cdnv2.tgdd.vn/mwg-static/topzone/Banner/d3/48/d348f4006b905360031e7212946d3a08.png"
+    }
+  ],
+  "carousel_watches": [
+    {
+      "id": 1,
+      "carousel_img": "https://cdnv2.tgdd.vn/mwg-static/topzone/Banner/57/2f/572fe1f4542768cc4fdef62cbee14b15.png"
+    },
+    {
+      "id": 2,
+      "carousel_img": "https://cdnv2.tgdd.vn/mwg-static/topzone/Banner/d3/48/d348f4006b905360031e7212946d3a08.png"
+    }
+  ],
+
+  "users": [
+    {
+      "id": 1,
+      "username": "user1",
+      "password": "pass123",
+      "img": "https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-1/382329342_2437108309830509_4202728373760808170_n.jpg?stp=cp0_dst-jpg_s40x40&_nc_cat=110&ccb=1-7&_nc_sid=6738e8&_nc_eui2=AeF5_VjHflqr-bd0KOu0HvFSrbnBYw19o9StucFjDX2j1Bf9cL0KXD5RKhAIIbWaO9d8lUXZMJn__W1Gxz9WUbBx&_nc_ohc=dacGpWVE4kYQ7kNvgFSASmQ&_nc_zt=24&_nc_ht=scontent.fdad1-3.fna&_nc_gid=AZyHryhinfb0fQrmqvFNf4W&oh=00_AYAfi14Wp7v4bU5dIIQVq7T3neMLEeLeblz3Zkj_qwON9g&oe=672E09A2"
+    },
+    {
+      "id": 2,
+      "username": "user2",
+      "password": "pass456"
+    }
+  ]
+}
