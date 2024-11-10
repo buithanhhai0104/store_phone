@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import SavingBox from "../../components/savingBox/SavingBox";
-
+import { useMediaQuery } from "react-responsive";
 type Configuration = {
   screen: string;
   chip: string;
@@ -32,11 +32,11 @@ type DataDetail = {
 const ProductDetail: React.FC = () => {
   const { idproduct } = useParams<{ idproduct: string | undefined }>();
   const endpoint = idproduct ? idproduct.slice(1) : "";
-
   const [dataDetail, setDataDetail] = useState<DataDetail | null>(null);
   const [activeColor, setActiveColor] = useState<string>("");
   const [activeImg, setActiveImg] = useState<string>("");
   const [activeVersion, setActiveVersion] = useState<string>("");
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
   useEffect(() => {
     const fetchProductData = async () => {
@@ -84,15 +84,31 @@ const ProductDetail: React.FC = () => {
   };
 
   return (
-    <section className="min-w-[1180px] max-w-[1180px] m-auto flex justify-center gap-[100px] items-center ">
-      <div className="w-[550px] h-[550px] sticky top-[80px]">
+    <section
+      className={`  flex justify-center  items-center  ${
+        isTabletOrMobile
+          ? "flex-col gap-[30px]"
+          : "min-w-[1180px] max-w-[1180px] m-auto gap-[100px]"
+      }`}
+    >
+      <div
+        className={
+          isTabletOrMobile
+            ? "w-[400px] h-[400px] mt-[20px]"
+            : "w-[550px] h-[550px] sticky top-[80px]"
+        }
+      >
         <img
           src={activeImg === "" ? dataDetail?.image : activeImg}
           alt={dataDetail?.model}
         />
       </div>
-      <div className="w-[580px]">
-        <h1 className="text-[32px] pb-[20px] pt-[5px] text-[#ffff] font-bold">
+      <div className={` ${isTabletOrMobile ? "w-[95%]" : "w-[580px]"}`}>
+        <h1
+          className={` ${
+            isTabletOrMobile ? "text-[24px]" : "text-[32px]"
+          } pb-[20px] pt-[5px] text-[#ffff] font-bold`}
+        >
           {dataDetail?.model}
         </h1>
         <div className=" flex flex-col  gap-[20px] text-[#FFFF]">

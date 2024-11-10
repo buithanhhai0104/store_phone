@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
 type Configuration = {
   screen: string;
   chip: string;
@@ -18,18 +19,24 @@ interface IProductDataProps {
     image: string;
     configuration: Configuration;
     promotion_online: boolean;
+    version: string;
   };
 }
 
 const ProductItem: React.FC<IProductDataProps> = ({ productData }) => {
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" });
   return (
     <Link
       to={`/:${productData.model}`}
       key={productData.id}
-      className="flex items-center flex-col w-full flex-shrink-0 bg-[#2b2a2a] py-[30px]  rounded-3xl hover:shadow-product m-[4px]"
+      className={`flex items-center flex-col w-full flex-shrink-0 bg-[#2b2a2a] py-[30px] ${
+        isTabletOrMobile ? "text-[13px]" : ""
+      } rounded-3xl hover:shadow-product m-[4px] `}
     >
       <img
-        className="w-[250px] h-[250px]"
+        className={
+          !isTabletOrMobile ? "w-[250px] h-[250px]" : "w-[150px] h-[150px]"
+        }
         src={productData.image}
         alt={productData.model}
       />

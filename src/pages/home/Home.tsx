@@ -1,122 +1,61 @@
 import React, { useEffect, useState } from "react";
 import Carousel from "../../components/carousel/Carousel";
-import SlideProduct from "../../components/slide/SlideProduct";
-import { FaApple } from "react-icons/fa6";
+import ProductSection from "../../components/ProductSection/ProductSection";
+import config from "../../config";
+
 const Home: React.FC = () => {
   const [data, setData] = useState<any[]>([]);
-  const [dataIphone, setDataIphone] = useState<any[]>([]);
-  const [dataMacbook, setDataMacbook] = useState<any[]>([]);
+  const [dataIphones, setDataIphones] = useState<any[]>([]);
+  const [dataMacbooks, setDataMacbooks] = useState<any[]>([]);
   const [dataIpads, setDataIpads] = useState<any[]>([]);
   const [dataWatches, setDataWatches] = useState<any[]>([]);
 
   useEffect(() => {
-    const fetchData = async () => {
+    const fetchCategoryData = async (
+      url: string,
+      setData: React.Dispatch<React.SetStateAction<any[]>>
+    ) => {
       try {
-        const response = await fetch("http://localhost:3001/carouselhome");
+        const response = await fetch(url);
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
         const result = await response.json();
         setData(result);
-      } catch (error) {}
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
     };
 
-    fetchData();
+    fetchCategoryData("http://localhost:3001/carouselhome", setData);
+    fetchCategoryData("http://localhost:3001/iphones", setDataIphones);
+    fetchCategoryData("http://localhost:3001/macbooks", setDataMacbooks);
+    fetchCategoryData("http://localhost:3001/watches", setDataWatches);
+    fetchCategoryData("http://localhost:3001/ipads", setDataIpads);
   }, []);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("http://localhost:3001/iphones");
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        const result = await response.json();
-        console.log(result);
-        setDataIphone(result);
-      } catch (error) {}
-    };
-
-    fetchData();
-  }, []);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("http://localhost:3001/macbooks");
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        const result = await response.json();
-        setDataMacbook(result);
-      } catch (error) {}
-    };
-
-    fetchData();
-  }, []);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("http://localhost:3001/watches");
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        const result = await response.json();
-        setDataWatches(result);
-      } catch (error) {}
-    };
-
-    fetchData();
-  }, []);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("http://localhost:3001/ipads");
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        const result = await response.json();
-        setDataIpads(result);
-      } catch (error) {}
-    };
-
-    fetchData();
-  }, []);
-
   return (
     <div>
       <Carousel dataImg={data} />
-      <div>
-        <div className="flex justify-center items-center text-[40px] text-[#ffff] mt-[30px] mb-[30px]">
-          <FaApple />
-
-          <p>iPhone</p>
-        </div>
-        <SlideProduct dataPhone={dataIphone} />
-      </div>
-      <div>
-        <div className="flex justify-center items-center text-[40px] text-[#ffff] mt-[30px] mb-[30px]">
-          <FaApple />
-          <p>Macbook</p>
-        </div>
-        <SlideProduct dataPhone={dataMacbook} />
-      </div>
-      <div>
-        <div className="flex justify-center items-center text-[40px] text-[#ffff] mt-[30px] mb-[30px]">
-          <FaApple />
-          <p>iPad</p>
-        </div>
-        <SlideProduct dataPhone={dataIpads} />
-      </div>
-      <div>
-        <div className="flex justify-center items-center text-[40px] text-[#ffff] mt-[30px] mb-[30px]">
-          <FaApple />
-          <p>Watch</p>
-        </div>
-        <SlideProduct dataPhone={dataWatches} />
-      </div>
+      <ProductSection
+        dataSection={dataIphones}
+        title={"iPhone"}
+        link={config.routes.iphone}
+      />
+      <ProductSection
+        dataSection={dataMacbooks}
+        title={"Macbook"}
+        link={config.routes.mac}
+      />
+      <ProductSection
+        dataSection={dataIpads}
+        title={"iPad"}
+        link={config.routes.ipad}
+      />
+      <ProductSection
+        dataSection={dataWatches}
+        title={"Watch"}
+        link={config.routes.watch}
+      />
     </div>
   );
 };

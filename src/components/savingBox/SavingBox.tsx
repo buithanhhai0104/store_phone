@@ -54,7 +54,7 @@ const SavingBox: React.FC<SavingBoxProps> = ({
   }, [productInspection, navigate]);
 
   return (
-    <div className="flex flex-col w-[550px] bg-custom-gradient rounded-2xl mt-[20px] ">
+    <div className="flex flex-col w-full bg-custom-gradient rounded-2xl mt-[20px] ">
       <div className="flex justify-between bg-promotion rounded-2xl text-[#ffff] py-[15px] px-[10px] ">
         <div className="flex flex-col">
           <b className="text-[17px] font-normal">Online Giá Rẻ Quá</b>

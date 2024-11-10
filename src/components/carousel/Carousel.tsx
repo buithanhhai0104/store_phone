@@ -47,7 +47,7 @@ const Carousel: React.FC<CarouselProps> = ({ dataImg }) => {
       <div
         ref={sliderRef}
         className={`flex overflow-auto overflow-x-hidden shadow-lg rounded-2xl ${
-          isTabletOrMobile ? "mt-3.5 w-[95%] m-auto" : ""
+          isTabletOrMobile ? "mt-3.5 w-[95%] m-auto  h-[150px]" : ""
         } `}
       >
         {dataImg.map((item) => {
@@ -57,7 +57,7 @@ const Carousel: React.FC<CarouselProps> = ({ dataImg }) => {
       <button
         onClick={nextSlide}
         className={` flex justify-center items-center absolute right-[20px] top-[45%]  bg-[#29292a] text-[#ffff] rounded-full hover:bg-[#757575] ${
-          isTabletOrMobile ? " w-[35px] h-[35px]" : "w-[50px] h-[50px]"
+          isTabletOrMobile ? " w-[25px] h-[25px]" : "w-[50px] h-[50px]"
         }`}
       >
         <FaArrowRight />
@@ -65,7 +65,7 @@ const Carousel: React.FC<CarouselProps> = ({ dataImg }) => {
       <button
         onClick={prevSlide}
         className={` flex justify-center items-center absolute left-[20px] top-[45%]  bg-[#29292a] text-[#ffff] rounded-full hover:bg-[#757575] ${
-          isTabletOrMobile ? " w-[35px] h-[35px]" : "w-[50px] h-[50px]"
+          isTabletOrMobile ? " w-[25px] h-[25px]" : "w-[50px] h-[50px]"
         }`}
       >
         <FaArrowLeft />

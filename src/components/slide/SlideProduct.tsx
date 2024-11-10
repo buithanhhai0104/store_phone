@@ -3,15 +3,6 @@ import { Link } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 
-type Configuration = {
-  screen: string;
-  chip: string;
-  ram: string;
-  storage: string;
-  camera: string;
-  battery: string;
-};
-
 type DataPhoneProps = {
   dataPhone: {
     id: number;
@@ -19,7 +10,6 @@ type DataPhoneProps = {
     price_usd: number;
     price_vnd: string;
     image: string;
-    configuration: Configuration;
     promotion_online: boolean;
   }[];
 };
