@@ -4,7 +4,9 @@ import config from "../../../../config";
 import { FaFacebook } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
+import { useMediaQuery } from "react-responsive";
 const Footer: React.FC = () => {
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" });
   return (
     <footer className="bg-black text-gray-400 py-8 mt-[30px]">
       <div className=" w-[85%] container mx-auto px-4">
@@ -157,8 +159,16 @@ const Footer: React.FC = () => {
           </div>
         </div>
 
-        <div className="flex justify-between">
-          <div className="w-[60%]  pt-1 text-xs text-center md:text-left">
+        <div
+          className={`flex ${
+            isTabletOrMobile ? "flex-col" : "justify-between"
+          } `}
+        >
+          <div
+            className={` ${
+              isTabletOrMobile ? "w-full" : "w-[55%] text-center"
+            }  pt-1 text-xs  md:text-left mb-[20px]`}
+          >
             <p>
               &copy; 2018. Công ty cổ phần Thế Giới Di Động. GPDKKD: 0303217354
               do sở KH & ĐT TP.HCM cấp ngày 02/01/2007.
@@ -171,21 +181,21 @@ const Footer: React.FC = () => {
             </p>
             <p>Email: hotro@thegioididong.com</p>
           </div>
-          <div className="flex justify-cente gap-[10px] r md:justify-end mt-2 space-x-4">
+          <div className="flex justify-cente gap-[20px] r md:justify-end mt-3 space-x-4">
             <img
               src="https://cdnv2.tgdd.vn/webmwg/2024/tz/images/certify-bct.png"
               alt="Cert 1"
-              className="h-10"
+              className={isTabletOrMobile ? "h-7" : "h-10"}
             />{" "}
             <img
               src="https://tinnhiemmang.vn/handle_cert?id=topzone.vn"
               alt="Cert 2"
-              className="h-10"
+              className={isTabletOrMobile ? "h-7" : "h-10"}
             />
             <img
               src="https://images.dmca.com/Badges/_dmca_premi_badge_4.png?ID=4f44c8e7-b645-4ddb-8aec-c130d0598c85"
               alt="Cert 3"
-              className="h-10"
+              className={isTabletOrMobile ? "h-7" : "h-10"}
             />
           </div>
         </div>
