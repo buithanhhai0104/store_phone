@@ -185,17 +185,17 @@ const Footer: React.FC = () => {
             <img
               src="https://cdnv2.tgdd.vn/webmwg/2024/tz/images/certify-bct.png"
               alt="Cert 1"
-              className={isTabletOrMobile ? "h-7" : "h-10"}
+              className={isTabletOrMobile ? "h-5" : "h-10"}
             />{" "}
             <img
               src="https://tinnhiemmang.vn/handle_cert?id=topzone.vn"
               alt="Cert 2"
-              className={isTabletOrMobile ? "h-7" : "h-10"}
+              className={isTabletOrMobile ? "h-5" : "h-10"}
             />
             <img
               src="https://images.dmca.com/Badges/_dmca_premi_badge_4.png?ID=4f44c8e7-b645-4ddb-8aec-c130d0598c85"
               alt="Cert 3"
-              className={isTabletOrMobile ? "h-7" : "h-10"}
+              className={isTabletOrMobile ? "h-5" : "h-10"}
             />
           </div>
         </div>
