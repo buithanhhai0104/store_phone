@@ -5,6 +5,7 @@ interface User {
   id: number;
   username: string;
   img?: string;
+  admin: boolean;
 }
 
 interface UserContextType {

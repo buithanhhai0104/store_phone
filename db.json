@@ -25,11 +25,14 @@
         "screen": "6.7 inch OLED",
         "chip": "Apple A17 Pro",
         "ram": "8GB",
-        "storage": ["256GB", "512GB", "1TB"],
+        "storage": [
+          "256GB",
+          "512GB",
+          "1TB"
+        ],
         "camera": "48MP + 12MP + 12MP",
         "battery": "4,400 mAh"
       },
-      "price_usd": 1399,
       "price_vnd": "33.576.000đ",
       "promotion_online": true,
       "image": "https://cdn.tgdd.vn/Products/Images/42/305658/s16/iphone-15-pro-max-gold-1-2-650x650.png"
@@ -59,11 +62,14 @@
         "screen": "6.1 inch OLED",
         "chip": "Apple A17 Pro",
         "ram": "8GB",
-        "storage": ["256GB", "512GB", "1TB"],
+        "storage": [
+          "256GB",
+          "512GB",
+          "1TB"
+        ],
         "camera": "48MP + 12MP + 12MP",
         "battery": "3,700 mAh"
       },
-      "price_usd": 1299,
       "price_vnd": "31.176.000đ",
       "promotion_online": false,
       "image": "https://cdn.tgdd.vn/Products/Images/42/303831/s16/iphone-15-pro-black-1-2-650x650.png"
@@ -93,11 +99,14 @@
         "screen": "6.1 inch OLED",
         "chip": "Apple A16 Bionic",
         "ram": "6GB",
-        "storage": ["256GB", "512GB", "1TB"],
+        "storage": [
+          "256GB",
+          "512GB",
+          "1TB"
+        ],
         "camera": "48MP + 12MP",
         "battery": "3,800 mAh"
       },
-      "price_usd": 899,
       "price_vnd": "21.576.000đ",
       "promotion_online": true,
       "image": "https://cdn.tgdd.vn/Products/Images/42/303891/s16/iphone-15-plus-blue-1-2-650x650.png"
@@ -127,11 +136,14 @@
         "screen": "6.7 inch OLED",
         "chip": "Apple A16 Bionic",
         "ram": "6GB",
-        "storage": ["256GB", "512GB", "1TB"],
+        "storage": [
+          "256GB",
+          "512GB",
+          "1TB"
+        ],
         "camera": "48MP + 12MP",
         "battery": "4,300 mAh"
       },
-      "price_usd": 999,
       "price_vnd": "23.976.000đ",
       "promotion_online": true,
       "image": "https://cdn.tgdd.vn/Products/Images/42/303891/s16/iphone-15-plus-blue-1-2-650x650.png"
@@ -161,11 +173,14 @@
         "screen": "6.7 inch OLED",
         "chip": "Apple A16 Bionic",
         "ram": "6GB",
-        "storage": ["256GB", "512GB", "1TB"],
+        "storage": [
+          "256GB",
+          "512GB",
+          "1TB"
+        ],
         "camera": "48MP + 12MP + 12MP",
         "battery": "4,323 mAh"
       },
-      "price_usd": 1199,
       "price_vnd": "28.776.000đ",
       "promotion_online": true,
       "image": "https://cdn.tgdd.vn/Products/Images/42/245545/s16/iphone-14-plus-gold-1-650x650.png"
@@ -195,11 +210,14 @@
         "screen": "6.1 inch OLED",
         "chip": "Apple A15 Bionic",
         "ram": "6GB",
-        "storage": ["256GB", "512GB", "1TB"],
+        "storage": [
+          "256GB",
+          "512GB",
+          "1TB"
+        ],
         "camera": "12MP + 12MP",
         "battery": "3,279 mAh"
       },
-      "price_usd": 799,
       "price_vnd": "19.176.000đ",
       "promotion_online": true,
       "image": "https://cdn.tgdd.vn/Products/Images/42/240259/s16/iphone-14-purple-650x650.png"
@@ -229,11 +247,14 @@
         "screen": "6.1 inch OLED",
         "chip": "Apple A15 Bionic",
         "ram": "6GB",
-        "storage": ["256GB", "512GB", "1TB"],
+        "storage": [
+          "256GB",
+          "512GB",
+          "1TB"
+        ],
         "camera": "12MP + 12MP",
         "battery": "3,279 mAh"
       },
-      "price_usd": 799,
       "price_vnd": "19.176.000đ",
       "promotion_online": true,
       "image": "https://cdn.tgdd.vn/Products/Images/42/240259/s16/iphone-14-purple-650x650.png"
@@ -263,11 +284,14 @@
         "screen": "6.1 inch OLED",
         "chip": "Apple A15 Bionic",
         "ram": "6GB",
-        "storage": ["256GB", "512GB", "1TB"],
+        "storage": [
+          "256GB",
+          "512GB",
+          "1TB"
+        ],
         "camera": "12MP + 12MP",
         "battery": "3,279 mAh"
       },
-      "price_usd": 799,
       "price_vnd": "19.176.000đ",
       "promotion_online": true,
       "image": "https://cdn.tgdd.vn/Products/Images/42/240259/s16/iphone-14-purple-650x650.png"
@@ -297,11 +321,14 @@
         "screen": "6.1 inch OLED",
         "chip": "Apple A15 Bionic",
         "ram": "6GB",
-        "storage": ["256GB", "512GB", "1TB"],
+        "storage": [
+          "256GB",
+          "512GB",
+          "1TB"
+        ],
         "camera": "12MP + 12MP",
         "battery": "3,279 mAh"
       },
-      "price_usd": 799,
       "price_vnd": "19.176.000đ",
       "promotion_online": true,
       "image": "https://cdn.tgdd.vn/Products/Images/42/240259/s16/iphone-14-purple-650x650.png"
@@ -331,11 +358,14 @@
         "screen": "6.1 inch OLED",
         "chip": "Apple A15 Bionic",
         "ram": "6GB",
-        "storage": ["256GB", "512GB", "1TB"],
+        "storage": [
+          "256GB",
+          "512GB",
+          "1TB"
+        ],
         "camera": "12MP + 12MP",
         "battery": "3,279 mAh"
       },
-      "price_usd": 799,
       "price_vnd": "19.176.000đ",
       "promotion_online": true,
       "image": "https://cdn.tgdd.vn/Products/Images/42/240259/s16/iphone-14-purple-650x650.png"
@@ -365,14 +395,45 @@
         "screen": "6.1 inch OLED",
         "chip": "Apple A15 Bionic",
         "ram": "6GB",
-        "storage": ["256GB", "512GB", "1TB"],
+        "storage": [
+          "256GB",
+          "512GB",
+          "1TB"
+        ],
         "camera": "12MP + 12MP",
         "battery": "3,279 mAh"
       },
-      "price_usd": 799,
       "price_vnd": "19.176.000đ",
       "promotion_online": true,
       "image": "https://cdn.tgdd.vn/Products/Images/42/240259/s16/iphone-14-purple-650x650.png"
+    },
+    {
+      "model": "iPhone 16 Pro Max 256GB",
+      "version": "iPhone 16",
+      "colors": [
+        {
+          "color_name": "Đỏ",
+          "color_id": "#FF0000"
+        },
+        {
+          "color_name": "Đen",
+          "color_id": "#000000"
+        },
+        {
+          "color_name": "Hồng",
+          "color_id": "#FFC0CB"
+        }
+      ],
+      "image": "https://cdn.tgdd.vn/Products/Images/42/329149/s16/iphone-16-pro-max-titan-den-thumbnew-650x650.png",
+      "price_vnd": "34.490.000đ",
+      "configuration": {
+        "storage": [
+          "256GB",
+          "312GB",
+          "1TB"
+        ]
+      },
+      "id": 12
     }
   ],
   "macbooks": [
@@ -396,11 +457,14 @@
         "screen": "16.2 inch Liquid Retina XDR",
         "chip": "Apple M2 Pro",
         "ram": "16GB",
-        "storage": ["256GB", "512GB", "1TB"],
+        "storage": [
+          "256GB",
+          "512GB",
+          "1TB"
+        ],
         "graphics": "Integrated 16-core GPU",
         "battery": "100 Wh"
       },
-      "price_usd": 2499,
       "price_vnd": "59.976.000đ",
       "promotion_online": true,
       "image": "https://cdn.tgdd.vn/Products/Images/44/318233/s16/mac16-topzone-silver-650x650.png"
@@ -425,11 +489,14 @@
         "screen": "14.2 inch Liquid Retina XDR",
         "chip": "Apple M2 Pro",
         "ram": "16GB",
-        "storage": ["256GB", "512GB", "1TB"],
+        "storage": [
+          "256GB",
+          "512GB",
+          "1TB"
+        ],
         "graphics": "Integrated 16-core GPU",
         "battery": "70 Wh"
       },
-      "price_usd": 1999,
       "price_vnd": "47.976.000đ",
       "promotion_online": true,
       "image": "https://cdn.tgdd.vn/Products/Images/44/309017/s16/mac-air-15-midnight-new-650x650.png"
@@ -459,11 +526,14 @@
         "screen": "13.6 inch Liquid Retina",
         "chip": "Apple M2",
         "ram": "8GB",
-        "storage": ["256GB", "512GB", "1TB"],
+        "storage": [
+          "256GB",
+          "512GB",
+          "1TB"
+        ],
         "graphics": "Integrated 8-core GPU",
         "battery": "52.6 Wh"
       },
-      "price_usd": 1199,
       "price_vnd": "28.776.000đ",
       "promotion_online": false,
       "image": "https://cdn.tgdd.vn/Products/Images/44/282847/s16/mac-air-m2-13-vang-new-650x650.png"
@@ -493,11 +563,14 @@
         "screen": "15.3 inch Liquid Retina",
         "chip": "Apple M2",
         "ram": "8GB",
-        "storage": ["256GB", "512GB", "1TB"],
+        "storage": [
+          "256GB",
+          "512GB",
+          "1TB"
+        ],
         "graphics": "Integrated 10-core GPU",
         "battery": "66.5 Wh"
       },
-      "price_usd": 1299,
       "price_vnd": "31.176.000đ",
       "promotion_online": true,
       "image": "https://cdn.tgdd.vn/Products/Images/44/309016/s16/mac-air-15-xam-new-650x650.png"
@@ -527,11 +600,14 @@
         "screen": "13.6 inch Liquid Retina",
         "chip": "Apple M2",
         "ram": "8GB",
-        "storage": ["256GB", "512GB", "1TB"],
+        "storage": [
+          "256GB",
+          "512GB",
+          "1TB"
+        ],
         "graphics": "Integrated 8-core GPU",
         "battery": "52.6 Wh"
       },
-      "price_usd": 1199,
       "price_vnd": "28.776.000đ",
       "promotion_online": false,
       "image": "https://cdn.tgdd.vn/Products/Images/44/282847/s16/mac-air-m2-13-vang-new-650x650.png"
@@ -556,11 +632,14 @@
         "screen": "14.2 inch Liquid Retina XDR",
         "chip": "Apple M2 Pro",
         "ram": "16GB",
-        "storage": ["256GB", "512GB", "1TB"],
+        "storage": [
+          "256GB",
+          "512GB",
+          "1TB"
+        ],
         "graphics": "Integrated 16-core GPU",
         "battery": "70 Wh"
       },
-      "price_usd": 1999,
       "price_vnd": "47.976.000đ",
       "promotion_online": true,
       "image": "https://cdn.tgdd.vn/Products/Images/44/309017/s16/mac-air-15-midnight-new-650x650.png"
@@ -585,17 +664,47 @@
         "screen": "14.2 inch Liquid Retina XDR",
         "chip": "Apple M2 Pro",
         "ram": "16GB",
-        "storage": ["256GB", "512GB", "1TB"],
+        "storage": [
+          "256GB",
+          "512GB",
+          "1TB"
+        ],
         "graphics": "Integrated 16-core GPU",
         "battery": "70 Wh"
       },
-      "price_usd": 1999,
       "price_vnd": "47.976.000đ",
       "promotion_online": true,
       "image": "https://cdn.tgdd.vn/Products/Images/44/309017/s16/mac-air-15-midnight-new-650x650.png"
+    },
+    {
+      "model": "MacBook Air 13 inch M1",
+      "version": "MacBook Air",
+      "colors": [
+        {
+          "color_name": "Đen",
+          "color_id": "#000000"
+        },
+        {
+          "color_name": "Đỏ",
+          "color_id": "#FF0000"
+        },
+        {
+          "color_name": "Hồng",
+          "color_id": "#FFC0CB"
+        }
+      ],
+      "image": "https://cdn.tgdd.vn/Products/Images/44/231244/s16/mac-air-m1-13-xam-new-650x650.png",
+      "price_vnd": "50.000.000đ",
+      "configuration": {
+        "storage": [
+          "256GB",
+          "512GB",
+          "1TB"
+        ]
+      },
+      "id": 8
     }
   ],
-
   "ipads": [
     {
       "id": 1,
@@ -617,10 +726,13 @@
         "screen": "12.9-inch Liquid Retina XDR",
         "chip": "Apple M2",
         "ram": "8GB",
-        "storage": ["256GB", "512GB", "1TB"],
+        "storage": [
+          "256GB",
+          "512GB",
+          "1TB"
+        ],
         "battery": "40.88 Wh"
       },
-      "price_usd": 1099,
       "price_vnd": "25.976.000đ",
       "promotion_online": true,
       "image": "https://cdn.tgdd.vn/Products/Images/522/325513/s16/ipad-pro-11-inch-wifi-black-thumb-650x650.png"
@@ -645,10 +757,13 @@
         "screen": "10.9-inch Liquid Retina",
         "chip": "Apple M1",
         "ram": "8GB",
-        "storage": ["256GB", "512GB", "1TB"],
+        "storage": [
+          "256GB",
+          "512GB",
+          "1TB"
+        ],
         "battery": "28.6 Wh"
       },
-      "price_usd": 599,
       "price_vnd": "13.976.000đ",
       "promotion_online": true,
       "image": "https://cdn.tgdd.vn/Products/Images/522/325501/s16/ipad-air-m2-11-inch-wifi-gray-650x650.png"
@@ -673,10 +788,13 @@
         "screen": "8.3-inch Liquid Retina",
         "chip": "Apple A15 Bionic",
         "ram": "4GB",
-        "storage": ["256GB", "512GB", "1TB"],
+        "storage": [
+          "256GB",
+          "512GB",
+          "1TB"
+        ],
         "battery": "19.3 Wh"
       },
-      "price_usd": 499,
       "price_vnd": "11.976.000đ",
       "promotion_online": false,
       "image": "https://cdn.tgdd.vn/Products/Images/522/248091/s16/ipad-mini-6-startlight-1-650x650.png"
@@ -701,10 +819,13 @@
         "screen": "10.2-inch Retina",
         "chip": "Apple A13 Bionic",
         "ram": "3GB",
-        "storage": ["256GB", "512GB", "1TB"],
+        "storage": [
+          "256GB",
+          "512GB",
+          "1TB"
+        ],
         "battery": "32.4 Wh"
       },
-      "price_usd": 329,
       "price_vnd": "7.976.000đ",
       "promotion_online": true,
       "image": "https://cdn.tgdd.vn/Products/Images/522/293543/s16/iPad-gen-10-pink-1-650x650.png"
@@ -729,10 +850,13 @@
         "screen": "12.9-inch Liquid Retina XDR",
         "chip": "Apple M2",
         "ram": "8GB",
-        "storage": ["256GB", "512GB", "1TB"],
+        "storage": [
+          "256GB",
+          "512GB",
+          "1TB"
+        ],
         "battery": "40.88 Wh"
       },
-      "price_usd": 1099,
       "price_vnd": "25.976.000đ",
       "promotion_online": true,
       "image": "https://cdn.tgdd.vn/Products/Images/522/325513/s16/ipad-pro-11-inch-wifi-black-thumb-650x650.png"
@@ -757,10 +881,13 @@
         "screen": "12.9-inch Liquid Retina XDR",
         "chip": "Apple M2",
         "ram": "8GB",
-        "storage": ["256GB", "512GB", "1TB"],
+        "storage": [
+          "256GB",
+          "512GB",
+          "1TB"
+        ],
         "battery": "40.88 Wh"
       },
-      "price_usd": 1099,
       "price_vnd": "25.976.000đ",
       "promotion_online": true,
       "image": "https://cdn.tgdd.vn/Products/Images/522/325513/s16/ipad-pro-11-inch-wifi-black-thumb-650x650.png"
@@ -785,10 +912,13 @@
         "screen": "8.3-inch Liquid Retina",
         "chip": "Apple A15 Bionic",
         "ram": "4GB",
-        "storage": ["256GB", "512GB", "1TB"],
+        "storage": [
+          "256GB",
+          "512GB",
+          "1TB"
+        ],
         "battery": "19.3 Wh"
       },
-      "price_usd": 499,
       "price_vnd": "11.976.000đ",
       "promotion_online": false,
       "image": "https://cdn.tgdd.vn/Products/Images/522/248091/s16/ipad-mini-6-startlight-1-650x650.png"
@@ -813,16 +943,46 @@
         "screen": "8.3-inch Liquid Retina",
         "chip": "Apple A15 Bionic",
         "ram": "4GB",
-        "storage": ["256GB", "512GB", "1TB"],
+        "storage": [
+          "256GB",
+          "512GB",
+          "1TB"
+        ],
         "battery": "19.3 Wh"
       },
-      "price_usd": 499,
       "price_vnd": "11.976.000đ",
       "promotion_online": false,
       "image": "https://cdn.tgdd.vn/Products/Images/522/248091/s16/ipad-mini-6-startlight-1-650x650.png"
+    },
+    {
+      "model": "iPad Air 6 M2 11 inch WiFi",
+      "version": "iPad Air",
+      "colors": [
+        {
+          "color_name": "Đỏ",
+          "color_id": "#FF0000"
+        },
+        {
+          "color_name": "Đen",
+          "color_id": "#000000"
+        },
+        {
+          "color_name": "Hồng",
+          "color_id": "#FFC0CB"
+        }
+      ],
+      "image": "https://cdn.tgdd.vn/Products/Images/522/325501/s16/ipad-air-m2-11-inch-wifi-gray-650x650.png",
+      "price_vnd": "16.000.000đ",
+      "configuration": {
+        "storage": [
+          "128GB",
+          "256GB",
+          "512GB"
+        ]
+      },
+      "id": 9
     }
   ],
-
   "watches": [
     {
       "id": 1,
@@ -844,10 +1004,11 @@
         "screen": "49mm Retina Display",
         "chip": "Apple S8",
         "ram": "1GB",
-        "storage": ["32GB"],
+        "storage": [
+          "32GB"
+        ],
         "battery": "36 hours"
       },
-      "price_usd": 799,
       "price_vnd": "18.976.000đ",
       "promotion_online": true,
       "image": "https://cdn.tgdd.vn/Products/Images/7077/329155/s16/apple-watch-s10-hong-nhat-tn-650x650.png"
@@ -872,10 +1033,11 @@
         "screen": "41mm/45mm Retina Display",
         "chip": "Apple S8",
         "ram": "1GB",
-        "storage": ["32GB"],
+        "storage": [
+          "32GB"
+        ],
         "battery": "18 hours"
       },
-      "price_usd": 399,
       "price_vnd": "9.976.000đ",
       "promotion_online": true,
       "image": "https://cdn.tgdd.vn/Products/Images/7077/314696/s16/apple-watch-s9-lte-vien-thep-khong-gi-day-thep-1-1-650x650.png"
@@ -900,10 +1062,11 @@
         "screen": "40mm/44mm Retina Display",
         "chip": "Apple S8",
         "ram": "1GB",
-        "storage": ["32GB"],
+        "storage": [
+          "32GB"
+        ],
         "battery": "18 hours"
       },
-      "price_usd": 249,
       "price_vnd": "5.976.000đ",
       "promotion_online": true,
       "image": "https://cdn.tgdd.vn/Products/Images/7077/314714/s16/apple-watch-ultra-lte-49mm-vien-titanium-day-trail-xanh-650x650.png"
@@ -928,10 +1091,11 @@
         "screen": "41mm/45mm Retina Display",
         "chip": "Apple S6",
         "ram": "1GB",
-        "storage": ["32GB"],
+        "storage": [
+          "32GB"
+        ],
         "battery": "18 hours"
       },
-      "price_usd": 399,
       "price_vnd": "9.976.000đ",
       "promotion_online": false,
       "image": "https://cdn.tgdd.vn/Products/Images/7077/316002/s16/apple-watch-s9-vien-nhom-day-silicone-do-tb-1-650x650.png"
@@ -956,10 +1120,11 @@
         "screen": "40mm/44mm Retina Display",
         "chip": "Apple S8",
         "ram": "1GB",
-        "storage": ["32GB"],
+        "storage": [
+          "32GB"
+        ],
         "battery": "18 hours"
       },
-      "price_usd": 249,
       "price_vnd": "5.976.000đ",
       "promotion_online": true,
       "image": "https://cdn.tgdd.vn/Products/Images/7077/315998/s16/apple-watch-s9-vien-nhom-day-vai-xanh-den-tb-1-1-650x650.png"
@@ -984,10 +1149,11 @@
         "screen": "41mm/45mm Retina Display",
         "chip": "Apple S8",
         "ram": "1GB",
-        "storage": ["32GB"],
+        "storage": [
+          "32GB"
+        ],
         "battery": "18 hours"
       },
-      "price_usd": 399,
       "price_vnd": "9.976.000đ",
       "promotion_online": true,
       "image": "https://cdn.tgdd.vn/Products/Images/7077/316003/s16/t%C3%A1ch%20n%E1%BB%81n%20site%2016%20(1)-650x650.png"
@@ -1012,16 +1178,16 @@
         "screen": "40mm/44mm Retina Display",
         "chip": "Apple S8",
         "ram": "1GB",
-        "storage": ["32GB"],
+        "storage": [
+          "32GB"
+        ],
         "battery": "18 hours"
       },
-      "price_usd": 249,
       "price_vnd": "5.976.000đ",
       "promotion_online": true,
       "image": "https://cdn.tgdd.vn/Products/Images/7077/315998/s16/apple-watch-s9-vien-nhom-day-vai-xanh-den-tb-1-1-650x650.png"
     }
   ],
-
   "carouselhome": [
     {
       "id": 1,
@@ -1088,18 +1254,206 @@
       "carousel_img": "https://cdnv2.tgdd.vn/mwg-static/topzone/Banner/d3/48/d348f4006b905360031e7212946d3a08.png"
     }
   ],
-
   "users": [
     {
       "id": 1,
-      "username": "user1",
+      "admin": true,
+      "username": "Thanh Hải",
       "password": "pass123",
-      "img": "https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-1/382329342_2437108309830509_4202728373760808170_n.jpg?stp=cp0_dst-jpg_s40x40&_nc_cat=110&ccb=1-7&_nc_sid=6738e8&_nc_eui2=AeF5_VjHflqr-bd0KOu0HvFSrbnBYw19o9StucFjDX2j1Bf9cL0KXD5RKhAIIbWaO9d8lUXZMJn__W1Gxz9WUbBx&_nc_ohc=dacGpWVE4kYQ7kNvgFSASmQ&_nc_zt=24&_nc_ht=scontent.fdad1-3.fna&_nc_gid=AZyHryhinfb0fQrmqvFNf4W&oh=00_AYAfi14Wp7v4bU5dIIQVq7T3neMLEeLeblz3Zkj_qwON9g&oe=672E09A2"
+      "img": "https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-1/382329342_2437108309830509_4202728373760808170_n.jpg?stp=cp0_dst-jpg_s40x40&_nc_cat=110&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeF5_VjHflqr-bd0KOu0HvFSrbnBYw19o9StucFjDX2j1Bf9cL0KXD5RKhAIIbWaO9d8lUXZMJn__W1Gxz9WUbBx&_nc_ohc=jy-ruoRCuM4Q7kNvgE7cxJ6&_nc_zt=24&_nc_ht=scontent.fdad1-3.fna&_nc_gid=AGCpEA3u-dRMp792Cf_tjIm&oh=00_AYAFZ3ItLCL_fUe5-ARBK_c06MRAFsNxdpb3_9zsG4ZtVA&oe=67377C62"
     },
     {
       "id": 2,
       "username": "user2",
-      "password": "pass456"
+      "password": "pass456",
+      "img": "https://cdn.tgdd.vn/Products/Images/42/305658/s16/iphone-15-pro-max-gold-1-2-650x650.png"
+    }
+  ],
+  "comments": [
+    {
+      "productId": "iPhone 15 Pro Max",
+      "userComment": {
+        "userId": 1,
+        "userName": "Thanh Hải",
+        "userImg": "https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-1/382329342_2437108309830509_4202728373760808170_n.jpg?stp=cp0_dst-jpg_s40x40&_nc_cat=110&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeF5_VjHflqr-bd0KOu0HvFSrbnBYw19o9StucFjDX2j1Bf9cL0KXD5RKhAIIbWaO9d8lUXZMJn__W1Gxz9WUbBx&_nc_ohc=jy-ruoRCuM4Q7kNvgE7cxJ6&_nc_zt=24&_nc_ht=scontent.fdad1-3.fna&_nc_gid=AGCpEA3u-dRMp792Cf_tjIm&oh=00_AYAFZ3ItLCL_fUe5-ARBK_c06MRAFsNxdpb3_9zsG4ZtVA&oe=67377C62",
+        "admin": true
+      },
+      "content": "test comment",
+      "id": 1,
+      "replies": [
+        {
+          "content": "oke",
+          "name": "Thanh Hải",
+          "img": "https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-1/382329342_2437108309830509_4202728373760808170_n.jpg?stp=cp0_dst-jpg_s40x40&_nc_cat=110&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeF5_VjHflqr-bd0KOu0HvFSrbnBYw19o9StucFjDX2j1Bf9cL0KXD5RKhAIIbWaO9d8lUXZMJn__W1Gxz9WUbBx&_nc_ohc=jy-ruoRCuM4Q7kNvgE7cxJ6&_nc_zt=24&_nc_ht=scontent.fdad1-3.fna&_nc_gid=AGCpEA3u-dRMp792Cf_tjIm&oh=00_AYAFZ3ItLCL_fUe5-ARBK_c06MRAFsNxdpb3_9zsG4ZtVA&oe=67377C62"
+        }
+      ]
+    },
+    {
+      "productId": "iPhone 15 Pro Max",
+      "userComment": {
+        "userId": 1,
+        "userName": "Thanh Hải",
+        "userImg": "https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-1/382329342_2437108309830509_4202728373760808170_n.jpg?stp=cp0_dst-jpg_s40x40&_nc_cat=110&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeF5_VjHflqr-bd0KOu0HvFSrbnBYw19o9StucFjDX2j1Bf9cL0KXD5RKhAIIbWaO9d8lUXZMJn__W1Gxz9WUbBx&_nc_ohc=jy-ruoRCuM4Q7kNvgE7cxJ6&_nc_zt=24&_nc_ht=scontent.fdad1-3.fna&_nc_gid=AGCpEA3u-dRMp792Cf_tjIm&oh=00_AYAFZ3ItLCL_fUe5-ARBK_c06MRAFsNxdpb3_9zsG4ZtVA&oe=67377C62",
+        "admin": true
+      },
+      "content": "test lần 2",
+      "id": 2
+    },
+    {
+      "productId": "iPhone 15 Pro Max",
+      "userComment": {
+        "userId": 1,
+        "userName": "Thanh Hải",
+        "userImg": "https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-1/382329342_2437108309830509_4202728373760808170_n.jpg?stp=cp0_dst-jpg_s40x40&_nc_cat=110&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeF5_VjHflqr-bd0KOu0HvFSrbnBYw19o9StucFjDX2j1Bf9cL0KXD5RKhAIIbWaO9d8lUXZMJn__W1Gxz9WUbBx&_nc_ohc=jy-ruoRCuM4Q7kNvgE7cxJ6&_nc_zt=24&_nc_ht=scontent.fdad1-3.fna&_nc_gid=AGCpEA3u-dRMp792Cf_tjIm&oh=00_AYAFZ3ItLCL_fUe5-ARBK_c06MRAFsNxdpb3_9zsG4ZtVA&oe=67377C62",
+        "admin": true
+      },
+      "content": "test lần 3",
+      "id": 3
+    },
+    {
+      "productId": "iPhone 15",
+      "userComment": {
+        "userId": 1,
+        "userName": "Thanh Hải",
+        "userImg": "https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-1/382329342_2437108309830509_4202728373760808170_n.jpg?stp=cp0_dst-jpg_s40x40&_nc_cat=110&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeF5_VjHflqr-bd0KOu0HvFSrbnBYw19o9StucFjDX2j1Bf9cL0KXD5RKhAIIbWaO9d8lUXZMJn__W1Gxz9WUbBx&_nc_ohc=jy-ruoRCuM4Q7kNvgE7cxJ6&_nc_zt=24&_nc_ht=scontent.fdad1-3.fna&_nc_gid=AGCpEA3u-dRMp792Cf_tjIm&oh=00_AYAFZ3ItLCL_fUe5-ARBK_c06MRAFsNxdpb3_9zsG4ZtVA&oe=67377C62",
+        "admin": true
+      },
+      "content": "Sản phẩm bảo hành bao lâu",
+      "id": 4,
+      "replies": [
+        {
+          "content": "5 năm",
+          "name": "Thanh Hải",
+          "img": "https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-1/382329342_2437108309830509_4202728373760808170_n.jpg?stp=cp0_dst-jpg_s40x40&_nc_cat=110&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeF5_VjHflqr-bd0KOu0HvFSrbnBYw19o9StucFjDX2j1Bf9cL0KXD5RKhAIIbWaO9d8lUXZMJn__W1Gxz9WUbBx&_nc_ohc=jy-ruoRCuM4Q7kNvgE7cxJ6&_nc_zt=24&_nc_ht=scontent.fdad1-3.fna&_nc_gid=AGCpEA3u-dRMp792Cf_tjIm&oh=00_AYAFZ3ItLCL_fUe5-ARBK_c06MRAFsNxdpb3_9zsG4ZtVA&oe=67377C62"
+        }
+      ]
+    }
+  ],
+  "reviews": [
+    {
+      "content": "mới xài được 1 ngày hư rồi ",
+      "userEvaluate": {
+        "userName": "Thanh Hải",
+        "userImg": "https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-1/382329342_2437108309830509_4202728373760808170_n.jpg?stp=cp0_dst-jpg_s40x40&_nc_cat=110&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeF5_VjHflqr-bd0KOu0HvFSrbnBYw19o9StucFjDX2j1Bf9cL0KXD5RKhAIIbWaO9d8lUXZMJn__W1Gxz9WUbBx&_nc_ohc=jy-ruoRCuM4Q7kNvgE7cxJ6&_nc_zt=24&_nc_ht=scontent.fdad1-3.fna&_nc_gid=AGCpEA3u-dRMp792Cf_tjIm&oh=00_AYAFZ3ItLCL_fUe5-ARBK_c06MRAFsNxdpb3_9zsG4ZtVA&oe=67377C62",
+        "userId": 1,
+        "admin": true
+      },
+      "rating": 1,
+      "model": "iPhone 15 Pro Max",
+      "id": 1
+    },
+    {
+      "content": "xài được 2 ngày hư ",
+      "userEvaluate": {
+        "userName": "user2",
+        "userImg": "https://cdn.tgdd.vn/Products/Images/42/305658/s16/iphone-15-pro-max-gold-1-2-650x650.png",
+        "userId": 2
+      },
+      "rating": 2,
+      "model": "iPhone 15 Pro Max",
+      "id": 2
+    },
+    {
+      "content": "cũng được ",
+      "userEvaluate": {
+        "userName": "Thanh Hải",
+        "userImg": "https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-1/382329342_2437108309830509_4202728373760808170_n.jpg?stp=cp0_dst-jpg_s40x40&_nc_cat=110&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeF5_VjHflqr-bd0KOu0HvFSrbnBYw19o9StucFjDX2j1Bf9cL0KXD5RKhAIIbWaO9d8lUXZMJn__W1Gxz9WUbBx&_nc_ohc=jy-ruoRCuM4Q7kNvgE7cxJ6&_nc_zt=24&_nc_ht=scontent.fdad1-3.fna&_nc_gid=AGCpEA3u-dRMp792Cf_tjIm&oh=00_AYAFZ3ItLCL_fUe5-ARBK_c06MRAFsNxdpb3_9zsG4ZtVA&oe=67377C62",
+        "userId": 1,
+        "admin": true
+      },
+      "rating": 3,
+      "model": "iPhone 15 Pro Max",
+      "id": 3
+    },
+    {
+      "content": "tuyệt vời !!!!!!!!",
+      "userEvaluate": {
+        "userName": "Thanh Hải",
+        "userImg": "https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-1/382329342_2437108309830509_4202728373760808170_n.jpg?stp=cp0_dst-jpg_s40x40&_nc_cat=110&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeF5_VjHflqr-bd0KOu0HvFSrbnBYw19o9StucFjDX2j1Bf9cL0KXD5RKhAIIbWaO9d8lUXZMJn__W1Gxz9WUbBx&_nc_ohc=jy-ruoRCuM4Q7kNvgE7cxJ6&_nc_zt=24&_nc_ht=scontent.fdad1-3.fna&_nc_gid=AGCpEA3u-dRMp792Cf_tjIm&oh=00_AYAFZ3ItLCL_fUe5-ARBK_c06MRAFsNxdpb3_9zsG4ZtVA&oe=67377C62",
+        "userId": 1,
+        "admin": true
+      },
+      "rating": 5,
+      "model": "iPhone 15 Pro Max",
+      "id": 4
+    },
+    {
+      "content": "laptop dỏm",
+      "userEvaluate": {
+        "userName": "Thanh Hải",
+        "userImg": "https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-1/382329342_2437108309830509_4202728373760808170_n.jpg?stp=cp0_dst-jpg_s40x40&_nc_cat=110&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeF5_VjHflqr-bd0KOu0HvFSrbnBYw19o9StucFjDX2j1Bf9cL0KXD5RKhAIIbWaO9d8lUXZMJn__W1Gxz9WUbBx&_nc_ohc=jy-ruoRCuM4Q7kNvgE7cxJ6&_nc_zt=24&_nc_ht=scontent.fdad1-3.fna&_nc_gid=AGCpEA3u-dRMp792Cf_tjIm&oh=00_AYAFZ3ItLCL_fUe5-ARBK_c06MRAFsNxdpb3_9zsG4ZtVA&oe=67377C62",
+        "userId": 1,
+        "admin": true
+      },
+      "rating": 1,
+      "model": "iPad 10.2-inch (2023)",
+      "id": 5
+    },
+    {
+      "content": "quá tốt !!\n",
+      "userEvaluate": {
+        "userName": "Thanh Hải",
+        "userImg": "https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-1/382329342_2437108309830509_4202728373760808170_n.jpg?stp=cp0_dst-jpg_s40x40&_nc_cat=110&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeF5_VjHflqr-bd0KOu0HvFSrbnBYw19o9StucFjDX2j1Bf9cL0KXD5RKhAIIbWaO9d8lUXZMJn__W1Gxz9WUbBx&_nc_ohc=jy-ruoRCuM4Q7kNvgE7cxJ6&_nc_zt=24&_nc_ht=scontent.fdad1-3.fna&_nc_gid=AGCpEA3u-dRMp792Cf_tjIm&oh=00_AYAFZ3ItLCL_fUe5-ARBK_c06MRAFsNxdpb3_9zsG4ZtVA&oe=67377C62",
+        "userId": 1,
+        "admin": true
+      },
+      "rating": 5,
+      "model": "iPhone 15 Pro Max",
+      "id": 6
+    },
+    {
+      "content": "tệ",
+      "userEvaluate": {
+        "userName": "Thanh Hải",
+        "userImg": "https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-1/382329342_2437108309830509_4202728373760808170_n.jpg?stp=cp0_dst-jpg_s40x40&_nc_cat=110&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeF5_VjHflqr-bd0KOu0HvFSrbnBYw19o9StucFjDX2j1Bf9cL0KXD5RKhAIIbWaO9d8lUXZMJn__W1Gxz9WUbBx&_nc_ohc=jy-ruoRCuM4Q7kNvgE7cxJ6&_nc_zt=24&_nc_ht=scontent.fdad1-3.fna&_nc_gid=AGCpEA3u-dRMp792Cf_tjIm&oh=00_AYAFZ3ItLCL_fUe5-ARBK_c06MRAFsNxdpb3_9zsG4ZtVA&oe=67377C62",
+        "userId": 1,
+        "admin": true
+      },
+      "rating": 1,
+      "model": "iPhone 15 Pro Max",
+      "id": 7
+    },
+    {
+      "content": "tuyệt vời",
+      "userEvaluate": {
+        "userName": "user2",
+        "userImg": "https://cdn.tgdd.vn/Products/Images/42/305658/s16/iphone-15-pro-max-gold-1-2-650x650.png",
+        "userId": 2
+      },
+      "rating": 5,
+      "model": "iPhone 15 Pro",
+      "id": 8
+    },
+    {
+      "content": "quá đẹp",
+      "userEvaluate": {
+        "userName": "Thanh Hải",
+        "userImg": "https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-1/382329342_2437108309830509_4202728373760808170_n.jpg?stp=cp0_dst-jpg_s40x40&_nc_cat=110&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeF5_VjHflqr-bd0KOu0HvFSrbnBYw19o9StucFjDX2j1Bf9cL0KXD5RKhAIIbWaO9d8lUXZMJn__W1Gxz9WUbBx&_nc_ohc=jy-ruoRCuM4Q7kNvgE7cxJ6&_nc_zt=24&_nc_ht=scontent.fdad1-3.fna&_nc_gid=AGCpEA3u-dRMp792Cf_tjIm&oh=00_AYAFZ3ItLCL_fUe5-ARBK_c06MRAFsNxdpb3_9zsG4ZtVA&oe=67377C62",
+        "userId": 1,
+        "admin": true
+      },
+      "rating": 5,
+      "model": "iPhone 15",
+      "id": 9
+    },
+    {
+      "content": "1123",
+      "userEvaluate": {},
+      "rating": 5,
+      "model": "iPhone 15 Pro Max",
+      "id": 10
+    },
+    {
+      "content": "312",
+      "userEvaluate": {
+        "userName": "Thanh Hải",
+        "userImg": "https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-1/382329342_2437108309830509_4202728373760808170_n.jpg?stp=cp0_dst-jpg_s40x40&_nc_cat=110&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeF5_VjHflqr-bd0KOu0HvFSrbnBYw19o9StucFjDX2j1Bf9cL0KXD5RKhAIIbWaO9d8lUXZMJn__W1Gxz9WUbBx&_nc_ohc=jy-ruoRCuM4Q7kNvgE7cxJ6&_nc_zt=24&_nc_ht=scontent.fdad1-3.fna&_nc_gid=AGCpEA3u-dRMp792Cf_tjIm&oh=00_AYAFZ3ItLCL_fUe5-ARBK_c06MRAFsNxdpb3_9zsG4ZtVA&oe=67377C62",
+        "userId": 1,
+        "admin": true
+      },
+      "rating": 5,
+      "model": "iPhone 15 Pro Max",
+      "id": 11
     }
   ]
 }

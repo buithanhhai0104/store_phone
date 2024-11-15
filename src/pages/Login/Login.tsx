@@ -1,11 +1,14 @@
 import React, { useState, FormEvent, useContext } from "react";
 import { UserContext } from "../../Context/userContext";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setUser } from "../../redux/userSlice";
 
 interface User {
   id: number;
   username: string;
-  email: string;
+  admin: boolean;
+  img: string;
   password: string;
 }
 
@@ -15,6 +18,7 @@ const Login: React.FC = () => {
   const [message, setMessage] = useState<string>("");
   const userContext = useContext(UserContext);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleLogin = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -26,6 +30,8 @@ const Login: React.FC = () => {
       );
 
       if (user) {
+        const { password, ...userWithoutPassword } = user;
+        dispatch(setUser(userWithoutPassword));
         setMessage("Đăng nhập thành công!");
         if (userContext && userContext.setUser) {
           userContext.setUser(user);

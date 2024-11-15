@@ -67,25 +67,27 @@ const IPhone: React.FC = () => {
           } `}
         >
           <ul className="flex py-[10px] space-x-2 ">
-            {["Tất cả", "iPhone 15", "iPhone 14"].map((version, index) => {
-              return (
-                <li
-                  key={index}
-                  onClick={() => setActiveVersion(version)}
-                  className={`flex justify-center items-center w-[100px] h-[40px] text-[15px] hover:border-b-[1px] hover:text-white ${
-                    activeVersion === version
-                      ? `${
-                          !isTabletOrMobile
-                            ? "border-b-[1px] border-white text-white"
-                            : "bg-slate-500 rounded-xl"
-                        }`
-                      : ""
-                  }`}
-                >
-                  {version}
-                </li>
-              );
-            })}
+            {["Tất cả", "iPhone 16", "iPhone 15", "iPhone 14"].map(
+              (version, index) => {
+                return (
+                  <li
+                    key={index}
+                    onClick={() => setActiveVersion(version)}
+                    className={`flex justify-center items-center w-[100px] h-[40px] text-[15px] hover:border-b-[1px] hover:text-white ${
+                      activeVersion === version
+                        ? `${
+                            !isTabletOrMobile
+                              ? "border-b-[1px] border-white text-white"
+                              : "bg-slate-500 rounded-xl"
+                          }`
+                        : ""
+                    }`}
+                  >
+                    {version}
+                  </li>
+                );
+              }
+            )}
           </ul>
         </div>
         <div

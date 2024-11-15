@@ -8,7 +8,7 @@ import { useMediaQuery } from "react-responsive";
 const Footer: React.FC = () => {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" });
   return (
-    <footer className="bg-black text-gray-400 py-8 mt-[30px]">
+    <footer className="bg-black text-gray-400 py-8 mb-[20px]">
       <div className=" w-[85%] container mx-auto px-4">
         <div className="flex justify-between items-center mb-8">
           <div className="inline-flex gap-[10px] items-center">

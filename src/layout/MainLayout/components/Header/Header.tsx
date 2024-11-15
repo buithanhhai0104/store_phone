@@ -1,18 +1,30 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useState, useEffect, Children } from "react";
 import { useMediaQuery } from "react-responsive";
 import config from "../../../../config";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "../../../../redux/store";
+import Tippy from "@tippyjs/react/headless";
+// icon
 import { MdOutlineShoppingBag } from "react-icons/md";
 import { CiSearch } from "react-icons/ci";
 import { HiOutlineXMark } from "react-icons/hi2";
-import { UserContext } from "../../../../Context/userContext";
-import { useSelector } from "react-redux";
-import { RootState } from "../../../../redux/store";
 import { IoReorderThree } from "react-icons/io5";
+import { TiAdjustContrast } from "react-icons/ti";
+import { BsTranslate } from "react-icons/bs";
+import { FcPrevious } from "react-icons/fc";
+import { clearUser } from "../../../../redux/userSlice";
+
 interface iProduct {
   id: number;
   name: string;
   to?: string;
+}
+
+interface ICustomListItem {
+  title: string;
+  icon?: JSX.Element;
+  children?: { title: string }[];
 }
 
 const productList: iProduct[] = [
@@ -26,11 +38,49 @@ const productList: iProduct[] = [
   { id: 8, name: "TopCare" },
 ];
 
+const customList = [
+  {
+    title: "Giao diện",
+    icon: <TiAdjustContrast />,
+    children: [
+      {
+        title: "Sáng",
+      },
+      {
+        title: "Tối",
+      },
+    ],
+  },
+  {
+    title: "Ngôn ngữ",
+    icon: <BsTranslate />,
+    children: [
+      {
+        title: "Tiếng việt",
+      },
+      {
+        title: "English",
+      },
+    ],
+  },
+  {
+    title: "Đăng xuất",
+    icon: <FcPrevious />,
+  },
+];
+
 const Header: React.FC = () => {
   const [showSearch, setShowSearch] = useState<boolean>(false);
-  const userContext = useContext(UserContext);
+  const user = useSelector((state: RootState) => state.user.user);
   const [activeNavMobile, setActiveNavMobile] = useState<boolean>(false);
+  const [showCustomList, setShowCustomList] =
+    useState<ICustomListItem[]>(customList);
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" });
+  const cartQuantity = useSelector((state: RootState) => state.cart.items);
+  const [theme, setTheme] = useState<boolean>(false);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const handleSearch = () => {
     setShowSearch(true);
   };
@@ -54,7 +104,25 @@ const Header: React.FC = () => {
     setActiveNavMobile((prev) => !prev);
   };
 
-  const cartQuantity = useSelector((state: RootState) => state.cart.items);
+  const handleLogout = () => {
+    if (user) {
+      dispatch(clearUser());
+      navigate("/");
+    }
+  };
+
+  const handleItemClick = (item: ICustomListItem) => {
+    if (item.title === "Đăng xuất") {
+      handleLogout();
+      return;
+    } else if (item.children) {
+      setShowCustomList(item.children);
+    }
+    if (item.title === "Sáng" || item.title === "Tối") {
+      setTheme((prev) => !prev);
+    }
+  };
+  console.log(theme);
   return (
     <div className={showSearch ? "w-full h-[100vh] bg-screen-cover z-20" : ""}>
       <div className="h-[60px] flex bg-[#101010]">
@@ -122,9 +190,7 @@ const Header: React.FC = () => {
                       ? "w-[40px] h-[40px]"
                       : "w-[30px] h-[30px]"
                   }  bg-[#2F3033] rounded-full cursor-pointer hover:bg-[#5e5e60]`}
-                  to={
-                    !userContext?.user ? config.routes.cart : config.routes.cart
-                  }
+                  to={!user ? config.routes.cart : config.routes.cart}
                 >
                   <MdOutlineShoppingBag />
                   {cartQuantity.length !== 0 ? (
@@ -133,6 +199,51 @@ const Header: React.FC = () => {
                     </div>
                   ) : null}
                 </Link>
+                {!user ? (
+                  <Link
+                    className="bg-custom-gradient p-[5px] rounded-lg"
+                    to={config.routes.login}
+                  >
+                    Đăng nhập
+                  </Link>
+                ) : (
+                  <Tippy
+                    interactive={true}
+                    delay={[0, 200]}
+                    render={(attrs) => (
+                      <div
+                        className="w-[180px]  bg-[#3e3e3f] p-[10px] flex  gap-[10px] flex-col justify-center items-center rounded-xl text-[#ffff] "
+                        {...attrs}
+                        tabIndex={1}
+                      >
+                        {user.admin ? (
+                          <Link
+                            className="flex w-full border-[1px] text-[18px] justify-center items-center gap-[20px] p-[10px] rounded-xl hover:bg-[#1f1f1f]"
+                            to={config.routes.addproduct}
+                          >
+                            Admin
+                          </Link>
+                        ) : null}
+                        {showCustomList.map((item, index) => (
+                          <button
+                            key={index}
+                            onClick={() => handleItemClick(item)}
+                            className="flex w-full border-[1px] text-[18px] items-center gap-[20px] p-[10px] rounded-xl hover:bg-[#1f1f1f]"
+                          >
+                            <span className="text-[20px]">{item.icon}</span>
+                            {item.title}
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                  >
+                    <img
+                      className="w-[40px] h-[40px] rounded-full"
+                      src={user.img}
+                      alt={user.username}
+                    />
+                  </Tippy>
+                )}
               </div>
             </>
           ) : (
