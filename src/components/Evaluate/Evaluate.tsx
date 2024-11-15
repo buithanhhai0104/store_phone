@@ -1,4 +1,4 @@
-import React, { startTransition, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
 import { RootState } from "../../redux/store";
 import EvaluateItem from "./EvaluateItem";
@@ -41,7 +41,7 @@ const Evaluate: React.FC<EvaluateProps> = ({ model }) => {
     { star: 5 },
   ];
 
-  const fetchEvaluate = async () => {
+  const fetchEvaluate = useCallback(async () => {
     try {
       if (model) {
         const response = await fetch(
@@ -53,24 +53,24 @@ const Evaluate: React.FC<EvaluateProps> = ({ model }) => {
     } catch (error) {
       console.error("Không thể tải bình luận:", error);
     }
-  };
+  }, [model]);
 
   useEffect(() => {
     fetchEvaluate();
-  }, [model]);
+  }, [fetchEvaluate]);
 
-  const calculateAverageRating = () => {
+  const calculateAverageRating = useCallback(() => {
     if (evaluateData.length === 0) return 0;
     const totalRating = evaluateData.reduce(
       (sum, evaluate) => sum + evaluate.rating,
       0
     );
     return totalRating / evaluateData.length;
-  };
+  }, [evaluateData]);
 
   useEffect(() => {
     setAverageRating(calculateAverageRating());
-  }, [evaluateData]);
+  }, [calculateAverageRating]);
 
   const handleAddEvaluate = async () => {
     if (selectReview === 0 || valueEvaluate === "") {
@@ -99,7 +99,7 @@ const Evaluate: React.FC<EvaluateProps> = ({ model }) => {
       setSelectReview(0);
       fetchEvaluate();
     } catch (error) {
-      console.error("Không thể thêm bình luận:", error);
+      console.error("Không thể thêm đánh giá:", error);
     }
   };
 

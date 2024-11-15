@@ -1,7 +1,6 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback } from "react";
 import { IoIosSend } from "react-icons/io";
 import BoxComment from "./BoxComment/BoxComment";
-import { UserContext } from "../../Context/userContext";
 import { useNavigate } from "react-router-dom";
 import config from "../../config";
 import { useSelector } from "react-redux";
@@ -39,8 +38,8 @@ const Comments: React.FC<ICommentProps> = ({ model }) => {
   const user = useSelector((state: RootState) => state.user.user);
   const navigate = useNavigate();
 
-  // Hàm lấy bình luận
-  const fetchComments = async () => {
+  // Hàm render bình luận
+  const fetchComments = useCallback(async () => {
     try {
       if (model) {
         const response = await fetch(
@@ -52,11 +51,11 @@ const Comments: React.FC<ICommentProps> = ({ model }) => {
     } catch (error) {
       console.error("Không thể tải bình luận:", error);
     }
-  };
+  }, [model]);
 
   useEffect(() => {
     fetchComments();
-  }, [model]);
+  }, [fetchComments]);
 
   const handleAddComment = async () => {
     if (user) {

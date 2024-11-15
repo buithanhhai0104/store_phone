@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, memo } from "react";
 import { TiMessages } from "react-icons/ti";
 import { RootState } from "../../../redux/store";
 import { useSelector } from "react-redux";
@@ -134,4 +134,4 @@ const BoxComment: React.FC<IBoxCommentProps> = ({
   );
 };
 
-export default BoxComment;
+export default memo(BoxComment);

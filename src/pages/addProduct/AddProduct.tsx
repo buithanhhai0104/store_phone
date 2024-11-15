@@ -1,18 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { FaXmark } from "react-icons/fa6";
 import { MouseEventHandler } from "react";
 const AddProductForm = () => {
-  // color
-  const [chooseColor, setChooseColor] = useState<
-    {
-      color_name: string;
-      color_id: string;
-    }[]
-  >([]);
-
-  // version
-
-  const [valueVersion, setValueVersion] = useState<string>("");
   const optionColors = [
     {
       color_name: "Đỏ",
@@ -39,15 +28,19 @@ const AddProductForm = () => {
       color_id: "#FFA500",
     },
   ];
+  const [chooseColor, setChooseColor] = useState<
+    {
+      color_name: string;
+      color_id: string;
+    }[]
+  >([]);
   const [chooseVersion, setChooseVersion] = useState<string[]>([]);
   const [productName, setProductName] = useState<string>("");
   const [productPrice, setProductPrice] = useState<string>("");
   const [category, setCategory] = useState<string>("");
   const [productLine, setProductLine] = useState<string>("");
   const [productImg, setProductImg] = useState<string>("");
-  const [productColors, setProductColors] = useState<
-    { color_id: string; color_name: string; color_img: string }[]
-  >([]);
+  const [valueVersion, setValueVersion] = useState<string>("");
 
   const AddProduct = async () => {
     const addProduct = {
@@ -96,7 +89,7 @@ const AddProductForm = () => {
         prev.filter((item) => item.color_name !== color_name)
       );
     };
-
+  // Thông tin sản phẩm
   const handleDeleteVersion =
     (color_name: string): MouseEventHandler<HTMLSpanElement> =>
     (event) => {
@@ -108,7 +101,6 @@ const AddProductForm = () => {
         Thêm sản phẩm mới
       </h1>
 
-      {/* Product Information */}
       <section className="mb-6">
         <h2 className="text-lg font-semibold text-gray-700 mb-2">
           Thông tin sản phẩm
@@ -125,7 +117,7 @@ const AddProductForm = () => {
         </label>
       </section>
 
-      {/* Category and Brand */}
+      {/* Dòng sản phẩm */}
       <section className="mb-6">
         <h2 className="text-lg font-semibold text-gray-700 mb-2">
           Danh mục và Thương hiệu
@@ -145,7 +137,7 @@ const AddProductForm = () => {
         </label>
       </section>
 
-      {/* Pricing and Stock */}
+      {/* Giá bán  */}
       <section className="mb-6">
         <h2 className="text-lg font-semibold text-gray-700 mb-2">Giá bán</h2>
         <label className="block mb-4">
@@ -160,7 +152,7 @@ const AddProductForm = () => {
         </label>
       </section>
 
-      {/* Image Upload */}
+      {/*Hình ảnh sản phẩm  */}
       <section className="mb-6">
         <h2 className="text-lg font-semibold text-gray-700 mb-2">
           Ảnh sản phẩm
@@ -179,8 +171,8 @@ const AddProductForm = () => {
           {"Xem trước ảnh tại đây"}
         </div>
       </section>
+      {/* chi tiết  sản phẩm */}
 
-      {/* Additional Details */}
       <section className="mb-6">
         <h2 className="text-lg font-semibold text-gray-700 mb-2">
           Chi tiết và Thuộc tính

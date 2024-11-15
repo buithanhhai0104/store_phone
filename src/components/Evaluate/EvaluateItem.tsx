@@ -1,4 +1,4 @@
-import React from "react";
+import React, { memo } from "react";
 import { FaStar } from "react-icons/fa";
 
 interface IuserEvaluate {
@@ -60,4 +60,4 @@ const EvaluateItem: React.FC<IEvaluateItemsProps> = ({ evaluateData }) => {
   );
 };
 
-export default EvaluateItem;
+export default memo(EvaluateItem);
