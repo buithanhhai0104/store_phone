@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { FaXmark } from "react-icons/fa6";
 import { MouseEventHandler } from "react";
+import { fetchaddproduct } from "../../service/addProduct";
+import { v4 as uuidv4 } from "uuid";
 const AddProductForm = () => {
   const optionColors = [
     {
@@ -44,6 +46,8 @@ const AddProductForm = () => {
 
   const AddProduct = async () => {
     const addProduct = {
+      id: uuidv4(),
+      category: category,
       model: productName,
       version: productLine,
       colors: chooseColor,
@@ -54,15 +58,17 @@ const AddProductForm = () => {
       },
     };
 
-    try {
-      fetch(`http://localhost:3001/${category}`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(addProduct),
-      });
-    } catch (error) {
-      console.error("Không thể thêm sản phẩm:", error);
-    }
+    await fetchaddproduct(addProduct);
+
+    // try {
+    //   fetch(`http://localhost:3001/products`, {
+    //     method: "POST",
+    //     headers: { "Content-Type": "application/json" },
+    //     body: JSON.stringify(addProduct),
+    //   });
+    // } catch (error) {
+    //   console.error("Không thể thêm sản phẩm:", error);
+    // }
   };
 
   // add
@@ -129,10 +135,10 @@ const AddProductForm = () => {
             onChange={(e) => setCategory(e.target.value)}
             className="mt-1 w-full p-2 border border-gray-300 rounded"
           >
-            <option value="iphones">iPhone</option>
-            <option value="macbooks">Macbook</option>
-            <option value="ipads">iPad</option>
-            <option value="watches">Apple Watch</option>
+            <option value="iphone">iPhone</option>
+            <option value="macbook">Macbook</option>
+            <option value="ipad">iPad</option>
+            <option value="watche">Apple Watch</option>
           </select>
         </label>
       </section>

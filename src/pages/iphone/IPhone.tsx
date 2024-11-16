@@ -3,6 +3,7 @@ import Carousel from "../../components/carousel/Carousel";
 import { FaApple } from "react-icons/fa6";
 import ProductItem from "../../components/ProductItem/ProductItem";
 import { useMediaQuery } from "react-responsive";
+
 const IPhone: React.FC = () => {
   const [dataCarolsel, setDataCarousel] = useState<any[]>([]);
   const [dataIphones, setDataIphones] = useState<any[]>([]);
@@ -15,13 +16,13 @@ const IPhone: React.FC = () => {
     });
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:3001/carousel_iphones");
+        const response = await fetch("http://localhost:3001/carousel");
 
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
         const result = await response.json();
-        setDataCarousel(result);
+        setDataCarousel(result.carouselhome);
       } catch (error) {}
     };
 
@@ -32,8 +33,10 @@ const IPhone: React.FC = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `http://localhost:3001/iphones${
-            activeVersion !== "Tất cả" ? `?version=${activeVersion}` : ""
+          `http://localhost:3001/products${
+            activeVersion !== "Tất cả"
+              ? `?version=${activeVersion}`
+              : `?category=iphone`
           }`
         );
         if (!response.ok) {

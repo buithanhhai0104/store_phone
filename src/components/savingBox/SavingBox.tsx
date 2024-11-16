@@ -6,11 +6,15 @@ import { addToCart } from "../../redux/cartSlice";
 import { v4 as uuidv4 } from "uuid";
 
 type SavingBoxProps = {
-  dataDetail: {
-    id: number;
-    price_vnd: string;
-    model: string;
-  } | null;
+  dataDetail:
+    | {
+        postProduct: {
+          id: number;
+          price_vnd: string;
+          model: string;
+        };
+      }
+    | undefined;
   productColor: string;
   productImg: string;
   productVersion: string;
@@ -40,8 +44,8 @@ const SavingBox: React.FC<SavingBoxProps> = ({
           img: productImg,
           version: productVersion,
           color: productColor,
-          model: dataDetail?.model,
-          price: dataDetail?.price_vnd,
+          model: dataDetail?.postProduct.model,
+          price: dataDetail?.postProduct.price_vnd,
         })
       );
     }
@@ -58,7 +62,9 @@ const SavingBox: React.FC<SavingBoxProps> = ({
       <div className="flex justify-between bg-promotion rounded-2xl text-[#ffff] py-[15px] px-[10px] ">
         <div className="flex flex-col">
           <b className="text-[17px] font-normal">Online Giá Rẻ Quá</b>
-          <strong className="text-[24px]">{dataDetail?.price_vnd}</strong>
+          <strong className="text-[24px]">
+            {dataDetail?.postProduct.price_vnd}
+          </strong>
         </div>
         <div className="flex flex-col text-[14px] font-semibold">
           <span>Kết thúc vào</span>
@@ -93,7 +99,7 @@ const SavingBox: React.FC<SavingBoxProps> = ({
             onClick={handleAddToCart}
             className="flex w-full justify-center items-center text-[#ffff] bg-[#d43232] p-[20px] rounded-xl"
           >
-            MUA NGAY VỚI GIÁ {dataDetail?.price_vnd}
+            MUA NGAY VỚI GIÁ {dataDetail?.postProduct.price_vnd}
           </button>
           <div className="flex gap-[10px] text-[#ffff]">
             <Link

@@ -5,12 +5,14 @@ import { FaArrowRight } from "react-icons/fa";
 
 type DataPhoneProps = {
   dataPhone: {
-    id: number;
-    model: string;
-    price_usd: number;
-    price_vnd: string;
-    image: string;
-    promotion_online: boolean;
+    postProduct: {
+      id: number;
+      model: string;
+      price_usd: number;
+      price_vnd: string;
+      image: string;
+      promotion_online: boolean;
+    };
   }[];
 };
 
@@ -49,19 +51,21 @@ const SlideProduct: React.FC<DataPhoneProps> = ({ dataPhone }) => {
         {dataPhone.map((item) => {
           return (
             <Link
-              to={`/:${item.model}`}
-              key={item.id}
+              to={`/:${item.postProduct.id}`}
+              key={item.postProduct.id}
               className="flex items-center flex-col w-[280px] flex-shrink-0 bg-[#2b2a2a] py-[30px]  rounded-3xl hover:shadow-product m-[4px]"
             >
               <img
                 className="w-[250px] h-[250px]"
-                src={item.image}
-                alt={item.model}
+                src={item.postProduct.image}
+                alt={item.postProduct.model}
               />
-              <h3 className="text-[#ffff] my-[20px]">{item.model}</h3>
-              <span className="text-[#ffff]">{item.price_vnd}</span>
+              <h3 className="text-[#ffff] my-[20px]">
+                {item.postProduct.model}
+              </h3>
+              <span className="text-[#ffff]">{item.postProduct.price_vnd}</span>
               <span className="text-[#ff9f00]">
-                {item.promotion_online ? "Online giá rẻ quá" : ""}
+                {item.postProduct.promotion_online ? "Online giá rẻ quá" : ""}
               </span>
             </Link>
           );

@@ -15,13 +15,13 @@ const Mac: React.FC = () => {
     });
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:3001/carousel_macbooks");
+        const response = await fetch("http://localhost:3001/carousel");
 
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
         const result = await response.json();
-        setDataCarousel(result);
+        setDataCarousel(result.carousel_macbooks);
       } catch (error) {}
     };
 
@@ -32,8 +32,10 @@ const Mac: React.FC = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `http://localhost:3001/macbooks${
-            activeVersion !== "Tất cả" ? `?version=${activeVersion}` : ""
+          `http://localhost:3001/products${
+            activeVersion !== "Tất cả"
+              ? `?version=${activeVersion}`
+              : "?category=macbook"
           }`
         );
         if (!response.ok) {

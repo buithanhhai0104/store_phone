@@ -6,6 +6,7 @@ import { FaArrowRight } from "react-icons/fa";
 type CarouselProps = {
   dataImg: { id: number; carousel_img: string }[];
 };
+
 const Carousel: React.FC<CarouselProps> = ({ dataImg }) => {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const [currentIndex, setCurrentIndex] = useState<number>(0);

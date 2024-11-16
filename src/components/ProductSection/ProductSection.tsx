@@ -10,20 +10,22 @@ type Configuration = {
   screen: string;
   chip: string;
   ram: string;
-  storage: string;
+  storage: string[];
   camera: string;
   battery: string;
 };
 
 interface IProductData {
-  id: number;
-  model: string;
-  price_usd: number;
-  price_vnd: string;
-  image: string;
-  promotion_online: boolean;
-  version: string;
-  configuration: Configuration;
+  postProduct: {
+    id: number;
+    model: string;
+    price_usd: number;
+    price_vnd: string;
+    image: string;
+    promotion_online: boolean;
+    version: string;
+    configuration: Configuration;
+  };
 }
 
 interface IProductSectionProps {

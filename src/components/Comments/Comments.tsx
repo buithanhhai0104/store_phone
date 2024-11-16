@@ -7,7 +7,7 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
 
 interface ICommentProps {
-  model: string | undefined;
+  id: number | undefined;
 }
 
 interface Reply {
@@ -31,7 +31,7 @@ interface Comment {
   content: string;
 }
 
-const Comments: React.FC<ICommentProps> = ({ model }) => {
+const Comments: React.FC<ICommentProps> = ({ id }) => {
   const [comments, setComments] = useState<Comment[]>([]);
   const [newComment, setNewComment] = useState<string>("");
   const [feedbacks, setFeedbacks] = useState<string>("");
@@ -41,9 +41,9 @@ const Comments: React.FC<ICommentProps> = ({ model }) => {
   // Hàm render bình luận
   const fetchComments = useCallback(async () => {
     try {
-      if (model) {
+      if (id) {
         const response = await fetch(
-          `http://localhost:3001/comments?productId=${model}`
+          `http://localhost:3001/comments?productId=${id}`
         );
         const data = await response.json();
         setComments(data);
@@ -51,7 +51,7 @@ const Comments: React.FC<ICommentProps> = ({ model }) => {
     } catch (error) {
       console.error("Không thể tải bình luận:", error);
     }
-  }, [model]);
+  }, [id]);
 
   useEffect(() => {
     fetchComments();
@@ -59,10 +59,10 @@ const Comments: React.FC<ICommentProps> = ({ model }) => {
 
   const handleAddComment = async () => {
     if (user) {
-      if (newComment.trim() === "" || !model) return;
+      if (newComment.trim() === "" || !id) return;
 
       const commentData = {
-        productId: model,
+        productId: id,
         userComment: {
           userId: user.id,
           userName: user.username,

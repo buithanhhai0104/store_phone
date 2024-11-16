@@ -15,13 +15,13 @@ const Watch: React.FC = () => {
     });
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:3001/carousel_watches");
+        const response = await fetch("http://localhost:3001/carousel");
 
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
         const result = await response.json();
-        setDataCarousel(result);
+        setDataCarousel(result.carousel_watches);
       } catch (error) {}
     };
 
@@ -32,8 +32,10 @@ const Watch: React.FC = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `http://localhost:3001/watches${
-            activeVersion !== "Tất cả" ? `?version=${activeVersion}` : ""
+          `http://localhost:3001/products${
+            activeVersion !== "Tất cả"
+              ? `?version=${activeVersion}`
+              : "?category=watch"
           }`
         );
         if (!response.ok) {

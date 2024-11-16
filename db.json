@@ -1,8 +1,9 @@
 {
-  "iphones": [
+  "products": [
     {
       "id": 1,
       "version": "iPhone 15",
+      "category": "iphone",
       "model": "iPhone 15 Pro Max",
       "colors": [
         {
@@ -40,6 +41,7 @@
     {
       "id": 2,
       "version": "iPhone 15",
+      "category": "iphone",
       "model": "iPhone 15 Pro",
       "colors": [
         {
@@ -77,6 +79,7 @@
     {
       "id": 3,
       "version": "iPhone 15",
+      "category": "iphone",
       "model": "iPhone 15",
       "colors": [
         {
@@ -114,6 +117,7 @@
     {
       "id": 4,
       "version": "iPhone 15",
+      "category": "iphone",
       "model": "iPhone 15 Plus",
       "colors": [
         {
@@ -151,6 +155,7 @@
     {
       "id": 5,
       "version": "iPhone 14",
+      "category": "iphone",
       "model": "iPhone 14 Pro Max",
       "colors": [
         {
@@ -188,6 +193,7 @@
     {
       "id": 6,
       "version": "iPhone 14",
+      "category": "iphone",
       "model": "iPhone 14",
       "colors": [
         {
@@ -225,6 +231,7 @@
     {
       "id": 7,
       "version": "iPhone 14",
+      "category": "iphone",
       "model": "iPhone 14",
       "colors": [
         {
@@ -262,6 +269,7 @@
     {
       "id": 8,
       "version": "iPhone 14",
+      "category": "iphone",
       "model": "iPhone 14",
       "colors": [
         {
@@ -299,6 +307,7 @@
     {
       "id": 9,
       "version": "iPhone 14",
+      "category": "iphone",
       "model": "iPhone 14",
       "colors": [
         {
@@ -336,6 +345,7 @@
     {
       "id": 10,
       "version": "iPhone 14",
+      "category": "iphone",
       "model": "iPhone 14",
       "colors": [
         {
@@ -373,6 +383,7 @@
     {
       "id": 11,
       "version": "iPhone 14",
+      "category": "iphone",
       "model": "iPhone 14",
       "colors": [
         {
@@ -408,6 +419,7 @@
       "image": "https://cdn.tgdd.vn/Products/Images/42/240259/s16/iphone-14-purple-650x650.png"
     },
     {
+      "category": "iphone",
       "model": "iPhone 16 Pro Max 256GB",
       "version": "iPhone 16",
       "colors": [
@@ -436,6 +448,7 @@
       "id": 12
     },
     {
+      "category": "iphone",
       "model": "iPhone 16 Plus 128GB",
       "version": "iPhone 16",
       "colors": [
@@ -462,12 +475,11 @@
         ]
       },
       "id": 13
-    }
-  ],
-  "macbooks": [
+    },
     {
-      "id": 1,
+      "id": 14,
       "version": "Macbook Pro",
+      "category": "macbook",
       "model": "MacBook Pro 16-inch (2023)",
       "colors": [
         {
@@ -498,8 +510,9 @@
       "image": "https://cdn.tgdd.vn/Products/Images/44/318233/s16/mac16-topzone-silver-650x650.png"
     },
     {
-      "id": 2,
+      "id": 15,
       "version": "Macbook Pro",
+      "category": "macbook",
       "model": "MacBook Pro 14-inch (2023)",
       "colors": [
         {
@@ -530,8 +543,9 @@
       "image": "https://cdn.tgdd.vn/Products/Images/44/309017/s16/mac-air-15-midnight-new-650x650.png"
     },
     {
-      "id": 3,
+      "id": 16,
       "version": "Macbook Air",
+      "category": "macbook",
       "model": "MacBook Air 13-inch (M2, 2022)",
       "colors": [
         {
@@ -567,8 +581,9 @@
       "image": "https://cdn.tgdd.vn/Products/Images/44/282847/s16/mac-air-m2-13-vang-new-650x650.png"
     },
     {
-      "id": 4,
+      "id": 17,
       "version": "Macbook Air",
+      "category": "macbook",
       "model": "MacBook Air 15-inch (M2, 2023)",
       "colors": [
         {
@@ -604,8 +619,9 @@
       "image": "https://cdn.tgdd.vn/Products/Images/44/309016/s16/mac-air-15-xam-new-650x650.png"
     },
     {
-      "id": 5,
+      "id": 18,
       "version": "Macbook Air",
+      "category": "macbook",
       "model": "MacBook Air 13-inch (M2, 2022)",
       "colors": [
         {
@@ -641,8 +657,9 @@
       "image": "https://cdn.tgdd.vn/Products/Images/44/282847/s16/mac-air-m2-13-vang-new-650x650.png"
     },
     {
-      "id": 6,
+      "id": 19,
       "version": "Macbook Pro",
+      "category": "macbook",
       "model": "MacBook Pro 14-inch (2023)",
       "colors": [
         {
@@ -673,8 +690,9 @@
       "image": "https://cdn.tgdd.vn/Products/Images/44/309017/s16/mac-air-15-midnight-new-650x650.png"
     },
     {
-      "id": 7,
+      "id": 20,
       "version": "Macbook Pro",
+      "category": "macbook",
       "model": "MacBook Pro 14-inch (2023)",
       "colors": [
         {
@@ -705,6 +723,7 @@
       "image": "https://cdn.tgdd.vn/Products/Images/44/309017/s16/mac-air-15-midnight-new-650x650.png"
     },
     {
+      "category": "macbook",
       "model": "MacBook Air 13 inch M1",
       "version": "MacBook Air",
       "colors": [
@@ -730,14 +749,13 @@
           "1TB"
         ]
       },
-      "id": 8
-    }
-  ],
-  "ipads": [
+      "id": 21
+    },
     {
-      "id": 1,
+      "id": 22,
       "version": "iPad Pro",
       "model": "iPad Pro 12.9-inch (2023)",
+      "category": "ipad",
       "colors": [
         {
           "color_id": "#a3a3a3",
@@ -766,9 +784,10 @@
       "image": "https://cdn.tgdd.vn/Products/Images/522/325513/s16/ipad-pro-11-inch-wifi-black-thumb-650x650.png"
     },
     {
-      "id": 2,
+      "id": 23,
       "version": "iPad Air",
       "model": "iPad Air 10.9-inch (2023)",
+      "category": "ipad",
       "colors": [
         {
           "color_id": "#a3a3a3",
@@ -797,9 +816,10 @@
       "image": "https://cdn.tgdd.vn/Products/Images/522/325501/s16/ipad-air-m2-11-inch-wifi-gray-650x650.png"
     },
     {
-      "id": 3,
+      "id": 24,
       "version": "iPad Mini",
       "model": "iPad Mini 8.3-inch (2022)",
+      "category": "ipad",
       "colors": [
         {
           "color_id": "#a3a3a3",
@@ -828,9 +848,10 @@
       "image": "https://cdn.tgdd.vn/Products/Images/522/248091/s16/ipad-mini-6-startlight-1-650x650.png"
     },
     {
-      "id": 4,
+      "id": 25,
       "version": "iPad Air",
       "model": "iPad 10.2-inch (2023)",
+      "category": "ipad",
       "colors": [
         {
           "color_id": "#a3a3a3",
@@ -859,9 +880,10 @@
       "image": "https://cdn.tgdd.vn/Products/Images/522/293543/s16/iPad-gen-10-pink-1-650x650.png"
     },
     {
-      "id": 5,
+      "id": 26,
       "version": "iPad Pro",
       "model": "iPad Pro 12.9-inch (2023)",
+      "category": "ipad",
       "colors": [
         {
           "color_id": "#a3a3a3",
@@ -890,9 +912,10 @@
       "image": "https://cdn.tgdd.vn/Products/Images/522/325513/s16/ipad-pro-11-inch-wifi-black-thumb-650x650.png"
     },
     {
-      "id": 6,
+      "id": 27,
       "version": "iPad Pro",
       "model": "iPad Pro 12.9-inch (2023)",
+      "category": "ipad",
       "colors": [
         {
           "color_id": "#a3a3a3",
@@ -921,9 +944,10 @@
       "image": "https://cdn.tgdd.vn/Products/Images/522/325513/s16/ipad-pro-11-inch-wifi-black-thumb-650x650.png"
     },
     {
-      "id": 7,
+      "id": 28,
       "version": "iPad Mini",
       "model": "iPad Mini 8.3-inch (2022)",
+      "category": "ipad",
       "colors": [
         {
           "color_id": "#a3a3a3",
@@ -952,9 +976,10 @@
       "image": "https://cdn.tgdd.vn/Products/Images/522/248091/s16/ipad-mini-6-startlight-1-650x650.png"
     },
     {
-      "id": 8,
+      "id": 29,
       "version": "iPad Mini",
       "model": "iPad Mini 8.3-inch (2022)",
+      "category": "ipad",
       "colors": [
         {
           "color_id": "#a3a3a3",
@@ -984,6 +1009,7 @@
     },
     {
       "model": "iPad Air 6 M2 11 inch WiFi",
+      "category": "ipad",
       "version": "iPad Air",
       "colors": [
         {
@@ -1008,12 +1034,11 @@
           "512GB"
         ]
       },
-      "id": 9
-    }
-  ],
-  "watches": [
+      "id": 30
+    },
     {
-      "id": 1,
+      "id": 31,
+      "category": "watch",
       "version": "Apple Watch Ultra",
       "model": "Apple Watch Ultra (2023)",
       "colors": [
@@ -1042,7 +1067,8 @@
       "image": "https://cdn.tgdd.vn/Products/Images/7077/329155/s16/apple-watch-s10-hong-nhat-tn-650x650.png"
     },
     {
-      "id": 2,
+      "id": 32,
+      "category": "watch",
       "version": "Apple Watch Series 8",
       "model": "Apple Watch Series 8 (2023)",
       "colors": [
@@ -1071,7 +1097,8 @@
       "image": "https://cdn.tgdd.vn/Products/Images/7077/314696/s16/apple-watch-s9-lte-vien-thep-khong-gi-day-thep-1-1-650x650.png"
     },
     {
-      "id": 3,
+      "id": 33,
+      "category": "watch",
       "version": "Apple Watch SE",
       "model": "Apple Watch SE (2022)",
       "colors": [
@@ -1100,7 +1127,8 @@
       "image": "https://cdn.tgdd.vn/Products/Images/7077/314714/s16/apple-watch-ultra-lte-49mm-vien-titanium-day-trail-xanh-650x650.png"
     },
     {
-      "id": 4,
+      "id": 34,
+      "category": "watch",
       "version": "Apple Watch Series 7",
       "model": "Apple Watch Series 7 (2021)",
       "colors": [
@@ -1129,7 +1157,8 @@
       "image": "https://cdn.tgdd.vn/Products/Images/7077/316002/s16/apple-watch-s9-vien-nhom-day-silicone-do-tb-1-650x650.png"
     },
     {
-      "id": 5,
+      "id": 35,
+      "category": "watch",
       "version": "Apple Watch SE",
       "model": "Apple Watch SE (2022)",
       "colors": [
@@ -1158,7 +1187,8 @@
       "image": "https://cdn.tgdd.vn/Products/Images/7077/315998/s16/apple-watch-s9-vien-nhom-day-vai-xanh-den-tb-1-1-650x650.png"
     },
     {
-      "id": 6,
+      "id": 36,
+      "category": "watch",
       "version": "Apple Watch Series 8",
       "model": "Apple Watch Series 8 (2023)",
       "colors": [
@@ -1184,10 +1214,11 @@
       },
       "price_vnd": "9.976.000đ",
       "promotion_online": true,
-      "image": "https://cdn.tgdd.vn/Products/Images/7077/316003/s16/t%C3%A1ch%20n%E1%BB%81n%20site%2016%20(1)-650x650.png"
+      "image": "https://cdn.tgdd.vn/Products/Images/44/322616/s16/macbook-air-15-inch-m3-2024-8-650x650.jpg"
     },
     {
-      "id": 7,
+      "id": 37,
+      "category": "watch",
       "version": "Apple Watch SE",
       "model": "Apple Watch SE (2022)",
       "colors": [
@@ -1214,81 +1245,99 @@
       "price_vnd": "5.976.000đ",
       "promotion_online": true,
       "image": "https://cdn.tgdd.vn/Products/Images/7077/315998/s16/apple-watch-s9-vien-nhom-day-vai-xanh-den-tb-1-1-650x650.png"
+    },
+    {
+      "category": "macbook",
+      "model": "MacBook Air 15 inch M3",
+      "version": "MacBook Air",
+      "colors": [],
+      "image": "https://cdn.tgdd.vn/Products/Images/44/322616/s16/macbook-air-15-inch-m3-2024-bac-650x650.png",
+      "price_vnd": "31.090.000đ",
+      "configuration": {
+        "storage": [
+          "256GB",
+          "512GB",
+          "1TB"
+        ]
+      },
+      "id": 38
     }
   ],
-  "carouselhome": [
-    {
-      "id": 1,
-      "carousel_img": "https://cdnv2.tgdd.vn/mwg-static/topzone/Banner/30/51/30512b9286aa60273933891bcfc2fb2d.jpg"
-    },
-    {
-      "id": 2,
-      "carousel_img": "https://cdnv2.tgdd.vn/mwg-static/topzone/Banner/b4/c9/b4c9b3e71872b0d1a7d58b95a5a0be20.png"
-    },
-    {
-      "id": 3,
-      "carousel_img": "https://cdnv2.tgdd.vn/mwg-static/topzone/Banner/95/1f/951fcf455fabd314d19e23c4b355dc02.png"
-    },
-    {
-      "id": 4,
-      "carousel_img": "https://cdnv2.tgdd.vn/mwg-static/topzone/Banner/b6/27/b6274bafb470e9e998add0c2ac0706df.jpg"
-    },
-    {
-      "id": 5,
-      "carousel_img": "https://cdnv2.tgdd.vn/mwg-static/topzone/Banner/87/31/8731e0f352ab9ab88e42ba114387a0d5.jpg"
-    }
-  ],
-  "carousel_iphones": [
-    {
-      "id": 1,
-      "carousel_img": "https://cdnv2.tgdd.vn/mwg-static/topzone/Banner/04/1d/041dff8d9810b558f0f05b6134816bf2.png"
-    },
-    {
-      "id": 2,
-      "carousel_img": "https://cdnv2.tgdd.vn/mwg-static/topzone/Banner/4e/9d/4e9daa0d03c9661cbbaa060b60ffb062.png"
-    },
-    {
-      "id": 3,
-      "carousel_img": "https://cdnv2.tgdd.vn/mwg-static/topzone/Banner/aa/c2/aac28c02bcbd991ef1deefb739e6b2e4.png"
-    }
-  ],
-  "carousel_macbooks": [
-    {
-      "id": 1,
-      "carousel_img": "https://cdnv2.tgdd.vn/mwg-static/topzone/Banner/52/d5/52d51168bb31b5df7ae0ef466a377230.png"
-    },
-    {
-      "id": 2,
-      "carousel_img": "https://cdnv2.tgdd.vn/mwg-static/topzone/Banner/1a/71/1a713570cd3c1f8112e60cd980bf29cf.png"
-    }
-  ],
-  "carousel_ipads": [
-    {
-      "id": 1,
-      "carousel_img": "https://cdnv2.tgdd.vn/mwg-static/topzone/Banner/8b/ee/8beea45a4976d47f68235de823ffeb56.png"
-    },
-    {
-      "id": 2,
-      "carousel_img": "https://cdnv2.tgdd.vn/mwg-static/topzone/Banner/d3/48/d348f4006b905360031e7212946d3a08.png"
-    }
-  ],
-  "carousel_watches": [
-    {
-      "id": 1,
-      "carousel_img": "https://cdnv2.tgdd.vn/mwg-static/topzone/Banner/57/2f/572fe1f4542768cc4fdef62cbee14b15.png"
-    },
-    {
-      "id": 2,
-      "carousel_img": "https://cdnv2.tgdd.vn/mwg-static/topzone/Banner/d3/48/d348f4006b905360031e7212946d3a08.png"
-    }
-  ],
+  "carousel": {
+    "carouselhome": [
+      {
+        "id": 1,
+        "carousel_img": "https://cdnv2.tgdd.vn/mwg-static/topzone/Banner/30/51/30512b9286aa60273933891bcfc2fb2d.jpg"
+      },
+      {
+        "id": 2,
+        "carousel_img": "https://cdnv2.tgdd.vn/mwg-static/topzone/Banner/b4/c9/b4c9b3e71872b0d1a7d58b95a5a0be20.png"
+      },
+      {
+        "id": 3,
+        "carousel_img": "https://cdnv2.tgdd.vn/mwg-static/topzone/Banner/95/1f/951fcf455fabd314d19e23c4b355dc02.png"
+      },
+      {
+        "id": 4,
+        "carousel_img": "https://cdnv2.tgdd.vn/mwg-static/topzone/Banner/b6/27/b6274bafb470e9e998add0c2ac0706df.jpg"
+      },
+      {
+        "id": 5,
+        "carousel_img": "https://cdnv2.tgdd.vn/mwg-static/topzone/Banner/87/31/8731e0f352ab9ab88e42ba114387a0d5.jpg"
+      }
+    ],
+    "carousel_iphones": [
+      {
+        "id": 1,
+        "carousel_img": "https://cdnv2.tgdd.vn/mwg-static/topzone/Banner/04/1d/041dff8d9810b558f0f05b6134816bf2.png"
+      },
+      {
+        "id": 2,
+        "carousel_img": "https://cdnv2.tgdd.vn/mwg-static/topzone/Banner/4e/9d/4e9daa0d03c9661cbbaa060b60ffb062.png"
+      },
+      {
+        "id": 3,
+        "carousel_img": "https://cdnv2.tgdd.vn/mwg-static/topzone/Banner/aa/c2/aac28c02bcbd991ef1deefb739e6b2e4.png"
+      }
+    ],
+    "carousel_macbooks": [
+      {
+        "id": 1,
+        "carousel_img": "https://cdnv2.tgdd.vn/mwg-static/topzone/Banner/52/d5/52d51168bb31b5df7ae0ef466a377230.png"
+      },
+      {
+        "id": 2,
+        "carousel_img": "https://cdnv2.tgdd.vn/mwg-static/topzone/Banner/1a/71/1a713570cd3c1f8112e60cd980bf29cf.png"
+      }
+    ],
+    "carousel_ipads": [
+      {
+        "id": 1,
+        "carousel_img": "https://cdnv2.tgdd.vn/mwg-static/topzone/Banner/8b/ee/8beea45a4976d47f68235de823ffeb56.png"
+      },
+      {
+        "id": 2,
+        "carousel_img": "https://cdnv2.tgdd.vn/mwg-static/topzone/Banner/d3/48/d348f4006b905360031e7212946d3a08.png"
+      }
+    ],
+    "carousel_watches": [
+      {
+        "id": 1,
+        "carousel_img": "https://cdnv2.tgdd.vn/mwg-static/topzone/Banner/57/2f/572fe1f4542768cc4fdef62cbee14b15.png"
+      },
+      {
+        "id": 2,
+        "carousel_img": "https://cdnv2.tgdd.vn/mwg-static/topzone/Banner/d3/48/d348f4006b905360031e7212946d3a08.png"
+      }
+    ]
+  },
   "users": [
     {
       "id": 1,
       "admin": true,
       "username": "Thanh Hải",
       "password": "pass123",
-      "img": "https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-1/382329342_2437108309830509_4202728373760808170_n.jpg?stp=cp0_dst-jpg_s40x40&_nc_cat=110&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeF5_VjHflqr-bd0KOu0HvFSrbnBYw19o9StucFjDX2j1Bf9cL0KXD5RKhAIIbWaO9d8lUXZMJn__W1Gxz9WUbBx&_nc_ohc=jy-ruoRCuM4Q7kNvgE7cxJ6&_nc_zt=24&_nc_ht=scontent.fdad1-3.fna&_nc_gid=AGCpEA3u-dRMp792Cf_tjIm&oh=00_AYAFZ3ItLCL_fUe5-ARBK_c06MRAFsNxdpb3_9zsG4ZtVA&oe=67377C62"
+      "img": "https://cdn.tgdd.vn/Products/Images/44/322616/s16/macbook-air-15-inch-m3-2024-8-650x650.jpg"
     },
     {
       "id": 2,
@@ -1299,259 +1348,41 @@
   ],
   "comments": [
     {
-      "productId": "iPhone 15 Pro Max",
+      "productId": 1,
       "userComment": {
         "userId": 1,
         "userName": "Thanh Hải",
-        "userImg": "https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-1/382329342_2437108309830509_4202728373760808170_n.jpg?stp=cp0_dst-jpg_s40x40&_nc_cat=110&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeF5_VjHflqr-bd0KOu0HvFSrbnBYw19o9StucFjDX2j1Bf9cL0KXD5RKhAIIbWaO9d8lUXZMJn__W1Gxz9WUbBx&_nc_ohc=jy-ruoRCuM4Q7kNvgE7cxJ6&_nc_zt=24&_nc_ht=scontent.fdad1-3.fna&_nc_gid=AGCpEA3u-dRMp792Cf_tjIm&oh=00_AYAFZ3ItLCL_fUe5-ARBK_c06MRAFsNxdpb3_9zsG4ZtVA&oe=67377C62",
+        "userImg": "https://cdn.tgdd.vn/Products/Images/44/322616/s16/macbook-air-15-inch-m3-2024-8-650x650.jpg",
         "admin": true
       },
-      "content": "test comment",
-      "id": 1,
-      "replies": [
-        {
-          "content": "oke",
-          "name": "Thanh Hải",
-          "img": "https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-1/382329342_2437108309830509_4202728373760808170_n.jpg?stp=cp0_dst-jpg_s40x40&_nc_cat=110&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeF5_VjHflqr-bd0KOu0HvFSrbnBYw19o9StucFjDX2j1Bf9cL0KXD5RKhAIIbWaO9d8lUXZMJn__W1Gxz9WUbBx&_nc_ohc=jy-ruoRCuM4Q7kNvgE7cxJ6&_nc_zt=24&_nc_ht=scontent.fdad1-3.fna&_nc_gid=AGCpEA3u-dRMp792Cf_tjIm&oh=00_AYAFZ3ItLCL_fUe5-ARBK_c06MRAFsNxdpb3_9zsG4ZtVA&oe=67377C62"
-        }
-      ]
-    },
-    {
-      "productId": "iPhone 15 Pro Max",
-      "userComment": {
-        "userId": 1,
-        "userName": "Thanh Hải",
-        "userImg": "https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-1/382329342_2437108309830509_4202728373760808170_n.jpg?stp=cp0_dst-jpg_s40x40&_nc_cat=110&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeF5_VjHflqr-bd0KOu0HvFSrbnBYw19o9StucFjDX2j1Bf9cL0KXD5RKhAIIbWaO9d8lUXZMJn__W1Gxz9WUbBx&_nc_ohc=jy-ruoRCuM4Q7kNvgE7cxJ6&_nc_zt=24&_nc_ht=scontent.fdad1-3.fna&_nc_gid=AGCpEA3u-dRMp792Cf_tjIm&oh=00_AYAFZ3ItLCL_fUe5-ARBK_c06MRAFsNxdpb3_9zsG4ZtVA&oe=67377C62",
-        "admin": true
-      },
-      "content": "test lần 2",
-      "id": 2
-    },
-    {
-      "productId": "iPhone 15 Pro Max",
-      "userComment": {
-        "userId": 1,
-        "userName": "Thanh Hải",
-        "userImg": "https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-1/382329342_2437108309830509_4202728373760808170_n.jpg?stp=cp0_dst-jpg_s40x40&_nc_cat=110&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeF5_VjHflqr-bd0KOu0HvFSrbnBYw19o9StucFjDX2j1Bf9cL0KXD5RKhAIIbWaO9d8lUXZMJn__W1Gxz9WUbBx&_nc_ohc=jy-ruoRCuM4Q7kNvgE7cxJ6&_nc_zt=24&_nc_ht=scontent.fdad1-3.fna&_nc_gid=AGCpEA3u-dRMp792Cf_tjIm&oh=00_AYAFZ3ItLCL_fUe5-ARBK_c06MRAFsNxdpb3_9zsG4ZtVA&oe=67377C62",
-        "admin": true
-      },
-      "content": "test lần 3",
-      "id": 3
-    },
-    {
-      "productId": "iPhone 15",
-      "userComment": {
-        "userId": 1,
-        "userName": "Thanh Hải",
-        "userImg": "https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-1/382329342_2437108309830509_4202728373760808170_n.jpg?stp=cp0_dst-jpg_s40x40&_nc_cat=110&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeF5_VjHflqr-bd0KOu0HvFSrbnBYw19o9StucFjDX2j1Bf9cL0KXD5RKhAIIbWaO9d8lUXZMJn__W1Gxz9WUbBx&_nc_ohc=jy-ruoRCuM4Q7kNvgE7cxJ6&_nc_zt=24&_nc_ht=scontent.fdad1-3.fna&_nc_gid=AGCpEA3u-dRMp792Cf_tjIm&oh=00_AYAFZ3ItLCL_fUe5-ARBK_c06MRAFsNxdpb3_9zsG4ZtVA&oe=67377C62",
-        "admin": true
-      },
-      "content": "Sản phẩm bảo hành bao lâu",
-      "id": 4,
-      "replies": [
-        {
-          "content": "5 năm",
-          "name": "Thanh Hải",
-          "img": "https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-1/382329342_2437108309830509_4202728373760808170_n.jpg?stp=cp0_dst-jpg_s40x40&_nc_cat=110&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeF5_VjHflqr-bd0KOu0HvFSrbnBYw19o9StucFjDX2j1Bf9cL0KXD5RKhAIIbWaO9d8lUXZMJn__W1Gxz9WUbBx&_nc_ohc=jy-ruoRCuM4Q7kNvgE7cxJ6&_nc_zt=24&_nc_ht=scontent.fdad1-3.fna&_nc_gid=AGCpEA3u-dRMp792Cf_tjIm&oh=00_AYAFZ3ItLCL_fUe5-ARBK_c06MRAFsNxdpb3_9zsG4ZtVA&oe=67377C62"
-        }
-      ]
-    },
-    {
-      "productId": "iPhone 15 Pro",
-      "userComment": {
-        "userId": 1,
-        "userName": "Thanh Hải",
-        "userImg": "https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-1/382329342_2437108309830509_4202728373760808170_n.jpg?stp=cp0_dst-jpg_s40x40&_nc_cat=110&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeF5_VjHflqr-bd0KOu0HvFSrbnBYw19o9StucFjDX2j1Bf9cL0KXD5RKhAIIbWaO9d8lUXZMJn__W1Gxz9WUbBx&_nc_ohc=jy-ruoRCuM4Q7kNvgE7cxJ6&_nc_zt=24&_nc_ht=scontent.fdad1-3.fna&_nc_gid=AGCpEA3u-dRMp792Cf_tjIm&oh=00_AYAFZ3ItLCL_fUe5-ARBK_c06MRAFsNxdpb3_9zsG4ZtVA&oe=67377C62",
-        "admin": true
-      },
-      "content": "123",
-      "id": 5
-    },
-    {
-      "productId": "iPhone 15 Pro",
-      "userComment": {
-        "userId": 1,
-        "userName": "Thanh Hải",
-        "userImg": "https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-1/382329342_2437108309830509_4202728373760808170_n.jpg?stp=cp0_dst-jpg_s40x40&_nc_cat=110&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeF5_VjHflqr-bd0KOu0HvFSrbnBYw19o9StucFjDX2j1Bf9cL0KXD5RKhAIIbWaO9d8lUXZMJn__W1Gxz9WUbBx&_nc_ohc=jy-ruoRCuM4Q7kNvgE7cxJ6&_nc_zt=24&_nc_ht=scontent.fdad1-3.fna&_nc_gid=AGCpEA3u-dRMp792Cf_tjIm&oh=00_AYAFZ3ItLCL_fUe5-ARBK_c06MRAFsNxdpb3_9zsG4ZtVA&oe=67377C62",
-        "admin": true
-      },
-      "content": "111",
-      "id": 6
+      "content": "test",
+      "id": 1
     }
   ],
   "reviews": [
     {
-      "content": "mới xài được 1 ngày hư rồi ",
+      "content": "tuyệt vời",
       "userEvaluate": {
         "userName": "Thanh Hải",
-        "userImg": "https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-1/382329342_2437108309830509_4202728373760808170_n.jpg?stp=cp0_dst-jpg_s40x40&_nc_cat=110&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeF5_VjHflqr-bd0KOu0HvFSrbnBYw19o9StucFjDX2j1Bf9cL0KXD5RKhAIIbWaO9d8lUXZMJn__W1Gxz9WUbBx&_nc_ohc=jy-ruoRCuM4Q7kNvgE7cxJ6&_nc_zt=24&_nc_ht=scontent.fdad1-3.fna&_nc_gid=AGCpEA3u-dRMp792Cf_tjIm&oh=00_AYAFZ3ItLCL_fUe5-ARBK_c06MRAFsNxdpb3_9zsG4ZtVA&oe=67377C62",
+        "userImg": "https://cdn.tgdd.vn/Products/Images/44/322616/s16/macbook-air-15-inch-m3-2024-8-650x650.jpg",
         "userId": 1,
         "admin": true
       },
-      "rating": 1,
-      "model": "iPhone 15 Pro Max",
+      "rating": 5,
+      "productId": 1,
       "id": 1
     },
     {
-      "content": "xài được 2 ngày hư ",
+      "content": "quá tệ",
       "userEvaluate": {
-        "userName": "user2",
-        "userImg": "https://cdn.tgdd.vn/Products/Images/42/305658/s16/iphone-15-pro-max-gold-1-2-650x650.png",
-        "userId": 2
+        "userName": "Thanh Hải",
+        "userImg": "https://cdn.tgdd.vn/Products/Images/44/322616/s16/macbook-air-15-inch-m3-2024-8-650x650.jpg",
+        "userId": 1,
+        "admin": true
       },
-      "rating": 2,
-      "model": "iPhone 15 Pro Max",
+      "rating": 1,
+      "productId": 2,
       "id": 2
-    },
-    {
-      "content": "cũng được ",
-      "userEvaluate": {
-        "userName": "Thanh Hải",
-        "userImg": "https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-1/382329342_2437108309830509_4202728373760808170_n.jpg?stp=cp0_dst-jpg_s40x40&_nc_cat=110&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeF5_VjHflqr-bd0KOu0HvFSrbnBYw19o9StucFjDX2j1Bf9cL0KXD5RKhAIIbWaO9d8lUXZMJn__W1Gxz9WUbBx&_nc_ohc=jy-ruoRCuM4Q7kNvgE7cxJ6&_nc_zt=24&_nc_ht=scontent.fdad1-3.fna&_nc_gid=AGCpEA3u-dRMp792Cf_tjIm&oh=00_AYAFZ3ItLCL_fUe5-ARBK_c06MRAFsNxdpb3_9zsG4ZtVA&oe=67377C62",
-        "userId": 1,
-        "admin": true
-      },
-      "rating": 3,
-      "model": "iPhone 15 Pro Max",
-      "id": 3
-    },
-    {
-      "content": "tuyệt vời !!!!!!!!",
-      "userEvaluate": {
-        "userName": "Thanh Hải",
-        "userImg": "https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-1/382329342_2437108309830509_4202728373760808170_n.jpg?stp=cp0_dst-jpg_s40x40&_nc_cat=110&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeF5_VjHflqr-bd0KOu0HvFSrbnBYw19o9StucFjDX2j1Bf9cL0KXD5RKhAIIbWaO9d8lUXZMJn__W1Gxz9WUbBx&_nc_ohc=jy-ruoRCuM4Q7kNvgE7cxJ6&_nc_zt=24&_nc_ht=scontent.fdad1-3.fna&_nc_gid=AGCpEA3u-dRMp792Cf_tjIm&oh=00_AYAFZ3ItLCL_fUe5-ARBK_c06MRAFsNxdpb3_9zsG4ZtVA&oe=67377C62",
-        "userId": 1,
-        "admin": true
-      },
-      "rating": 5,
-      "model": "iPhone 15 Pro Max",
-      "id": 4
-    },
-    {
-      "content": "laptop dỏm",
-      "userEvaluate": {
-        "userName": "Thanh Hải",
-        "userImg": "https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-1/382329342_2437108309830509_4202728373760808170_n.jpg?stp=cp0_dst-jpg_s40x40&_nc_cat=110&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeF5_VjHflqr-bd0KOu0HvFSrbnBYw19o9StucFjDX2j1Bf9cL0KXD5RKhAIIbWaO9d8lUXZMJn__W1Gxz9WUbBx&_nc_ohc=jy-ruoRCuM4Q7kNvgE7cxJ6&_nc_zt=24&_nc_ht=scontent.fdad1-3.fna&_nc_gid=AGCpEA3u-dRMp792Cf_tjIm&oh=00_AYAFZ3ItLCL_fUe5-ARBK_c06MRAFsNxdpb3_9zsG4ZtVA&oe=67377C62",
-        "userId": 1,
-        "admin": true
-      },
-      "rating": 1,
-      "model": "iPad 10.2-inch (2023)",
-      "id": 5
-    },
-    {
-      "content": "quá tốt !!\n",
-      "userEvaluate": {
-        "userName": "Thanh Hải",
-        "userImg": "https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-1/382329342_2437108309830509_4202728373760808170_n.jpg?stp=cp0_dst-jpg_s40x40&_nc_cat=110&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeF5_VjHflqr-bd0KOu0HvFSrbnBYw19o9StucFjDX2j1Bf9cL0KXD5RKhAIIbWaO9d8lUXZMJn__W1Gxz9WUbBx&_nc_ohc=jy-ruoRCuM4Q7kNvgE7cxJ6&_nc_zt=24&_nc_ht=scontent.fdad1-3.fna&_nc_gid=AGCpEA3u-dRMp792Cf_tjIm&oh=00_AYAFZ3ItLCL_fUe5-ARBK_c06MRAFsNxdpb3_9zsG4ZtVA&oe=67377C62",
-        "userId": 1,
-        "admin": true
-      },
-      "rating": 5,
-      "model": "iPhone 15 Pro Max",
-      "id": 6
-    },
-    {
-      "content": "tệ",
-      "userEvaluate": {
-        "userName": "Thanh Hải",
-        "userImg": "https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-1/382329342_2437108309830509_4202728373760808170_n.jpg?stp=cp0_dst-jpg_s40x40&_nc_cat=110&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeF5_VjHflqr-bd0KOu0HvFSrbnBYw19o9StucFjDX2j1Bf9cL0KXD5RKhAIIbWaO9d8lUXZMJn__W1Gxz9WUbBx&_nc_ohc=jy-ruoRCuM4Q7kNvgE7cxJ6&_nc_zt=24&_nc_ht=scontent.fdad1-3.fna&_nc_gid=AGCpEA3u-dRMp792Cf_tjIm&oh=00_AYAFZ3ItLCL_fUe5-ARBK_c06MRAFsNxdpb3_9zsG4ZtVA&oe=67377C62",
-        "userId": 1,
-        "admin": true
-      },
-      "rating": 1,
-      "model": "iPhone 15 Pro Max",
-      "id": 7
-    },
-    {
-      "content": "tuyệt vời",
-      "userEvaluate": {
-        "userName": "user2",
-        "userImg": "https://cdn.tgdd.vn/Products/Images/42/305658/s16/iphone-15-pro-max-gold-1-2-650x650.png",
-        "userId": 2
-      },
-      "rating": 5,
-      "model": "iPhone 15 Pro",
-      "id": 8
-    },
-    {
-      "content": "quá đẹp",
-      "userEvaluate": {
-        "userName": "Thanh Hải",
-        "userImg": "https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-1/382329342_2437108309830509_4202728373760808170_n.jpg?stp=cp0_dst-jpg_s40x40&_nc_cat=110&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeF5_VjHflqr-bd0KOu0HvFSrbnBYw19o9StucFjDX2j1Bf9cL0KXD5RKhAIIbWaO9d8lUXZMJn__W1Gxz9WUbBx&_nc_ohc=jy-ruoRCuM4Q7kNvgE7cxJ6&_nc_zt=24&_nc_ht=scontent.fdad1-3.fna&_nc_gid=AGCpEA3u-dRMp792Cf_tjIm&oh=00_AYAFZ3ItLCL_fUe5-ARBK_c06MRAFsNxdpb3_9zsG4ZtVA&oe=67377C62",
-        "userId": 1,
-        "admin": true
-      },
-      "rating": 5,
-      "model": "iPhone 15",
-      "id": 9
-    },
-    {
-      "content": "1123",
-      "userEvaluate": {},
-      "rating": 5,
-      "model": "iPhone 15 Pro Max",
-      "id": 10
-    },
-    {
-      "content": "312",
-      "userEvaluate": {
-        "userName": "Thanh Hải",
-        "userImg": "https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-1/382329342_2437108309830509_4202728373760808170_n.jpg?stp=cp0_dst-jpg_s40x40&_nc_cat=110&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeF5_VjHflqr-bd0KOu0HvFSrbnBYw19o9StucFjDX2j1Bf9cL0KXD5RKhAIIbWaO9d8lUXZMJn__W1Gxz9WUbBx&_nc_ohc=jy-ruoRCuM4Q7kNvgE7cxJ6&_nc_zt=24&_nc_ht=scontent.fdad1-3.fna&_nc_gid=AGCpEA3u-dRMp792Cf_tjIm&oh=00_AYAFZ3ItLCL_fUe5-ARBK_c06MRAFsNxdpb3_9zsG4ZtVA&oe=67377C62",
-        "userId": 1,
-        "admin": true
-      },
-      "rating": 5,
-      "model": "iPhone 15 Pro Max",
-      "id": 11
-    },
-    {
-      "content": "quá tối",
-      "userEvaluate": {
-        "userName": "Thanh Hải",
-        "userImg": "https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-1/382329342_2437108309830509_4202728373760808170_n.jpg?stp=cp0_dst-jpg_s40x40&_nc_cat=110&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeF5_VjHflqr-bd0KOu0HvFSrbnBYw19o9StucFjDX2j1Bf9cL0KXD5RKhAIIbWaO9d8lUXZMJn__W1Gxz9WUbBx&_nc_ohc=jy-ruoRCuM4Q7kNvgE7cxJ6&_nc_zt=24&_nc_ht=scontent.fdad1-3.fna&_nc_gid=AGCpEA3u-dRMp792Cf_tjIm&oh=00_AYAFZ3ItLCL_fUe5-ARBK_c06MRAFsNxdpb3_9zsG4ZtVA&oe=67377C62",
-        "userId": 1,
-        "admin": true
-      },
-      "rating": 5,
-      "model": "iPhone 15 Pro",
-      "id": 12
-    },
-    {
-      "content": "hơi tệ",
-      "userEvaluate": {
-        "userName": "Thanh Hải",
-        "userImg": "https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-1/382329342_2437108309830509_4202728373760808170_n.jpg?stp=cp0_dst-jpg_s40x40&_nc_cat=110&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeF5_VjHflqr-bd0KOu0HvFSrbnBYw19o9StucFjDX2j1Bf9cL0KXD5RKhAIIbWaO9d8lUXZMJn__W1Gxz9WUbBx&_nc_ohc=jy-ruoRCuM4Q7kNvgE7cxJ6&_nc_zt=24&_nc_ht=scontent.fdad1-3.fna&_nc_gid=AGCpEA3u-dRMp792Cf_tjIm&oh=00_AYAFZ3ItLCL_fUe5-ARBK_c06MRAFsNxdpb3_9zsG4ZtVA&oe=67377C62",
-        "userId": 1,
-        "admin": true
-      },
-      "rating": 4,
-      "model": "iPhone 15 Pro",
-      "id": 13
-    },
-    {
-      "content": "hello",
-      "userEvaluate": {
-        "userName": "Thanh Hải",
-        "userImg": "https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-1/382329342_2437108309830509_4202728373760808170_n.jpg?stp=cp0_dst-jpg_s40x40&_nc_cat=110&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeF5_VjHflqr-bd0KOu0HvFSrbnBYw19o9StucFjDX2j1Bf9cL0KXD5RKhAIIbWaO9d8lUXZMJn__W1Gxz9WUbBx&_nc_ohc=jy-ruoRCuM4Q7kNvgE7cxJ6&_nc_zt=24&_nc_ht=scontent.fdad1-3.fna&_nc_gid=AGCpEA3u-dRMp792Cf_tjIm&oh=00_AYAFZ3ItLCL_fUe5-ARBK_c06MRAFsNxdpb3_9zsG4ZtVA&oe=67377C62",
-        "userId": 1,
-        "admin": true
-      },
-      "rating": 5,
-      "model": "iPhone 15 Pro",
-      "id": 14
-    },
-    {
-      "content": "tệ",
-      "userEvaluate": {
-        "userName": "Thanh Hải",
-        "userImg": "https://scontent.fdad1-3.fna.fbcdn.net/v/t39.30808-1/382329342_2437108309830509_4202728373760808170_n.jpg?stp=cp0_dst-jpg_s40x40&_nc_cat=110&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeF5_VjHflqr-bd0KOu0HvFSrbnBYw19o9StucFjDX2j1Bf9cL0KXD5RKhAIIbWaO9d8lUXZMJn__W1Gxz9WUbBx&_nc_ohc=jy-ruoRCuM4Q7kNvgE7cxJ6&_nc_zt=24&_nc_ht=scontent.fdad1-3.fna&_nc_gid=AGCpEA3u-dRMp792Cf_tjIm&oh=00_AYAFZ3ItLCL_fUe5-ARBK_c06MRAFsNxdpb3_9zsG4ZtVA&oe=67377C62",
-        "userId": 1,
-        "admin": true
-      },
-      "rating": 1,
-      "model": "iPhone 15",
-      "id": 15
     }
   ]
 }

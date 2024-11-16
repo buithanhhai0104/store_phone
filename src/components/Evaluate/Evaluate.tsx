@@ -7,7 +7,7 @@ import config from "../../config";
 import { useSelector } from "react-redux";
 
 interface EvaluateProps {
-  model: string | undefined;
+  id: number | undefined;
 }
 
 interface IuserEvaluate {
@@ -26,7 +26,7 @@ interface IEvaluate {
   content: string;
 }
 
-const Evaluate: React.FC<EvaluateProps> = ({ model }) => {
+const Evaluate: React.FC<EvaluateProps> = ({ id }) => {
   const [evaluateData, setEvaluateData] = useState<IEvaluate[]>([]);
   const [averageRating, setAverageRating] = useState<number>(0);
   const [valueEvaluate, setValueEvaluate] = useState<string>("");
@@ -43,9 +43,9 @@ const Evaluate: React.FC<EvaluateProps> = ({ model }) => {
 
   const fetchEvaluate = useCallback(async () => {
     try {
-      if (model) {
+      if (id) {
         const response = await fetch(
-          `http://localhost:3001/reviews?model=${model}`
+          `http://localhost:3001/reviews?productId=${id}`
         );
         const data = await response.json();
         setEvaluateData(data);
@@ -53,7 +53,7 @@ const Evaluate: React.FC<EvaluateProps> = ({ model }) => {
     } catch (error) {
       console.error("Không thể tải bình luận:", error);
     }
-  }, [model]);
+  }, [id]);
 
   useEffect(() => {
     fetchEvaluate();
@@ -86,7 +86,7 @@ const Evaluate: React.FC<EvaluateProps> = ({ model }) => {
         admin: user?.admin,
       },
       rating: selectReview,
-      model: model,
+      productId: id,
     };
 
     try {
@@ -113,7 +113,7 @@ const Evaluate: React.FC<EvaluateProps> = ({ model }) => {
   return (
     <div className="flex flex-col flex-1 gap-[10px]  bg-custom-gradient rounded-xl p-[10px]  ">
       <div className="flex flex-col bg-white w-[95%] m-auto p-[10px]  h-[200px] mt-[20px] rounded-xl  shadow-product">
-        <b className="text-[20px] p-[5px]">Đánh giá & nhận xét {model}</b>
+        <b className="text-[20px] p-[5px]">Đánh giá & nhận xét {id}</b>
         <div className="flex w-full justify-between p-[10px]">
           <div className="flex flex-col justify-center items-center border-r-[1px] flex-1 border-r-slate-500">
             <p className="text-[24px]">{averageRating.toFixed(1)}/5</p>

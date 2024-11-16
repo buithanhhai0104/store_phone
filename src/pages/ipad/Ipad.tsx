@@ -3,11 +3,29 @@ import Carousel from "../../components/carousel/Carousel";
 import { FaApple } from "react-icons/fa6";
 import ProductItem from "../../components/ProductItem/ProductItem";
 import { useMediaQuery } from "react-responsive";
+import { getDocs, collection } from "firebase/firestore";
+import { db } from "../../firebase";
+
 const Ipad: React.FC = () => {
   const [dataCarolsel, setDataCarousel] = useState<any[]>([]);
   const [dataIphones, setDataIphones] = useState<any[]>([]);
   const [activeVersion, setActiveVersion] = useState<string>("Tất cả");
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" });
+  const [users, setUsers] = useState<any>();
+
+  useEffect(() => {
+    const fetchUsers = async () => {
+      const querySnapshot = await getDocs(collection(db, "products"));
+      const usersList: any[] = [];
+      querySnapshot.forEach((doc) => {
+        usersList.push(doc.data());
+      });
+    };
+
+    fetchUsers();
+  }, []);
+
+  console.log(users);
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -15,13 +33,13 @@ const Ipad: React.FC = () => {
     });
     const fetchData = async () => {
       try {
-        const response = await fetch("http://localhost:3001/carousel_ipads");
+        const response = await fetch("http://localhost:3001/carousel");
 
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
         const result = await response.json();
-        setDataCarousel(result);
+        setDataCarousel(result.carousel_ipads);
       } catch (error) {}
     };
 
@@ -32,8 +50,10 @@ const Ipad: React.FC = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `http://localhost:3001/ipads${
-            activeVersion !== "Tất cả" ? `?version=${activeVersion}` : ""
+          `http://localhost:3001/products${
+            activeVersion !== "Tất cả"
+              ? `?version=${activeVersion}`
+              : "?category=ipad"
           }`
         );
         if (!response.ok) {
