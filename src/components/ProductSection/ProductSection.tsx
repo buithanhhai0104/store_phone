@@ -5,32 +5,11 @@ import { Link } from "react-router-dom";
 import { GrNext } from "react-icons/gr";
 import { FaApple } from "react-icons/fa6";
 import { useMediaQuery } from "react-responsive";
-
-type Configuration = {
-  screen: string;
-  chip: string;
-  ram: string;
-  storage: string[];
-  camera: string;
-  battery: string;
-};
-
-interface IProductData {
-  postProduct: {
-    id: number;
-    model: string;
-    price_usd: number;
-    price_vnd: string;
-    image: string;
-    promotion_online: boolean;
-    version: string;
-    configuration: Configuration;
-  };
-}
+import { ICategory } from "../../type";
 
 interface IProductSectionProps {
   title: string;
-  dataSection: IProductData[];
+  dataSection: ICategory[];
   link: string;
 }
 
@@ -52,11 +31,11 @@ const ProductSection: React.FC<IProductSectionProps> = ({
         <p>{title}</p>
       </div>
       {!isTabletOrMobile ? (
-        <SlideProduct dataPhone={dataSection} />
+        <SlideProduct products={dataSection} />
       ) : (
         <div className="grid grid-cols-2 gap-3 w-[90%] m-auto ">
           {dataSection.slice(0, 4).map((item) => {
-            return <ProductItem productData={item} />;
+            return <ProductItem product={item} />;
           })}
           <Link
             className="col-span-2 text-center text-[#2997ff] flex justify-center items-center gap-2"

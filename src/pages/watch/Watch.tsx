@@ -3,51 +3,53 @@ import Carousel from "../../components/carousel/Carousel";
 import { FaApple } from "react-icons/fa6";
 import ProductItem from "../../components/ProductItem/ProductItem";
 import { useMediaQuery } from "react-responsive";
+import { getDocumentByFieldName } from "../../service/product";
+import { ICategory } from "../../type";
+import { getCarousel } from "../../service/carousel";
+
 const Watch: React.FC = () => {
-  const [dataCarolsel, setDataCarousel] = useState<any[]>([]);
-  const [dataIphones, setDataIphones] = useState<any[]>([]);
+  const [carouselData, setCarouselData] = useState<string[]>([]);
+  const [dataWatches, setDataWatches] = useState<ICategory[]>([]);
+  const [newProducts, setNewProducts] = useState<ICategory[]>([]);
   const [activeVersion, setActiveVersion] = useState<string>("Tất cả");
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" });
+
   useEffect(() => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
     const fetchData = async () => {
-      try {
-        const response = await fetch("http://localhost:3001/carousel");
+      const ipadProducts = await getDocumentByFieldName(
+        "products",
+        "category",
+        "watch"
+      );
+      if (ipadProducts) {
+        setDataWatches(ipadProducts);
+        console.log(dataWatches);
+      }
+    };
+    fetchData();
 
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        const result = await response.json();
-        setDataCarousel(result.carousel_watches);
-      } catch (error) {}
+    const fetchDataCarousel = async () => {
+      const carouselWatch = await getCarousel();
+      setCarouselData(carouselWatch.carousel_watch);
     };
 
-    fetchData();
+    fetchDataCarousel();
   }, []);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(
-          `http://localhost:3001/products${
-            activeVersion !== "Tất cả"
-              ? `?version=${activeVersion}`
-              : "?category=watch"
-          }`
-        );
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        const result = await response.json();
-        setDataIphones(result);
-      } catch (error) {}
-    };
-
-    fetchData();
-  }, [activeVersion]);
+    const filterData = dataWatches.filter(
+      (product) => product.version === activeVersion
+    );
+    if (activeVersion === "Tất cả") {
+      setNewProducts(dataWatches);
+    } else {
+      setNewProducts(filterData);
+    }
+  }, [activeVersion, dataWatches]);
 
   return (
     <div>
@@ -61,7 +63,7 @@ const Watch: React.FC = () => {
           <p>Watch</p>
         </div>
         <div className=" w-full rounded-2xl">
-          <Carousel dataImg={dataCarolsel} />
+          <Carousel carouselData={carouselData} />
         </div>
         <div
           className={`flex gap-[30px] text-[#afb7bd] my-[50px]  ${
@@ -69,35 +71,31 @@ const Watch: React.FC = () => {
           } `}
         >
           <ul className="flex py-[10px] space-x-2">
-            {[
-              "Tất cả",
-              "Apple Watch Ultra",
-              "Apple Watch Series 8",
-              "Apple Watch SE",
-              "Apple Watch Series 7",
-            ].map((version, index) => {
-              return (
-                <li
-                  key={index}
-                  onClick={() => setActiveVersion(version)}
-                  className={`flex justify-center items-center ${
-                    version === "Tất cả"
-                      ? "w-[60px] h-[40px]"
-                      : "w-[150px] h-[40px]"
-                  } text-[15px] hover:border-b-[1px] hover:text-white ${
-                    activeVersion === version
-                      ? `${
-                          !isTabletOrMobile
-                            ? "border-b-[1px] border-white text-white"
-                            : "bg-slate-500 rounded-xl"
-                        }`
-                      : ""
-                  }`}
-                >
-                  {version}
-                </li>
-              );
-            })}
+            {["Tất cả", "Apple Watch Series 10", "Apple Watch Series 9"].map(
+              (version, index) => {
+                return (
+                  <li
+                    key={index}
+                    onClick={() => setActiveVersion(version)}
+                    className={`flex justify-center items-center ${
+                      version === "Tất cả"
+                        ? "w-[60px] h-[40px]"
+                        : "w-[150px] h-[40px]"
+                    } text-[15px] hover:border-b-[1px] hover:text-white ${
+                      activeVersion === version
+                        ? `${
+                            !isTabletOrMobile
+                              ? "border-b-[1px] border-white text-white"
+                              : "bg-slate-500 rounded-xl"
+                          }`
+                        : ""
+                    }`}
+                  >
+                    {version}
+                  </li>
+                );
+              }
+            )}
           </ul>
         </div>
         <div
@@ -107,8 +105,8 @@ const Watch: React.FC = () => {
               : "grid grid-cols-2 gap-[20px]"
           } `}
         >
-          {dataIphones.map((item) => {
-            return <ProductItem key={item.id} productData={item} />;
+          {newProducts.map((item) => {
+            return <ProductItem key={item.id} product={item} />;
           })}
         </div>
       </div>

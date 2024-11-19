@@ -2,12 +2,11 @@ import React, { useEffect, useState, useRef } from "react";
 import { useMediaQuery } from "react-responsive";
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
+export interface CarouselProps {
+  carouselData: string[];
+}
 
-type CarouselProps = {
-  dataImg: { id: number; carousel_img: string }[];
-};
-
-const Carousel: React.FC<CarouselProps> = ({ dataImg }) => {
+const Carousel: React.FC<CarouselProps> = ({ carouselData }) => {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const sliderRef = useRef<HTMLDivElement | null>(null);
@@ -15,12 +14,12 @@ const Carousel: React.FC<CarouselProps> = ({ dataImg }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) =>
-        prevIndex === dataImg.length - 1 ? 0 : prevIndex + 1
+        prevIndex === carouselData.length - 1 ? 0 : prevIndex + 1
       );
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [dataImg.length]);
+  }, [carouselData.length]);
 
   useEffect(() => {
     if (sliderRef.current) {
@@ -32,13 +31,13 @@ const Carousel: React.FC<CarouselProps> = ({ dataImg }) => {
   }, [currentIndex]);
 
   const nextSlide = () => {
-    if (currentIndex < dataImg.length - 1) {
+    if (currentIndex < carouselData.length - 1) {
       setCurrentIndex(currentIndex + 1);
     }
   };
 
   const prevSlide = () => {
-    if (currentIndex <= dataImg.length && currentIndex > 0) {
+    if (currentIndex <= carouselData.length && currentIndex > 0) {
       setCurrentIndex(currentIndex - 1);
     }
   };
@@ -51,8 +50,8 @@ const Carousel: React.FC<CarouselProps> = ({ dataImg }) => {
           isTabletOrMobile ? "mt-3.5 w-[95%] m-auto  h-[150px]" : ""
         } `}
       >
-        {dataImg.map((item) => {
-          return <img key={item.id} src={item.carousel_img} alt="" />;
+        {carouselData.map((item,index) => {
+          return <img key={index} src={item} alt="" />;
         })}
       </div>
       <button

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaXmark } from "react-icons/fa6";
 import { MouseEventHandler } from "react";
-import { fetchaddproduct } from "../../service/addProduct";
+import { addProduct } from "../../service/product";
 import { v4 as uuidv4 } from "uuid";
 const AddProductForm = () => {
   const optionColors = [
@@ -39,13 +39,13 @@ const AddProductForm = () => {
   const [chooseVersion, setChooseVersion] = useState<string[]>([]);
   const [productName, setProductName] = useState<string>("");
   const [productPrice, setProductPrice] = useState<string>("");
-  const [category, setCategory] = useState<string>("");
+  const [category, setCategory] = useState<string>("iphone");
   const [productLine, setProductLine] = useState<string>("");
   const [productImg, setProductImg] = useState<string>("");
   const [valueVersion, setValueVersion] = useState<string>("");
 
   const AddProduct = async () => {
-    const addProduct = {
+    const product = {
       id: uuidv4(),
       category: category,
       model: productName,
@@ -58,7 +58,7 @@ const AddProductForm = () => {
       },
     };
 
-    await fetchaddproduct(addProduct);
+    await addProduct(product);
 
     // try {
     //   fetch(`http://localhost:3001/products`, {
@@ -138,7 +138,7 @@ const AddProductForm = () => {
             <option value="iphone">iPhone</option>
             <option value="macbook">Macbook</option>
             <option value="ipad">iPad</option>
-            <option value="watche">Apple Watch</option>
+            <option value="watch">Apple Watch</option>
           </select>
         </label>
       </section>

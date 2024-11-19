@@ -3,51 +3,53 @@ import { FaApple } from "react-icons/fa6";
 import Carousel from "../../components/carousel/Carousel";
 import ProductItem from "../../components/ProductItem/ProductItem";
 import { useMediaQuery } from "react-responsive";
+import { getDocumentByFieldName } from "../../service/product";
+import { ICategory } from "../../type";
+import { getCarousel } from "../../service/carousel";
 const Mac: React.FC = () => {
-  const [dataCarolsel, setDataCarousel] = useState<any[]>([]);
-  const [dataMacbooks, setDataMacbooks] = useState<any[]>([]);
+  const [carouselData, setCarouselData] = useState<string[]>([]);
+  const [dataMacbooks, setDataMacbooks] = useState<ICategory[]>([]);
+  const [newProducts, setNewProducts] = useState<ICategory[]>([]);
   const [activeVersion, setActiveVersion] = useState<string>("Tất cả");
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" });
+
   useEffect(() => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
+
     const fetchData = async () => {
-      try {
-        const response = await fetch("http://localhost:3001/carousel");
-
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        const result = await response.json();
-        setDataCarousel(result.carousel_macbooks);
-      } catch (error) {}
+      const macbookProducts = await getDocumentByFieldName(
+        "products",
+        "category",
+        "macbook"
+      );
+      if (macbookProducts) {
+        setDataMacbooks(macbookProducts);
+      }
     };
-
     fetchData();
+    const fetchCarouselData = async () => {
+      const carouselMacbook = await getCarousel();
+      if (carouselMacbook) {
+        setCarouselData(carouselMacbook.carousel_macbook);
+      }
+    };
+    fetchCarouselData();
   }, []);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(
-          `http://localhost:3001/products${
-            activeVersion !== "Tất cả"
-              ? `?version=${activeVersion}`
-              : "?category=macbook"
-          }`
-        );
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        const result = await response.json();
-        setDataMacbooks(result);
-      } catch (error) {}
-    };
+    const filterData = dataMacbooks.filter(
+      (product) => product.version === activeVersion
+    );
 
-    fetchData();
-  }, [activeVersion]);
+    if (activeVersion === "Tất cả") {
+      setNewProducts(dataMacbooks);
+    } else {
+      setNewProducts(filterData);
+    }
+  }, [dataMacbooks, activeVersion]);
 
   return (
     <div>
@@ -61,7 +63,7 @@ const Mac: React.FC = () => {
           <p>Macbook</p>
         </div>
         <div className=" w-full rounded-2xl">
-          <Carousel dataImg={dataCarolsel} />
+          <Carousel carouselData={carouselData} />
         </div>
         <div
           className={`flex gap-[30px] text-[#afb7bd] my-[50px]  ${
@@ -97,8 +99,8 @@ const Mac: React.FC = () => {
               : "grid grid-cols-2 gap-[20px]"
           } `}
         >
-          {dataMacbooks.map((item) => {
-            return <ProductItem key={item.id} productData={item} />;
+          {newProducts.map((item) => {
+            return <ProductItem key={item.id} product={item} />;
           })}
         </div>
       </div>

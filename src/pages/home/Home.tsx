@@ -2,47 +2,13 @@ import React, { useEffect, useState } from "react";
 import Carousel from "../../components/carousel/Carousel";
 import ProductSection from "../../components/ProductSection/ProductSection";
 import config from "../../config";
-import { fetchProductsByCategory } from "../../service/getProducts";
-
-interface ICaterory {
-  postProduct: {
-    id: number;
-    model: string;
-    version: string;
-    price_usd: number;
-    price_vnd: string;
-    image: string;
-    configuration: {
-      screen: string;
-      chip: string;
-      ram: string;
-      storage: string[];
-      camera: string;
-      battery: string;
-    };
-    promotion_online: boolean;
-    colors: {
-      color_id: string;
-      color_name: string;
-      color_img: string;
-    };
-  };
-}
-
-interface Icarousel {
-  carouselhome: {
-    id: number;
-    carousel_img: string;
-  }[];
-}
+import { getProducts } from "../../service/product";
+import { ICategory, ICarousel } from "../../type";
+import { getCarousel } from "../../service/carousel";
 
 const Home: React.FC = () => {
-  const [dataCarousel, setDataCarousel] = useState<Icarousel>();
-  const [dataIphones, setDataIphones] = useState<ICaterory[]>([]);
-  const [dataMacbooks, setDataMacbooks] = useState<ICaterory[]>([]);
-  const [dataIpads, setDataIpads] = useState<ICaterory[]>([]);
-  const [dataWatches, setDataWatches] = useState<ICaterory[]>([]);
-
+  const [carouselData, setCarouselData] = useState<string[]>([]);
+  const [productsData, setproductsData] = useState<ICategory[]>([]);
   // useEffect(() => {
   //   const fetchCategoryData = async (
   //     url: string,
@@ -60,7 +26,7 @@ const Home: React.FC = () => {
   //     }
   //   };
 
-  //   fetchCategoryData("http://localhost:3001/carousel", setDataCarousel);
+  //   fetchCategoryData("http://localhost:3001/carousel", setcarouselData);
   //   fetchCategoryData(
   //     "http://localhost:3001/products?category=iphone",
   //     setDataIphones
@@ -81,41 +47,57 @@ const Home: React.FC = () => {
   // }, []);
 
   useEffect(() => {
-    const fetchData = async () => {
-      const productsDataIphone = await fetchProductsByCategory("iphone");
-      const productsDataMacbook = await fetchProductsByCategory("macbook");
-      setDataIphones(productsDataIphone);
-      setDataMacbooks(productsDataMacbook);
+    const fetchProductData = async () => {
+      const productsData = await getProducts();
+      if (productsData.length) {
+        setproductsData(productsData);
+      }
     };
-
-    fetchData();
+    const fetchCarouselData = async () => {
+      const carouselDatas = await getCarousel();
+      if (carouselDatas) {
+        setCarouselData(carouselDatas.carousel_home);
+      }
+    };
+    fetchCarouselData();
+    fetchProductData();
   }, []);
 
   return (
     <div>
-      {dataCarousel && <Carousel dataImg={dataCarousel.carouselhome} />}
-      <>
-        <ProductSection
-          dataSection={dataIphones}
-          title={"iPhone"}
-          link={config.routes.iphone}
-        />
-        <ProductSection
-          dataSection={dataMacbooks}
-          title={"Macbook"}
-          link={config.routes.mac}
-        />
-        <ProductSection
-          dataSection={dataIpads}
-          title={"iPad"}
-          link={config.routes.ipad}
-        />
-        <ProductSection
-          dataSection={dataWatches}
-          title={"Watch"}
-          link={config.routes.watch}
-        />
-      </>
+      {carouselData && <Carousel carouselData={carouselData} />}
+      {productsData.length > 0 && (
+        <>
+          <ProductSection
+            dataSection={productsData.filter(
+              (product) => product.category === "iphone"
+            )}
+            title={"iPhone"}
+            link={config.routes.iphone}
+          />
+          <ProductSection
+            dataSection={productsData.filter(
+              (product) => product.category === "macbook"
+            )}
+            title={"Macbook"}
+            link={config.routes.macbook}
+          />
+          <ProductSection
+            dataSection={productsData.filter(
+              (product) => product.category === "ipad"
+            )}
+            title={"iPad"}
+            link={config.routes.ipad}
+          />
+          <ProductSection
+            dataSection={productsData.filter(
+              (product) => product.category === "watch"
+            )}
+            title={"Watch"}
+            link={config.routes.watch}
+          />
+        </>
+      )}
     </div>
   );
 };

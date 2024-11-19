@@ -26,11 +26,7 @@
         "screen": "6.7 inch OLED",
         "chip": "Apple A17 Pro",
         "ram": "8GB",
-        "storage": [
-          "256GB",
-          "512GB",
-          "1TB"
-        ],
+        "storage": ["256GB", "512GB", "1TB"],
         "camera": "48MP + 12MP + 12MP",
         "battery": "4,400 mAh"
       },
@@ -64,11 +60,7 @@
         "screen": "6.1 inch OLED",
         "chip": "Apple A17 Pro",
         "ram": "8GB",
-        "storage": [
-          "256GB",
-          "512GB",
-          "1TB"
-        ],
+        "storage": ["256GB", "512GB", "1TB"],
         "camera": "48MP + 12MP + 12MP",
         "battery": "3,700 mAh"
       },
@@ -102,11 +94,7 @@
         "screen": "6.1 inch OLED",
         "chip": "Apple A16 Bionic",
         "ram": "6GB",
-        "storage": [
-          "256GB",
-          "512GB",
-          "1TB"
-        ],
+        "storage": ["256GB", "512GB", "1TB"],
         "camera": "48MP + 12MP",
         "battery": "3,800 mAh"
       },
@@ -140,11 +128,7 @@
         "screen": "6.7 inch OLED",
         "chip": "Apple A16 Bionic",
         "ram": "6GB",
-        "storage": [
-          "256GB",
-          "512GB",
-          "1TB"
-        ],
+        "storage": ["256GB", "512GB", "1TB"],
         "camera": "48MP + 12MP",
         "battery": "4,300 mAh"
       },
@@ -178,11 +162,7 @@
         "screen": "6.7 inch OLED",
         "chip": "Apple A16 Bionic",
         "ram": "6GB",
-        "storage": [
-          "256GB",
-          "512GB",
-          "1TB"
-        ],
+        "storage": ["256GB", "512GB", "1TB"],
         "camera": "48MP + 12MP + 12MP",
         "battery": "4,323 mAh"
       },
@@ -216,11 +196,7 @@
         "screen": "6.1 inch OLED",
         "chip": "Apple A15 Bionic",
         "ram": "6GB",
-        "storage": [
-          "256GB",
-          "512GB",
-          "1TB"
-        ],
+        "storage": ["256GB", "512GB", "1TB"],
         "camera": "12MP + 12MP",
         "battery": "3,279 mAh"
       },
@@ -254,11 +230,7 @@
         "screen": "6.1 inch OLED",
         "chip": "Apple A15 Bionic",
         "ram": "6GB",
-        "storage": [
-          "256GB",
-          "512GB",
-          "1TB"
-        ],
+        "storage": ["256GB", "512GB", "1TB"],
         "camera": "12MP + 12MP",
         "battery": "3,279 mAh"
       },
@@ -292,11 +264,7 @@
         "screen": "6.1 inch OLED",
         "chip": "Apple A15 Bionic",
         "ram": "6GB",
-        "storage": [
-          "256GB",
-          "512GB",
-          "1TB"
-        ],
+        "storage": ["256GB", "512GB", "1TB"],
         "camera": "12MP + 12MP",
         "battery": "3,279 mAh"
       },
@@ -330,11 +298,7 @@
         "screen": "6.1 inch OLED",
         "chip": "Apple A15 Bionic",
         "ram": "6GB",
-        "storage": [
-          "256GB",
-          "512GB",
-          "1TB"
-        ],
+        "storage": ["256GB", "512GB", "1TB"],
         "camera": "12MP + 12MP",
         "battery": "3,279 mAh"
       },
@@ -368,11 +332,7 @@
         "screen": "6.1 inch OLED",
         "chip": "Apple A15 Bionic",
         "ram": "6GB",
-        "storage": [
-          "256GB",
-          "512GB",
-          "1TB"
-        ],
+        "storage": ["256GB", "512GB", "1TB"],
         "camera": "12MP + 12MP",
         "battery": "3,279 mAh"
       },
@@ -406,11 +366,7 @@
         "screen": "6.1 inch OLED",
         "chip": "Apple A15 Bionic",
         "ram": "6GB",
-        "storage": [
-          "256GB",
-          "512GB",
-          "1TB"
-        ],
+        "storage": ["256GB", "512GB", "1TB"],
         "camera": "12MP + 12MP",
         "battery": "3,279 mAh"
       },
@@ -439,11 +395,7 @@
       "image": "https://cdn.tgdd.vn/Products/Images/42/329149/s16/iphone-16-pro-max-titan-den-thumbnew-650x650.png",
       "price_vnd": "34.490.000đ",
       "configuration": {
-        "storage": [
-          "256GB",
-          "312GB",
-          "1TB"
-        ]
+        "storage": ["256GB", "312GB", "1TB"]
       },
       "id": 12
     },
@@ -468,11 +420,7 @@
       "image": "https://cdn.tgdd.vn/Products/Images/42/329138/s16/iphone-16-plus-black-thumbnew-650x650.png",
       "price_vnd": "25.990.000đ",
       "configuration": {
-        "storage": [
-          "256GB",
-          "512GB",
-          "1TB"
-        ]
+        "storage": ["256GB", "512GB", "1TB"]
       },
       "id": 13
     },
@@ -497,11 +445,7 @@
         "screen": "16.2 inch Liquid Retina XDR",
         "chip": "Apple M2 Pro",
         "ram": "16GB",
-        "storage": [
-          "256GB",
-          "512GB",
-          "1TB"
-        ],
+        "storage": ["256GB", "512GB", "1TB"],
         "graphics": "Integrated 16-core GPU",
         "battery": "100 Wh"
       },
@@ -530,11 +474,7 @@
         "screen": "14.2 inch Liquid Retina XDR",
         "chip": "Apple M2 Pro",
         "ram": "16GB",
-        "storage": [
-          "256GB",
-          "512GB",
-          "1TB"
-        ],
+        "storage": ["256GB", "512GB", "1TB"],
         "graphics": "Integrated 16-core GPU",
         "battery": "70 Wh"
       },
@@ -568,11 +508,7 @@
         "screen": "13.6 inch Liquid Retina",
         "chip": "Apple M2",
         "ram": "8GB",
-        "storage": [
-          "256GB",
-          "512GB",
-          "1TB"
-        ],
+        "storage": ["256GB", "512GB", "1TB"],
         "graphics": "Integrated 8-core GPU",
         "battery": "52.6 Wh"
       },
@@ -606,11 +542,7 @@
         "screen": "15.3 inch Liquid Retina",
         "chip": "Apple M2",
         "ram": "8GB",
-        "storage": [
-          "256GB",
-          "512GB",
-          "1TB"
-        ],
+        "storage": ["256GB", "512GB", "1TB"],
         "graphics": "Integrated 10-core GPU",
         "battery": "66.5 Wh"
       },
@@ -644,11 +576,7 @@
         "screen": "13.6 inch Liquid Retina",
         "chip": "Apple M2",
         "ram": "8GB",
-        "storage": [
-          "256GB",
-          "512GB",
-          "1TB"
-        ],
+        "storage": ["256GB", "512GB", "1TB"],
         "graphics": "Integrated 8-core GPU",
         "battery": "52.6 Wh"
       },
@@ -677,11 +605,7 @@
         "screen": "14.2 inch Liquid Retina XDR",
         "chip": "Apple M2 Pro",
         "ram": "16GB",
-        "storage": [
-          "256GB",
-          "512GB",
-          "1TB"
-        ],
+        "storage": ["256GB", "512GB", "1TB"],
         "graphics": "Integrated 16-core GPU",
         "battery": "70 Wh"
       },
@@ -710,11 +634,7 @@
         "screen": "14.2 inch Liquid Retina XDR",
         "chip": "Apple M2 Pro",
         "ram": "16GB",
-        "storage": [
-          "256GB",
-          "512GB",
-          "1TB"
-        ],
+        "storage": ["256GB", "512GB", "1TB"],
         "graphics": "Integrated 16-core GPU",
         "battery": "70 Wh"
       },
@@ -743,11 +663,7 @@
       "image": "https://cdn.tgdd.vn/Products/Images/44/231244/s16/mac-air-m1-13-xam-new-650x650.png",
       "price_vnd": "50.000.000đ",
       "configuration": {
-        "storage": [
-          "256GB",
-          "512GB",
-          "1TB"
-        ]
+        "storage": ["256GB", "512GB", "1TB"]
       },
       "id": 21
     },
@@ -772,11 +688,7 @@
         "screen": "12.9-inch Liquid Retina XDR",
         "chip": "Apple M2",
         "ram": "8GB",
-        "storage": [
-          "256GB",
-          "512GB",
-          "1TB"
-        ],
+        "storage": ["256GB", "512GB", "1TB"],
         "battery": "40.88 Wh"
       },
       "price_vnd": "25.976.000đ",
@@ -804,11 +716,7 @@
         "screen": "10.9-inch Liquid Retina",
         "chip": "Apple M1",
         "ram": "8GB",
-        "storage": [
-          "256GB",
-          "512GB",
-          "1TB"
-        ],
+        "storage": ["256GB", "512GB", "1TB"],
         "battery": "28.6 Wh"
       },
       "price_vnd": "13.976.000đ",
@@ -836,11 +744,7 @@
         "screen": "8.3-inch Liquid Retina",
         "chip": "Apple A15 Bionic",
         "ram": "4GB",
-        "storage": [
-          "256GB",
-          "512GB",
-          "1TB"
-        ],
+        "storage": ["256GB", "512GB", "1TB"],
         "battery": "19.3 Wh"
       },
       "price_vnd": "11.976.000đ",
@@ -868,11 +772,7 @@
         "screen": "10.2-inch Retina",
         "chip": "Apple A13 Bionic",
         "ram": "3GB",
-        "storage": [
-          "256GB",
-          "512GB",
-          "1TB"
-        ],
+        "storage": ["256GB", "512GB", "1TB"],
         "battery": "32.4 Wh"
       },
       "price_vnd": "7.976.000đ",
@@ -900,11 +800,7 @@
         "screen": "12.9-inch Liquid Retina XDR",
         "chip": "Apple M2",
         "ram": "8GB",
-        "storage": [
-          "256GB",
-          "512GB",
-          "1TB"
-        ],
+        "storage": ["256GB", "512GB", "1TB"],
         "battery": "40.88 Wh"
       },
       "price_vnd": "25.976.000đ",
@@ -932,11 +828,7 @@
         "screen": "12.9-inch Liquid Retina XDR",
         "chip": "Apple M2",
         "ram": "8GB",
-        "storage": [
-          "256GB",
-          "512GB",
-          "1TB"
-        ],
+        "storage": ["256GB", "512GB", "1TB"],
         "battery": "40.88 Wh"
       },
       "price_vnd": "25.976.000đ",
@@ -964,11 +856,7 @@
         "screen": "8.3-inch Liquid Retina",
         "chip": "Apple A15 Bionic",
         "ram": "4GB",
-        "storage": [
-          "256GB",
-          "512GB",
-          "1TB"
-        ],
+        "storage": ["256GB", "512GB", "1TB"],
         "battery": "19.3 Wh"
       },
       "price_vnd": "11.976.000đ",
@@ -996,11 +884,7 @@
         "screen": "8.3-inch Liquid Retina",
         "chip": "Apple A15 Bionic",
         "ram": "4GB",
-        "storage": [
-          "256GB",
-          "512GB",
-          "1TB"
-        ],
+        "storage": ["256GB", "512GB", "1TB"],
         "battery": "19.3 Wh"
       },
       "price_vnd": "11.976.000đ",
@@ -1028,11 +912,7 @@
       "image": "https://cdn.tgdd.vn/Products/Images/522/325501/s16/ipad-air-m2-11-inch-wifi-gray-650x650.png",
       "price_vnd": "16.000.000đ",
       "configuration": {
-        "storage": [
-          "128GB",
-          "256GB",
-          "512GB"
-        ]
+        "storage": ["128GB", "256GB", "512GB"]
       },
       "id": 30
     },
@@ -1057,9 +937,7 @@
         "screen": "49mm Retina Display",
         "chip": "Apple S8",
         "ram": "1GB",
-        "storage": [
-          "32GB"
-        ],
+        "storage": ["32GB"],
         "battery": "36 hours"
       },
       "price_vnd": "18.976.000đ",
@@ -1087,9 +965,7 @@
         "screen": "41mm/45mm Retina Display",
         "chip": "Apple S8",
         "ram": "1GB",
-        "storage": [
-          "32GB"
-        ],
+        "storage": ["32GB"],
         "battery": "18 hours"
       },
       "price_vnd": "9.976.000đ",
@@ -1117,9 +993,7 @@
         "screen": "40mm/44mm Retina Display",
         "chip": "Apple S8",
         "ram": "1GB",
-        "storage": [
-          "32GB"
-        ],
+        "storage": ["32GB"],
         "battery": "18 hours"
       },
       "price_vnd": "5.976.000đ",
@@ -1147,9 +1021,7 @@
         "screen": "41mm/45mm Retina Display",
         "chip": "Apple S6",
         "ram": "1GB",
-        "storage": [
-          "32GB"
-        ],
+        "storage": ["32GB"],
         "battery": "18 hours"
       },
       "price_vnd": "9.976.000đ",
@@ -1177,9 +1049,7 @@
         "screen": "40mm/44mm Retina Display",
         "chip": "Apple S8",
         "ram": "1GB",
-        "storage": [
-          "32GB"
-        ],
+        "storage": ["32GB"],
         "battery": "18 hours"
       },
       "price_vnd": "5.976.000đ",
@@ -1207,9 +1077,7 @@
         "screen": "41mm/45mm Retina Display",
         "chip": "Apple S8",
         "ram": "1GB",
-        "storage": [
-          "32GB"
-        ],
+        "storage": ["32GB"],
         "battery": "18 hours"
       },
       "price_vnd": "9.976.000đ",
@@ -1237,9 +1105,7 @@
         "screen": "40mm/44mm Retina Display",
         "chip": "Apple S8",
         "ram": "1GB",
-        "storage": [
-          "32GB"
-        ],
+        "storage": ["32GB"],
         "battery": "18 hours"
       },
       "price_vnd": "5.976.000đ",
@@ -1254,11 +1120,7 @@
       "image": "https://cdn.tgdd.vn/Products/Images/44/322616/s16/macbook-air-15-inch-m3-2024-bac-650x650.png",
       "price_vnd": "31.090.000đ",
       "configuration": {
-        "storage": [
-          "256GB",
-          "512GB",
-          "1TB"
-        ]
+        "storage": ["256GB", "512GB", "1TB"]
       },
       "id": 38
     }

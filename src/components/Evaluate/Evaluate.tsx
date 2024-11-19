@@ -8,6 +8,7 @@ import { useSelector } from "react-redux";
 
 interface EvaluateProps {
   id: number | undefined;
+  model: string | undefined;
 }
 
 interface IuserEvaluate {
@@ -26,7 +27,7 @@ interface IEvaluate {
   content: string;
 }
 
-const Evaluate: React.FC<EvaluateProps> = ({ id }) => {
+const Evaluate: React.FC<EvaluateProps> = ({ id, model }) => {
   const [evaluateData, setEvaluateData] = useState<IEvaluate[]>([]);
   const [averageRating, setAverageRating] = useState<number>(0);
   const [valueEvaluate, setValueEvaluate] = useState<string>("");
@@ -113,7 +114,7 @@ const Evaluate: React.FC<EvaluateProps> = ({ id }) => {
   return (
     <div className="flex flex-col flex-1 gap-[10px]  bg-custom-gradient rounded-xl p-[10px]  ">
       <div className="flex flex-col bg-white w-[95%] m-auto p-[10px]  h-[200px] mt-[20px] rounded-xl  shadow-product">
-        <b className="text-[20px] p-[5px]">Đánh giá & nhận xét {id}</b>
+        <b className="text-[20px] p-[5px]">Đánh giá & nhận xét {model}</b>
         <div className="flex w-full justify-between p-[10px]">
           <div className="flex flex-col justify-center items-center border-r-[1px] flex-1 border-r-slate-500">
             <p className="text-[24px]">{averageRating.toFixed(1)}/5</p>

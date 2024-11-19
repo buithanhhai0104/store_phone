@@ -4,7 +4,8 @@ import SavingBox from "../../components/savingBox/SavingBox";
 import { useMediaQuery } from "react-responsive";
 import Evaluate from "../../components/Evaluate/Evaluate";
 import Comments from "../../components/Comments/Comments";
-import { fetchProductItem } from "../../service/getProductItem";
+import { getDocumentByFieldName } from "../../service/product";
+
 type Configuration = {
   screen: string;
   chip: string;
@@ -21,57 +22,41 @@ type Colors = {
 };
 
 type DataDetail = {
-  postProduct: {
-    id: number;
-    model: string;
-    price_usd: number;
-    price_vnd: string;
-    image: string;
-    configuration: Configuration;
-    promotion_online: boolean;
-    colors: Colors[];
-  };
+  id: number;
+  model: string;
+  price_usd: number;
+  price_vnd: string;
+  image: string;
+  configuration: Configuration;
+  promotion_online: boolean;
+  colors: Colors[];
 };
 
 const ProductDetail: React.FC = () => {
   const { idproduct } = useParams<{ idproduct: string | undefined }>();
-  const endpoint = idproduct ? idproduct.slice(1) : "";
+  const id = idproduct ? idproduct.slice(1) : "";
   const [dataDetail, setDataDetail] = useState<DataDetail>();
   const [activeColor, setActiveColor] = useState<string>("");
   const [activeImg, setActiveImg] = useState<string>("");
   const [activeVersion, setActiveVersion] = useState<string>("");
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
-  // const fetchProductdata = useCallback(async () => {
-  //   try {
-  //     if (endpoint) {
-  //       const response = await fetch(
-  //         `http://localhost:3001/products?id=${endpoint}`
-  //       );
-  //       const data = await response.json();
-  //       console.log(data);
-  //       setDataDetail(data[0]);
-  //     }
-  //   } catch (error) {
-  //     console.error("Không thể tải bình luận:", error);
-  //   }
-  // }, []);
-  // useEffect(() => {
-  //   fetchProductdata();
-  // }, []);
-
   useEffect(() => {
     const fetchData = async () => {
-      const productsDataMacbook = await fetchProductItem(endpoint);
+      const productsDataMacbook = await getDocumentByFieldName(
+        "products",
+        "id",
+        id
+      );
 
       setDataDetail(productsDataMacbook[0]);
     };
 
     fetchData();
-  }, []);
+  }, [id]);
 
-  const handleClickVersion = (event: React.MouseEvent<HTMLButtonElement>) => {
-    setActiveVersion(event.currentTarget.value);
+  const handleClickVersion = (e: React.MouseEvent<HTMLButtonElement>) => {
+    setActiveVersion(e.currentTarget.value);
   };
 
   return (
@@ -91,8 +76,8 @@ const ProductDetail: React.FC = () => {
           }
         >
           <img
-            src={activeImg === "" ? dataDetail?.postProduct.image : activeImg}
-            alt={dataDetail?.postProduct.model}
+            src={activeImg === "" ? dataDetail?.image : activeImg}
+            alt={dataDetail?.model}
           />
         </div>
         <div className={` ${isTabletOrMobile ? "w-[95%]" : "w-[580px]"}`}>
@@ -101,37 +86,35 @@ const ProductDetail: React.FC = () => {
               isTabletOrMobile ? "text-[24px]" : "text-[32px]"
             } pb-[20px] pt-[5px] text-[#ffff] font-bold`}
           >
-            {dataDetail?.postProduct.model}
+            {dataDetail?.model}
           </h1>
           <div className=" flex flex-col  gap-[20px] text-[#FFFF]">
             <span>Giá và khuyên mãi tại: Hồ Chí Minh</span>
-            {!dataDetail?.postProduct.promotion_online ? (
-              <strong>{dataDetail?.postProduct.price_vnd}</strong>
+            {!dataDetail?.promotion_online ? (
+              <strong>{dataDetail?.price_vnd}</strong>
             ) : null}
             <div className="flex flex-col gap-[10px]">
               <span>Dung lượng</span>
               <div className="flex gap-[20px]">
-                {dataDetail?.postProduct.configuration.storage.map(
-                  (version) => (
-                    <button
-                      key={version}
-                      value={version}
-                      onClick={handleClickVersion}
-                      className={`py-[10px] px-[12px] bg-[#2f3033] text-[#DBDBDB] rounded-lg ${
-                        activeVersion === version
-                          ? "border-2 border-blue-500"
-                          : ""
-                      } `}
-                    >
-                      {version}
-                    </button>
-                  )
-                )}
+                {dataDetail?.configuration.storage.map((version) => (
+                  <button
+                    key={version}
+                    value={version}
+                    onClick={handleClickVersion}
+                    className={`py-[10px] px-[12px] bg-[#2f3033] text-[#DBDBDB] rounded-lg ${
+                      activeVersion === version
+                        ? "border-2 border-blue-500"
+                        : ""
+                    } `}
+                  >
+                    {version}
+                  </button>
+                ))}
               </div>
               <div className="flex flex-col gap-[20px]">
                 <span>Màu: {activeColor}</span>
                 <div className="flex gap-[20px]">
-                  {dataDetail?.postProduct.colors.map((item) => (
+                  {dataDetail?.colors.map((item) => (
                     <button
                       key={item.color_id}
                       onClick={() => {
@@ -162,10 +145,10 @@ const ProductDetail: React.FC = () => {
       </div>
       <div className="flex gap-[75px] mt-[20px]">
         <div className="inline-block w-full">
-          <Evaluate id={dataDetail?.postProduct.id} />
+          <Evaluate id={dataDetail?.id} model={dataDetail?.model} />
         </div>
         <div className="inline-block w-full">
-          <Comments id={dataDetail?.postProduct.id} />
+          <Comments id={dataDetail?.id} />
         </div>
       </div>
     </section>

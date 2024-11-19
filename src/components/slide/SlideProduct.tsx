@@ -2,21 +2,13 @@ import React, { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
+import { ICategory } from "../../type";
 
-type DataPhoneProps = {
-  dataPhone: {
-    postProduct: {
-      id: number;
-      model: string;
-      price_usd: number;
-      price_vnd: string;
-      image: string;
-      promotion_online: boolean;
-    };
-  }[];
+type ProductsProps = {
+  products: ICategory[];
 };
 
-const SlideProduct: React.FC<DataPhoneProps> = ({ dataPhone }) => {
+const SlideProduct: React.FC<ProductsProps> = ({ products }) => {
   const sliderRefIphone = useRef<HTMLDivElement | null>(null);
   const [currentIndex, setCurrentIndex] = useState<number>(0);
 
@@ -32,7 +24,7 @@ const SlideProduct: React.FC<DataPhoneProps> = ({ dataPhone }) => {
   }, [currentIndex]);
 
   const nextSlide = () => {
-    if (currentIndex < dataPhone.length / 6) {
+    if (currentIndex < products.length / 6) {
       setCurrentIndex(currentIndex + 1);
     }
   };
@@ -48,24 +40,22 @@ const SlideProduct: React.FC<DataPhoneProps> = ({ dataPhone }) => {
         ref={sliderRefIphone}
         className="  flex flex-row  gap-4 overflow-auto overflow-x-hidden  max-w-[1200px] min-w-[1024px] m-auto rounded-3xl "
       >
-        {dataPhone.map((item) => {
+        {products.map((item) => {
           return (
             <Link
-              to={`/:${item.postProduct.id}`}
-              key={item.postProduct.id}
+              to={`/:${item.id}`}
+              key={item.id}
               className="flex items-center flex-col w-[280px] flex-shrink-0 bg-[#2b2a2a] py-[30px]  rounded-3xl hover:shadow-product m-[4px]"
             >
               <img
                 className="w-[250px] h-[250px]"
-                src={item.postProduct.image}
-                alt={item.postProduct.model}
+                src={item.image}
+                alt={item.model}
               />
-              <h3 className="text-[#ffff] my-[20px]">
-                {item.postProduct.model}
-              </h3>
-              <span className="text-[#ffff]">{item.postProduct.price_vnd}</span>
+              <h3 className="text-[#ffff] my-[20px]">{item.model}</h3>
+              <span className="text-[#ffff]">{item.price_vnd}</span>
               <span className="text-[#ff9f00]">
-                {item.postProduct.promotion_online ? "Online giá rẻ quá" : ""}
+                {item.promotion_online ? "Online giá rẻ quá" : ""}
               </span>
             </Link>
           );

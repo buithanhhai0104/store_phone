@@ -71,14 +71,13 @@ const customList = [
 
 const Header: React.FC = () => {
   const [showSearch, setShowSearch] = useState<boolean>(false);
-  const user = useSelector((state: RootState) => state.user.user);
+  const user = JSON.parse(localStorage.getItem("user") || "{}");
   const [activeNavMobile, setActiveNavMobile] = useState<boolean>(false);
   const [showCustomList, setShowCustomList] =
     useState<ICustomListItem[]>(customList);
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const cartQuantity = useSelector((state: RootState) => state.cart.items);
   const [theme, setTheme] = useState<boolean>(false);
-  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const handleSearch = () => {
@@ -106,7 +105,7 @@ const Header: React.FC = () => {
 
   const handleLogout = () => {
     if (user) {
-      dispatch(clearUser());
+      localStorage.removeItem("user");
       navigate("/");
     }
   };
@@ -122,7 +121,6 @@ const Header: React.FC = () => {
       setTheme((prev) => !prev);
     }
   };
-  console.log(theme);
   return (
     <div className={showSearch ? "w-full h-[100vh] bg-screen-cover z-20" : ""}>
       <div className="h-[60px] flex bg-[#101010]">
@@ -199,7 +197,7 @@ const Header: React.FC = () => {
                     </div>
                   ) : null}
                 </Link>
-                {!user ? (
+                {!user.id ? (
                   <Link
                     className="bg-custom-gradient p-[5px] rounded-lg"
                     to={config.routes.login}
@@ -239,8 +237,8 @@ const Header: React.FC = () => {
                   >
                     <img
                       className="w-[40px] h-[40px] rounded-full"
-                      src={user.img}
-                      alt={user.username}
+                      src={user.user_img}
+                      alt={user.user_name}
                     />
                   </Tippy>
                 )}

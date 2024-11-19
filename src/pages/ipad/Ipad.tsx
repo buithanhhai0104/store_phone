@@ -3,69 +3,94 @@ import Carousel from "../../components/carousel/Carousel";
 import { FaApple } from "react-icons/fa6";
 import ProductItem from "../../components/ProductItem/ProductItem";
 import { useMediaQuery } from "react-responsive";
-import { getDocs, collection } from "firebase/firestore";
-import { db } from "../../firebase";
+import { ICategory } from "../../type";
+import { getDocumentByFieldName } from "../../service/product";
+import { getCarousel } from "../../service/carousel";
 
 const Ipad: React.FC = () => {
-  const [dataCarolsel, setDataCarousel] = useState<any[]>([]);
-  const [dataIphones, setDataIphones] = useState<any[]>([]);
+  const [carouselData, setCarouselData] = useState<string[]>([]);
+  const [dataIpads, setDataIpads] = useState<ICategory[]>([]);
+  const [newProducts, setNewProducts] = useState<ICategory[]>([]);
   const [activeVersion, setActiveVersion] = useState<string>("Tất cả");
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" });
-  const [users, setUsers] = useState<any>();
 
-  useEffect(() => {
-    const fetchUsers = async () => {
-      const querySnapshot = await getDocs(collection(db, "products"));
-      const usersList: any[] = [];
-      querySnapshot.forEach((doc) => {
-        usersList.push(doc.data());
-      });
-    };
+  // useEffect(() => {
+  //   window.scrollTo({
+  //     top: 0,
+  //     behavior: "smooth",
+  //   });
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await fetch("http://localhost:3001/carousel");
 
-    fetchUsers();
-  }, []);
+  //       if (!response.ok) {
+  //         throw new Error("Network response was not ok");
+  //       }
+  //       const result = await response.json();
+  //       setCarouselData(result.carousel_ipads);
+  //     } catch (error) {}
+  //   };
 
-  console.log(users);
+  //   fetchData();
+  // }, []);
+
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await fetch(
+  //         `http://localhost:3001/products${
+  //           activeVersion !== "Tất cả"
+  //             ? `?version=${activeVersion}`
+  //             : "?category=ipad"
+  //         }`
+  //       );
+  //       if (!response.ok) {
+  //         throw new Error("Network response was not ok");
+  //       }
+  //       const result = await response.json();
+  //       setDataIphones(result);
+  //     } catch (error) {}
+  //   };
+
+  //   fetchData();
+  // }, [activeVersion]);
+
   useEffect(() => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
     const fetchData = async () => {
-      try {
-        const response = await fetch("http://localhost:3001/carousel");
-
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        const result = await response.json();
-        setDataCarousel(result.carousel_ipads);
-      } catch (error) {}
+      const ipadProducts = await getDocumentByFieldName(
+        "products",
+        "category",
+        "ipad"
+      );
+      if (ipadProducts) {
+        setDataIpads(ipadProducts);
+      }
     };
 
+    const fetchCarouselData = async () => {
+      const carouselIpad = await getCarousel();
+      if (carouselIpad) {
+        setCarouselData(carouselIpad.carousel_ipad);
+      }
+    };
     fetchData();
+    fetchCarouselData();
   }, []);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(
-          `http://localhost:3001/products${
-            activeVersion !== "Tất cả"
-              ? `?version=${activeVersion}`
-              : "?category=ipad"
-          }`
-        );
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        const result = await response.json();
-        setDataIphones(result);
-      } catch (error) {}
-    };
-
-    fetchData();
-  }, [activeVersion]);
+    const filterData = dataIpads.filter(
+      (product) => product.version === activeVersion
+    );
+    if (activeVersion === "Tất cả") {
+      setNewProducts(dataIpads);
+    } else {
+      setNewProducts(filterData);
+    }
+  }, [activeVersion, dataIpads]);
 
   return (
     <div>
@@ -79,7 +104,7 @@ const Ipad: React.FC = () => {
           <p>iPad</p>
         </div>
         <div className=" w-full rounded-2xl">
-          <Carousel dataImg={dataCarolsel} />
+          <Carousel carouselData={carouselData} />
         </div>
         <div
           className={`flex gap-[30px] text-[#afb7bd] my-[50px]  ${
@@ -117,8 +142,8 @@ const Ipad: React.FC = () => {
               : "grid grid-cols-2 gap-[20px]"
           } `}
         >
-          {dataIphones.map((item) => {
-            return <ProductItem key={item.id} productData={item} />;
+          {newProducts.map((item) => {
+            return <ProductItem key={item.id} product={item} />;
           })}
         </div>
       </div>
