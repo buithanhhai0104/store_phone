@@ -1,10 +1,10 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import config from "../../../../config";
+import config from "../../../config";
 import { IoIosArrowBack } from "react-icons/io";
-import ProductItem from "./CartItem/ProductItem";
-import { RootState } from "../../../../redux/store";
+import CartItem from "./CartItem";
+import { RootState } from "../../../redux/store";
 import { BsFillCartXFill } from "react-icons/bs";
 
 const CartItems: React.FC = () => {
@@ -25,7 +25,7 @@ const CartItems: React.FC = () => {
             {cartItems.map((item) => {
               return (
                 <li key={item.id}>
-                  <ProductItem productData={item} />
+                  <CartItem productData={item} />
                 </li>
               );
             })}

@@ -7,7 +7,7 @@ import Login from "../pages/Login/Login";
 import ProductDetail from "../pages/productDetail/ProductDetail";
 import Ipad from "../pages/ipad/Ipad";
 import Watch from "../pages/watch/Watch";
-import AddProductForm from "../pages/addProduct/AddProduct";
+import ProductManagement from "../pages/productManagement/Productmanagement";
 const publicRoutes = [
   { path: config.routes.home, component: Home },
   { path: config.routes.mac, component: Mac },
@@ -17,6 +17,6 @@ const publicRoutes = [
   { path: config.routes.watch, component: Watch },
   { path: config.routes.login, component: Login },
   { path: config.routes.productDetail, component: ProductDetail },
-  { path: config.routes.addproduct, component: AddProductForm },
+  { path: config.routes.productmanagement, component: ProductManagement },
 ];
 export default publicRoutes;

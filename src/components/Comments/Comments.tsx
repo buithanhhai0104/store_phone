@@ -3,50 +3,46 @@ import { IoIosSend } from "react-icons/io";
 import BoxComment from "./BoxComment/BoxComment";
 import { useNavigate } from "react-router-dom";
 import config from "../../config";
-import { useSelector } from "react-redux";
-import { RootState } from "../../redux/store";
+import { addComment, getComment, updateComment } from "../../service/comment";
+import { v4 as uuidv4 } from "uuid";
 
 interface ICommentProps {
-  id: number | undefined;
+  id: string;
 }
 
 interface Reply {
+  idFeedback: string;
   content: string;
-  img: string;
-  name: string;
+  user_name: string;
+  user_img: string;
 }
 
 interface IuserComment {
   userId: string;
   userName: string;
   userImg: string;
-  admin: boolean;
 }
 
 interface Comment {
-  id: number;
   productId: string;
   userComment: IuserComment;
   replies: Reply[];
   content: string;
+  docId: string;
 }
 
 const Comments: React.FC<ICommentProps> = ({ id }) => {
   const [comments, setComments] = useState<Comment[]>([]);
-  const [newComment, setNewComment] = useState<string>("");
-  const [feedbacks, setFeedbacks] = useState<string>("");
-  const user = useSelector((state: RootState) => state.user.user);
+  const [valueComment, setValueComment] = useState<string>("");
+  const [feedbacks, setFeedbacks] = useState<Record<string, string>>({});
+  const user = JSON.parse(localStorage.getItem("user") || "null");
   const navigate = useNavigate();
 
-  // Hàm render bình luận
   const fetchComments = useCallback(async () => {
     try {
       if (id) {
-        const response = await fetch(
-          `http://localhost:3001/comments?productId=${id}`
-        );
-        const data = await response.json();
-        setComments(data);
+        const commentData = await getComment(id);
+        setComments(commentData || []);
       }
     } catch (error) {
       console.error("Không thể tải bình luận:", error);
@@ -57,59 +53,61 @@ const Comments: React.FC<ICommentProps> = ({ id }) => {
     fetchComments();
   }, [fetchComments]);
 
+  // Thêm bình luận mới
   const handleAddComment = async () => {
-    if (user) {
-      if (newComment.trim() === "" || !id) return;
+    if (!user) {
+      alert("Vui lòng đăng nhập để bình luận!");
+      navigate(config.routes.login);
+      return;
+    }
+    if (valueComment.trim() === "" || !id) return;
 
-      const commentData = {
-        productId: id,
-        userComment: {
-          userId: user.id,
-          userName: user.username,
-          userImg: user.img,
-          admin: user.admin,
-        },
-        content: newComment,
-      };
+    const commentData: Partial<Comment> = {
+      productId: id,
+      userComment: {
+        userId: user.id,
+        userName: user.user_name,
+        userImg: user.user_img,
+      },
+      content: valueComment,
+    };
 
-      try {
-        await fetch(`http://localhost:3001/comments`, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(commentData),
-        });
-        setNewComment("");
-        // Gọi lại fetchComments để cập nhật danh sách bình luận
-        fetchComments();
-      } catch (error) {
-        console.error("Không thể thêm bình luận:", error);
-      }
+    try {
+      await addComment(commentData);
+      setValueComment("");
+      fetchComments();
+    } catch (error) {
+      console.error("Không thể thêm bình luận:", error);
     }
   };
 
-  const handleAddFeedback = async (id: number) => {
-    if (feedbacks) {
-      try {
-        await fetch(`http://localhost:3001/comments/${id}`, {
-          method: "PATCH",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            replies: [
-              ...(comments.find((item) => item.id === id)?.replies || []),
-              {
-                content: feedbacks,
-                name: user?.username,
-                img: user?.img,
-              },
-            ],
-          }),
-        });
-        setFeedbacks("");
-        fetchComments(); // Gọi lại hàm fetch để cập nhật bình luận
-      } catch (error) {
-        console.error("Không thể thêm phản hồi:", error);
-      }
+  const handleAddFeedback = async (docId: string) => {
+    if (!user) {
+      alert("Vui lòng đăng nhập để phản hồi!");
+      navigate(config.routes.login);
+      return;
     }
+    const feedbackContent = feedbacks[docId]?.trim();
+    if (!feedbackContent) return;
+
+    const newFeedback: Reply = {
+      idFeedback: uuidv4(),
+      content: feedbackContent,
+      user_name: user.user_name,
+      user_img: user.user_img,
+    };
+
+    try {
+      await updateComment(docId, newFeedback);
+      setFeedbacks((prev) => ({ ...prev, [docId]: "" }));
+      fetchComments();
+    } catch (error) {
+      console.error("Không thể thêm phản hồi:", error);
+    }
+  };
+
+  const handleFeedbackChange = (docId: string, value: string) => {
+    setFeedbacks((prev) => ({ ...prev, [docId]: value }));
   };
 
   const handleClickComment = () => {
@@ -120,19 +118,19 @@ const Comments: React.FC<ICommentProps> = ({ id }) => {
   };
 
   return (
-    <div className="flex-flex-col  flex-1 bg-custom-gradient  mt-[20px] rounded-xl p-[10px] ">
+    <div className="flex-flex-col flex-1 bg-custom-gradient mt-[20px] rounded-xl p-[10px]">
       <b className="text-[24px] mb-2">Hỏi và đáp</b>
-      <div className="flex  w-[85%] my-0 m-auto relative gap-[10px] justify-center items-center">
-        <div className="flex p-[10px]  bg-custom-gradient shadow-product rounded-lg mt-1 flex-1 border-[1px]">
+      <div className="flex w-[85%] my-0 m-auto relative gap-[10px] justify-center items-center">
+        <div className="flex p-[10px] bg-custom-gradient shadow-product rounded-lg mt-1 flex-1 border-[1px]">
           <img
             className="pr-[10px]"
             src="https://cdn2.cellphones.com.vn/insecure/rs:fill:55:0/q:90/plain/https://cellphones.com.vn/media/wysiwyg/chibi2.png"
-            alt=""
+            alt="User"
           />
           <textarea
-            value={newComment}
+            value={valueComment}
             onClick={handleClickComment}
-            onChange={(e) => setNewComment(e.target.value)}
+            onChange={(e) => setValueComment(e.target.value)}
             className="border-0 bg-[#2f3033] rounded-xl p-[10px] shadow-inner text-white"
             placeholder="Nhập văn bản không giới hạn và tự động xuống dòng"
             rows={4}
@@ -141,17 +139,18 @@ const Comments: React.FC<ICommentProps> = ({ id }) => {
         </div>
         <button
           onClick={handleAddComment}
-          className="flex absolute bottom-[15%] right-[5%]  h-[40px] justify-center items-center gap-[1px] p-[10px] bg-red-500 text-white rounded-xl"
+          className="flex absolute bottom-[15%] right-[5%] h-[40px] justify-center items-center gap-[1px] p-[10px] bg-red-500 text-white rounded-xl"
         >
           <IoIosSend />
           <p>Gửi</p>
         </button>
       </div>
       <BoxComment
-        dataComment={comments || []}
+        dataComment={comments}
         handleAddFeedback={handleAddFeedback}
         valuefeedback={feedbacks}
-        setFeedbacks={setFeedbacks}
+        setFeedbacks={handleFeedbackChange}
+        user={user || undefined}
       />
     </div>
   );

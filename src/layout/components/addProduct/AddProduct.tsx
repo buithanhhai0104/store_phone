@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { FaXmark } from "react-icons/fa6";
 import { MouseEventHandler } from "react";
-import { addProduct } from "../../service/product";
+import { addProduct } from "../../../service/product";
 import { v4 as uuidv4 } from "uuid";
-const AddProductForm = () => {
+const AddProductForm: React.FC = () => {
   const optionColors = [
     {
       color_name: "Đỏ",
@@ -59,16 +59,6 @@ const AddProductForm = () => {
     };
 
     await addProduct(product);
-
-    // try {
-    //   fetch(`http://localhost:3001/products`, {
-    //     method: "POST",
-    //     headers: { "Content-Type": "application/json" },
-    //     body: JSON.stringify(addProduct),
-    //   });
-    // } catch (error) {
-    //   console.error("Không thể thêm sản phẩm:", error);
-    // }
   };
 
   // add
@@ -102,7 +92,7 @@ const AddProductForm = () => {
       setChooseVersion((prev) => prev.filter((item) => item !== color_name));
     };
   return (
-    <div className="max-w-2xl mx-auto p-6 bg-custom-gradient rounded-lg shadow-md">
+    <div className="w-[90%]  mx-auto p-6 bg-white rounded-lg shadow-md">
       <h1 className="text-2xl font-semibold text-center text-gray-800 mb-6">
         Thêm sản phẩm mới
       </h1>

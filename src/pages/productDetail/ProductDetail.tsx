@@ -22,7 +22,7 @@ type Colors = {
 };
 
 type DataDetail = {
-  id: number;
+  id: string;
   model: string;
   price_usd: number;
   price_vnd: string;
@@ -33,7 +33,7 @@ type DataDetail = {
 };
 
 const ProductDetail: React.FC = () => {
-  const { idproduct } = useParams<{ idproduct: string | undefined }>();
+  const { idproduct } = useParams<{ idproduct: string }>();
   const id = idproduct ? idproduct.slice(1) : "";
   const [dataDetail, setDataDetail] = useState<DataDetail>();
   const [activeColor, setActiveColor] = useState<string>("");
@@ -119,9 +119,7 @@ const ProductDetail: React.FC = () => {
                       key={item.color_id}
                       onClick={() => {
                         setActiveColor(item.color_name);
-                        if (item.color_img) {
-                          setActiveImg(item.color_img);
-                        }
+                        setActiveImg(dataDetail.image);
                       }}
                       style={{ backgroundColor: item.color_id }}
                       className={`w-[40px] h-[40px] rounded-full shadow-inner ${
@@ -145,10 +143,13 @@ const ProductDetail: React.FC = () => {
       </div>
       <div className="flex gap-[75px] mt-[20px]">
         <div className="inline-block w-full">
-          <Evaluate id={dataDetail?.id} model={dataDetail?.model} />
+          <Evaluate
+            id={dataDetail?.id as string}
+            model={dataDetail?.model as string}
+          />
         </div>
         <div className="inline-block w-full">
-          <Comments id={dataDetail?.id} />
+          <Comments id={dataDetail?.id as string} />
         </div>
       </div>
     </section>

@@ -11,7 +11,7 @@ const routes: Routes = {
   login: "/login",
   watch: "/watch",
   productDetail: "/:idproduct",
-  addproduct: "/add_product",
+  productmanagement: "/productmanagement",
 };
 
 export default routes;

@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
-import config from "../../../../config";
+import config from "../../../config";
 import { Link, useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "../../../../redux/store";
+import { useSelector } from "react-redux";
+import { RootState } from "../../../redux/store";
 import Tippy from "@tippyjs/react/headless";
 // icon
 import { MdOutlineShoppingBag } from "react-icons/md";
@@ -13,7 +13,6 @@ import { IoReorderThree } from "react-icons/io5";
 import { TiAdjustContrast } from "react-icons/ti";
 import { BsTranslate } from "react-icons/bs";
 import { FcPrevious } from "react-icons/fc";
-import { clearUser } from "../../../../redux/userSlice";
 
 interface iProduct {
   id: number;
@@ -214,14 +213,12 @@ const Header: React.FC = () => {
                         {...attrs}
                         tabIndex={1}
                       >
-                        {user.admin ? (
-                          <Link
-                            className="flex w-full border-[1px] text-[18px] justify-center items-center gap-[20px] p-[10px] rounded-xl hover:bg-[#1f1f1f]"
-                            to={config.routes.addproduct}
-                          >
-                            Admin
-                          </Link>
-                        ) : null}
+                        <Link
+                          className="flex w-full border-[1px] text-[18px] justify-center items-center gap-[20px] p-[10px] rounded-xl hover:bg-[#1f1f1f]"
+                          to={config.routes.productmanagement}
+                        >
+                          Quản lý
+                        </Link>
                         {showCustomList.map((item, index) => (
                           <button
                             key={index}

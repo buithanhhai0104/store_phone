@@ -2,15 +2,14 @@ import React, { memo } from "react";
 import { FaStar } from "react-icons/fa";
 
 interface IuserEvaluate {
-  userName: string;
-  userImg: string;
+  user_name: string;
+  user_img: string;
   userId: number;
-  admin: boolean;
 }
 
 interface IEvaluateItemsProps {
   evaluateData: {
-    id: number;
+    id: string;
     userEvaluate: IuserEvaluate;
     rating: number;
     comment: string;
@@ -21,23 +20,23 @@ interface IEvaluateItemsProps {
 const EvaluateItem: React.FC<IEvaluateItemsProps> = ({ evaluateData }) => {
   return (
     <div className="flex flex-col bg-white  rounded-xl w-[100%] m-auto">
-      {evaluateData.map((item) => {
+      {evaluateData.map((item, index) => {
         return (
-          <div className="bg-white border-b-[1px] p-[10px] ">
+          <div key={index} className="bg-white border-b-[1px] p-[10px] ">
             <div className="flex items-center gap-[20px]">
               <div className="flex items-center gap-[5px]">
                 <img
                   className="h-[40px] w-[40px] rounded-full"
-                  src={item.userEvaluate.userImg}
-                  alt={item.userEvaluate.userName}
+                  src={item.userEvaluate.user_img}
+                  alt={item.userEvaluate.user_name}
                 />
-                <p>{item.userEvaluate.userName}</p>
+                <p>{item.userEvaluate.user_name}</p>
               </div>
               <div className="flex">
                 {[...Array(5)].map((_, index) => {
                   const star = index;
                   return (
-                    <div>
+                    <div key={index}>
                       <FaStar
                         className={
                           item.rating <= star

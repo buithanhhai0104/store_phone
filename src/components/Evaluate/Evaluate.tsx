@@ -1,25 +1,23 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
-import { RootState } from "../../redux/store";
 import EvaluateItem from "./EvaluateItem";
 import { useNavigate } from "react-router-dom";
 import config from "../../config";
-import { useSelector } from "react-redux";
+import { addEvalute, getEvalute } from "../../service/evaluate";
 
 interface EvaluateProps {
-  id: number | undefined;
-  model: string | undefined;
+  id: string;
+  model: string;
 }
 
 interface IuserEvaluate {
-  userName: string;
-  userImg: string;
+  user_name: string;
+  user_img: string;
   userId: number;
-  admin: boolean;
 }
 
 interface IEvaluate {
-  id: number;
+  id: string;
   userEvaluate: IuserEvaluate;
   rating: number;
   comment: string;
@@ -32,7 +30,7 @@ const Evaluate: React.FC<EvaluateProps> = ({ id, model }) => {
   const [averageRating, setAverageRating] = useState<number>(0);
   const [valueEvaluate, setValueEvaluate] = useState<string>("");
   const [selectReview, setSelectReview] = useState<number>(0);
-  const user = useSelector((state: RootState) => state.user.user);
+  const user = JSON.parse(localStorage.getItem("user") || "null");
   const navigate = useNavigate();
   const listStar = [
     { star: 1 },
@@ -44,12 +42,9 @@ const Evaluate: React.FC<EvaluateProps> = ({ id, model }) => {
 
   const fetchEvaluate = useCallback(async () => {
     try {
-      if (id) {
-        const response = await fetch(
-          `http://localhost:3001/reviews?productId=${id}`
-        );
-        const data = await response.json();
-        setEvaluateData(data);
+      const evaluateData = await getEvalute(id);
+      if (evaluateData) {
+        setEvaluateData(evaluateData);
       }
     } catch (error) {
       console.error("Không thể tải bình luận:", error);
@@ -81,23 +76,18 @@ const Evaluate: React.FC<EvaluateProps> = ({ id, model }) => {
     const cursorEvaluate = {
       content: valueEvaluate,
       userEvaluate: {
-        userName: user?.username,
-        userImg: user?.img,
+        user_name: user?.user_name,
+        user_img: user?.user_img,
         userId: user?.id,
-        admin: user?.admin,
       },
       rating: selectReview,
       productId: id,
     };
-
     try {
-      await fetch(`http://localhost:3001/reviews`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(cursorEvaluate),
-      });
-      setValueEvaluate("");
+      await addEvalute(cursorEvaluate);
+      setAverageRating(0);
       setSelectReview(0);
+      setValueEvaluate("");
       fetchEvaluate();
     } catch (error) {
       console.error("Không thể thêm đánh giá:", error);
@@ -169,6 +159,7 @@ const Evaluate: React.FC<EvaluateProps> = ({ id, model }) => {
               const starIndex = index + 1;
               return (
                 <button
+                  key={index}
                   value={item.star}
                   onClick={() => setSelectReview(item.star)}
                 >

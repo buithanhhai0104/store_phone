@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import config from "../../../../config";
+import config from "../../../config";
 import { FaFacebook } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";

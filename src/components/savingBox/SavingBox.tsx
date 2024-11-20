@@ -8,7 +8,7 @@ import { v4 as uuidv4 } from "uuid";
 type SavingBoxProps = {
   dataDetail:
     | {
-        id: number;
+        id: string;
         price_vnd: string;
         model: string;
       }

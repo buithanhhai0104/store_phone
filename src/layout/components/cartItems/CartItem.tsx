@@ -1,10 +1,10 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { HiMiniXMark } from "react-icons/hi2";
-import { removeFromCart } from "../../../../../redux/cartSlice";
-import { addQuantity } from "../../../../../redux/cartSlice";
-import { reduceQuantity } from "../../../../../redux/cartSlice";
-interface ProductItemProps {
+import { removeFromCart } from "../../../redux/cartSlice";
+import { addQuantity } from "../../../redux/cartSlice";
+import { reduceQuantity } from "../../../redux/cartSlice";
+interface CartItemProps {
   productData: {
     id: string;
     quantity: number;
@@ -16,7 +16,7 @@ interface ProductItemProps {
   };
 }
 
-const ProductItem: React.FC<ProductItemProps> = ({ productData }) => {
+const CartItem: React.FC<CartItemProps> = ({ productData }) => {
   const dispatch = useDispatch();
 
   const handleRemoveItem = () => {
@@ -94,4 +94,4 @@ const ProductItem: React.FC<ProductItemProps> = ({ productData }) => {
   );
 };
 
-export default ProductItem;
+export default CartItem;
