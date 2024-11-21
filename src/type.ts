@@ -1,4 +1,5 @@
 export interface ICategory {
+  docId: string;
   id: string;
   category: string;
   model: string;

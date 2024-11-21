@@ -1,4 +1,12 @@
-import { addDoc, collection, query, where, getDocs } from "firebase/firestore";
+import {
+  addDoc,
+  collection,
+  query,
+  where,
+  getDocs,
+  doc,
+  updateDoc,
+} from "firebase/firestore";
 import { db } from "../firebase";
 
 export const addProduct = async (product: any) => {
@@ -17,12 +25,24 @@ export const getProducts = async (): Promise<any[]> => {
 
     const querySnapshot = await getDocs(q);
     const data = querySnapshot.docs.map((doc) => ({
+      docId: doc.id,
       ...doc.data(),
     }));
     return data;
   } catch (error) {
     console.error("Lỗi khi lấy dữ liệu:", error);
     return [];
+  }
+};
+
+export const updateProduct = async (docId: string, productRepair: any) => {
+  try {
+    const docRef = doc(collection(db, "products"), docId);
+    await updateDoc(docRef, {
+      ...productRepair,
+    });
+  } catch (error) {
+    console.log(error);
   }
 };
 
