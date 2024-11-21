@@ -58,7 +58,7 @@ const Mac: React.FC = () => {
           isTabletOrMobile ? "w-[95%]" : "w-[80%]"
         } m-auto rounded-2xl`}
       >
-        <div className="flex justify-center items-center text-[40px] text-[#ffff] mt-[30px] mb-[30px]">
+        <div className="flex justify-center items-center text-[40px]  mt-[30px] mb-[30px]">
           <FaApple />
           <p>Macbook</p>
         </div>
@@ -76,11 +76,11 @@ const Mac: React.FC = () => {
                 <li
                   key={index}
                   onClick={() => setActiveVersion(version)}
-                  className={`flex justify-center items-center w-[100px] h-[40px] text-[15px] hover:border-b-[1px] hover:text-white ${
+                  className={`flex justify-center dark:text-white text-black items-center w-[100px] h-[40px] text-[15px] hover:border-b-[1px] ${
                     activeVersion === version
                       ? `${
                           !isTabletOrMobile
-                            ? "border-b-[1px] border-white text-white"
+                            ? "border-b-[1px] dark:border-white border-black text-white"
                             : "bg-slate-500 rounded-xl"
                         }`
                       : ""

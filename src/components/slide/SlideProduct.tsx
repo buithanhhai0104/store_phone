@@ -45,15 +45,15 @@ const SlideProduct: React.FC<ProductsProps> = ({ products }) => {
             <Link
               to={`/:${item.id}`}
               key={item.id}
-              className="flex items-center flex-col w-[280px] flex-shrink-0 bg-[#2b2a2a] py-[30px]  rounded-3xl hover:shadow-product m-[4px]"
+              className="flex items-center flex-col w-[280px] flex-shrink-0  dark:bg-white bg-[#2b2a2a] text-white dark:text-black py-[30px]  rounded-3xl hover:shadow-product m-[4px]"
             >
               <img
                 className="w-[250px] h-[250px]"
                 src={item.image}
                 alt={item.model}
               />
-              <h3 className="text-[#ffff] my-[20px]">{item.model}</h3>
-              <span className="text-[#ffff]">{item.price_vnd}</span>
+              <h3 className=" my-[20px]">{item.model}</h3>
+              <span>{item.price_vnd}</span>
               <span className="text-[#ff9f00]">
                 {item.promotion_online ? "Online giá rẻ quá" : ""}
               </span>

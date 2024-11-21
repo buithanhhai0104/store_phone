@@ -76,7 +76,7 @@ const Header: React.FC = () => {
     useState<ICustomListItem[]>(customList);
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const cartQuantity = useSelector((state: RootState) => state.cart.items);
-  const [theme, setTheme] = useState<boolean>(false);
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
   const navigate = useNavigate();
 
   const handleSearch = () => {
@@ -109,15 +109,18 @@ const Header: React.FC = () => {
     }
   };
 
+  const toggleDarkMode = () => {
+    document.documentElement.classList.toggle("dark", !isDarkMode);
+    setIsDarkMode(!isDarkMode);
+  };
+
   const handleItemClick = (item: ICustomListItem) => {
     if (item.title === "Đăng xuất") {
       handleLogout();
       return;
-    } else if (item.children) {
-      setShowCustomList(item.children);
     }
-    if (item.title === "Sáng" || item.title === "Tối") {
-      setTheme((prev) => !prev);
+    if (item.title === "Giao diện") {
+      toggleDarkMode();
     }
   };
   return (
@@ -262,8 +265,8 @@ const Header: React.FC = () => {
       </div>
       {isTabletOrMobile && !showSearch ? (
         <ul
-          className={`flex w-[100%] h-[40px] bg-custom-gradient text-[#ffffff]  transition-all duration-500  ${
-            !activeNavMobile ? "" : " hidden"
+          className={`flex w-[100%] h-[40px] bg-custom-gradient text-[#ffffff] transition-all duration-500 ${
+            activeNavMobile ? "" : "hidden"
           }`}
         >
           {productList.slice(0, -2).map((item) => (

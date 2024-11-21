@@ -24,7 +24,7 @@ const ProductSection: React.FC<IProductSectionProps> = ({
       <div
         className={`flex justify-center items-center  ${
           isTabletOrMobile ? "text-[25px]" : "text-[40px]"
-        } text-[#ffff] mt-[30px] mb-[30px]`}
+        } bg-white dark:bg-gray-900 text-black dark:text-white mt-[30px] mb-[30px]`}
       >
         <FaApple />
 

@@ -2,12 +2,14 @@ import React, { useEffect, useState } from "react";
 import { getProducts } from "../../../service/product";
 import { ICategory } from "../../../type";
 import GetProductItem from "./GetProductItem";
-
+import { ClipLoader } from "react-spinners";
 const GetProduct: React.FC = (props) => {
   const [productData, setProductData] = useState<ICategory[]>([]);
   const [renderNewData, setRenderNewData] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(true);
   useEffect(() => {
     const fetchData = async () => {
+      setLoading(true);
       try {
         const productData = await getProducts();
         if (productData) {
@@ -15,11 +17,19 @@ const GetProduct: React.FC = (props) => {
         }
       } catch (error) {
         console.log(error);
+      } finally {
+        setLoading(false);
       }
     };
     fetchData();
   }, [renderNewData]);
   console.log(productData);
+  if (loading)
+    return (
+      <div className="w-[90%] flex justify-center items-center mx-auto p-6 bg-white rounded-lg shadow-md">
+        <ClipLoader color="#39aa6c" size={200} speedMultiplier={1} />
+      </div>
+    );
   return (
     <div className="w-[90%]  mx-auto p-6 bg-white rounded-lg shadow-md">
       <h1 className="text-2xl font-semibold text-center text-gray-800 mb-6">

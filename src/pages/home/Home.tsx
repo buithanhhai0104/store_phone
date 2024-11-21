@@ -3,7 +3,7 @@ import Carousel from "../../components/carousel/Carousel";
 import ProductSection from "../../components/ProductSection/ProductSection";
 import config from "../../config";
 import { getProducts } from "../../service/product";
-import { ICategory, ICarousel } from "../../type";
+import { ICategory } from "../../type";
 import { getCarousel } from "../../service/carousel";
 
 const Home: React.FC = () => {

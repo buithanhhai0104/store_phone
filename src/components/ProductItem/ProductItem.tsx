@@ -13,7 +13,7 @@ const ProductItem: React.FC<IProductDataProps> = ({ product }) => {
     <Link
       to={`/:${product.id}`}
       key={product.id}
-      className={`flex items-center flex-col w-full flex-shrink-0 bg-[#2b2a2a] py-[30px] ${
+      className={`flex items-center flex-col w-full flex-shrink-0  bg-[#2b2a2a] dark:bg-white text-white dark:text-black py-[30px] ${
         isTabletOrMobile ? "text-[13px]" : ""
       } rounded-3xl hover:shadow-product m-[4px] `}
     >
@@ -24,8 +24,8 @@ const ProductItem: React.FC<IProductDataProps> = ({ product }) => {
         src={product.image}
         alt={product.model}
       />
-      <h3 className="text-[#ffff] my-[20px]">{product.model}</h3>
-      <span className="text-[#ffff]">{product.price_vnd}</span>
+      <h3 className=" my-[20px]">{product.model}</h3>
+      <span>{product.price_vnd}</span>
       <span className="text-[#ff9f00]">
         {product.promotion_online ? "Online giá rẻ quá" : ""}
       </span>
