@@ -4,25 +4,10 @@ import EvaluateItem from "./EvaluateItem";
 import { useNavigate } from "react-router-dom";
 import config from "../../config";
 import { addEvalute, getEvalute } from "../../service/evaluate";
-
+import { IEvaluate } from "../../../type/evaluate";
 interface EvaluateProps {
   id: string;
   model: string;
-}
-
-interface IuserEvaluate {
-  user_name: string;
-  user_img: string;
-  userId: number;
-}
-
-interface IEvaluate {
-  id: string;
-  userEvaluate: IuserEvaluate;
-  rating: number;
-  comment: string;
-  model: string;
-  content: string;
 }
 
 const Evaluate: React.FC<EvaluateProps> = ({ id, model }) => {
@@ -102,7 +87,7 @@ const Evaluate: React.FC<EvaluateProps> = ({ id, model }) => {
   };
 
   return (
-    <div className="flex flex-col flex-1 gap-[10px]  bg-custom-gradient rounded-xl p-[10px]  ">
+    <div className="flex flex-col flex-1 gap-[10px]  bg-custom-gradient rounded-xl p-[10px] text-black ">
       <div className="flex flex-col bg-white w-[95%] m-auto p-[10px]  h-[200px] mt-[20px] rounded-xl  shadow-product">
         <b className="text-[20px] p-[5px]">Đánh giá & nhận xét {model}</b>
         <div className="flex w-full justify-between p-[10px]">

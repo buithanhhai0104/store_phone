@@ -5,11 +5,11 @@ import { Link } from "react-router-dom";
 import { GrNext } from "react-icons/gr";
 import { FaApple } from "react-icons/fa6";
 import { useMediaQuery } from "react-responsive";
-import { ICategory } from "../../type";
+import { IProduct } from "../../../type/product";
 
 interface IProductSectionProps {
   title: string;
-  dataSection: ICategory[];
+  dataSection: IProduct[];
   link: string;
 }
 
@@ -24,7 +24,7 @@ const ProductSection: React.FC<IProductSectionProps> = ({
       <div
         className={`flex justify-center items-center  ${
           isTabletOrMobile ? "text-[25px]" : "text-[40px]"
-        } bg-white dark:bg-gray-900 text-black dark:text-white mt-[30px] mb-[30px]`}
+        } bg-[#f2f4f7] dark:bg-[#3e3e3f] text-black dark:text-white mt-[30px] mb-[30px]`}
       >
         <FaApple />
 

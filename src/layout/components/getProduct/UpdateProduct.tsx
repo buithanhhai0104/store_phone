@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import { ICategory } from "../../../type";
-import { updateProduct } from "../../../service/product";
+import { IProduct } from "../../../../type/product";
+import { deleteProduct, updateProduct } from "../../../service/product";
 
-interface IgetProductItemProps {
-  product: ICategory;
+interface IUpdateProductProps {
+  product: IProduct;
   setRenderNewData: (render: boolean) => void;
   renderNewData: boolean;
 }
-const GetProductItem: React.FC<IgetProductItemProps> = ({
+const UpdateProduct: React.FC<IUpdateProductProps> = ({
   product,
   setRenderNewData,
   renderNewData,
@@ -17,23 +17,33 @@ const GetProductItem: React.FC<IgetProductItemProps> = ({
   const [priceValue, setPriceValue] = useState<string>(product.price_vnd);
   const [categoryValue, setCategoryValue] = useState<string>(product.category);
   const [imageValue, setImageValue] = useState<string>(product.image);
-
+  const [showWarning, setShowWarning] = useState<boolean>(false);
+  const docId = product.docId ?? "defaultDocId";
   const handleUpdateProduct = async (docId: string) => {
-    const productRepair = {
-      model: modelValue,
-      price_vnd: priceValue,
-      category: categoryValue,
-      image: imageValue,
-    };
-    await updateProduct(docId, productRepair);
+    if (docId) {
+      const productRepair = {
+        model: modelValue,
+        price_vnd: priceValue,
+        category: categoryValue,
+        image: imageValue,
+      };
+      await updateProduct(docId, productRepair);
+      setRenderNewData(!renderNewData);
+      setShowUpdate((prev) => !prev);
+    }
+  };
+
+  const handleDeleteProduct = async (docId: string) => {
+    if (docId) {
+      await deleteProduct(docId);
+    }
     setRenderNewData(!renderNewData);
-    setShowUpdate((prev) => !prev);
   };
 
   return (
     <div
-      className={`flex  flex-col w-[full]  ${
-        showUpdate ? "h-[300px]" : "h-[100px]"
+      className={`flex  flex-col w-[full]  relative ${
+        showUpdate || showWarning ? "h-[300px]" : "h-[100px]"
       }  justify-between border-[1px] p-[10px]`}
     >
       <div className="h-[70px] w-full flex justify-between ">
@@ -46,14 +56,43 @@ const GetProductItem: React.FC<IgetProductItemProps> = ({
         </div>
         <div className="flex  flex-col gap-2 items-center">
           <button
+            disabled={showWarning ? true : false}
             onClick={() => setShowUpdate((prev) => !prev)}
             className="h-[35px] w-[60px] bg-green-400"
           >
             Sửa
           </button>
-          <button className="h-[35px] w-[60px] bg-red-400">Xóa</button>
+          <button
+            disabled={showWarning ? true : false}
+            onClick={() => setShowWarning(true)}
+            className="h-[35px] w-[60px] bg-red-400"
+          >
+            Xóa
+          </button>
         </div>
       </div>
+      {showWarning && (
+        <div className="  flex flex-col items-center absolute top-[40%] left-[30%]">
+          <span className="text-[30px] text-red-500 mb-5">
+            {" "}
+            Bạn muốn xóa sản phẩm này?
+          </span>
+          <div className="flex gap-10">
+            <button
+              className="h-[55px] w-[100px] bg-red-400"
+              onClick={() => handleDeleteProduct(docId)}
+            >
+              Đồng ý
+            </button>
+            <button
+              className="h-[55px] w-[100px] bg-green-400"
+              onClick={() => setShowWarning(false)}
+            >
+              Quay lại
+            </button>
+          </div>
+        </div>
+      )}
       {showUpdate && (
         <div className="flex-1 relative grid grid-cols-2 w-[85%] mt-3 gap-5">
           <div className="flex  flex-col gap-2 mr-[50px]">
@@ -93,7 +132,7 @@ const GetProductItem: React.FC<IgetProductItemProps> = ({
             />
           </div>
           <button
-            onClick={() => handleUpdateProduct(product.docId)}
+            onClick={() => handleUpdateProduct(docId)}
             className="px-4 w-[100px] absolute bottom-[35%] right-[-145px] py-2 bg-green-500 text-white rounded"
           >
             Lưu
@@ -104,4 +143,4 @@ const GetProductItem: React.FC<IgetProductItemProps> = ({
   );
 };
 
-export default GetProductItem;
+export default UpdateProduct;

@@ -3,6 +3,7 @@ import { FaXmark } from "react-icons/fa6";
 import { MouseEventHandler } from "react";
 import { addProduct } from "../../../service/product";
 import { v4 as uuidv4 } from "uuid";
+import { IProduct } from "../../../../type/product";
 const AddProductForm: React.FC = () => {
   const optionColors = [
     {
@@ -43,9 +44,10 @@ const AddProductForm: React.FC = () => {
   const [productLine, setProductLine] = useState<string>("");
   const [productImg, setProductImg] = useState<string>("");
   const [valueVersion, setValueVersion] = useState<string>("");
+  const [imgPrivew, setImgPreview] = useState<string>("");
 
   const AddProduct = async () => {
-    const product = {
+    const product: IProduct = {
       id: uuidv4(),
       category: category,
       model: productName,
@@ -57,8 +59,19 @@ const AddProductForm: React.FC = () => {
         storage: chooseVersion,
       },
     };
-
-    await addProduct(product);
+    const isObjectEmpty: any = (product: any) => {
+      return Object.values(product).every((value) => {
+        if (value && typeof value === "object" && !Array.isArray(value)) {
+          return isObjectEmpty(value);
+        }
+        return value !== null && value !== undefined && value !== "";
+      });
+    };
+    if (isObjectEmpty(product)) {
+      await addProduct(product);
+    } else {
+      alert("vui lòng nhập đầy đủ thông tin");
+    }
   };
 
   // add
@@ -92,7 +105,7 @@ const AddProductForm: React.FC = () => {
       setChooseVersion((prev) => prev.filter((item) => item !== color_name));
     };
   return (
-    <div className="w-[90%]  mx-auto p-6 bg-white rounded-lg shadow-md">
+    <div className="w-[90%]  mx-auto p-6 bg-white text-black rounded-lg shadow-md">
       <h1 className="text-2xl font-semibold text-center text-gray-800 mb-6">
         Thêm sản phẩm mới
       </h1>
@@ -153,18 +166,26 @@ const AddProductForm: React.FC = () => {
         <h2 className="text-lg font-semibold text-gray-700 mb-2">
           Ảnh sản phẩm
         </h2>
-        <label className="block mb-4">
-          <span className="text-gray-600">Link hình ảnh:</span>
-          <input
-            value={productImg}
-            onChange={(e) => setProductImg(e.target.value)}
-            type="text"
-            placeholder="Nhập Link hình ảnh"
-            className="mt-1 w-full p-2 border border-gray-300 rounded"
-          />
+        <label className="flex mb-4 items-end gap-4 ">
+          <div className="flex-1">
+            <span className="text-gray-600">Link hình ảnh:</span>
+            <input
+              value={productImg}
+              onChange={(e) => setProductImg(e.target.value)}
+              type="text"
+              placeholder="Nhập Link hình ảnh"
+              className="mt-1 w-full p-2 border border-gray-300 rounded"
+            />
+          </div>
+          <button
+            onClick={() => setImgPreview(productImg)}
+            className=" flex justify-center items-center w-[80px] h-[35px] p-1 text-[14px] bg-red-500 rounded-xl text-white mb-1 "
+          >
+            Xem trước
+          </button>
         </label>
         <div className="mt-2 w-full h-40 bg-gray-100 border border-gray-300 flex items-center justify-center text-gray-400">
-          {"Xem trước ảnh tại đây"}
+          <img className="w-[140px] h-[140px]" src={imgPrivew} alt="" />
         </div>
       </section>
       {/* chi tiết  sản phẩm */}
@@ -190,10 +211,10 @@ const AddProductForm: React.FC = () => {
             </div>
           </span>
 
-          <div className="w-full  min-h-[40px] border-[1px] border-blue-500  gap-[20px] mt-[10px] flex flex-col items-center p-[10px]">
+          <div className="w-full  min-h-[40px] border-[1px] border-blue-500  gap-[20px] mt-[10px] flex items-center p-[10px]">
             {chooseColor.map((item) => {
               return (
-                <div className="flex items-center gap-[10px] w-full">
+                <div className="flex items-center gap-[10px]">
                   <div className="flex">
                     <span
                       style={{ backgroundColor: item.color_id }}
@@ -202,16 +223,11 @@ const AddProductForm: React.FC = () => {
                       {item.color_name}
                     </span>
                   </div>
-                  <input
-                    type="text"
-                    placeholder="Nhập Link hình ảnh"
-                    className="mt-1  flex-1 w-full p-2 border border-gray-300 rounded"
-                  />
                   <span
                     onClick={handleDeleteColor(item.color_name)}
                     className=" flex justify-center items-center text-[20px]"
                   >
-                    <FaXmark />
+                    <FaXmark className="cursor-pointer" />
                   </span>
                 </div>
               );

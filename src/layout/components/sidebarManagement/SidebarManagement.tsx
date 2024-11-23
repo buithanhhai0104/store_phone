@@ -13,7 +13,7 @@ const SidebarManagement: React.FC<IsidebarManagementProps> = ({
   return (
     <div className="w-[25%] sticky top-[0px] h-screen bg-gray-800 text-white flex flex-col">
       <div className="p-4 border-b border-gray-700 text-center text-lg font-bold">
-        Product Manager
+        Quản lý sản phẩm
       </div>
 
       <nav className="flex-grow">

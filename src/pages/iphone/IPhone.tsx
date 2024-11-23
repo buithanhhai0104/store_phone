@@ -5,50 +5,14 @@ import ProductItem from "../../components/ProductItem/ProductItem";
 import { useMediaQuery } from "react-responsive";
 import { getDocumentByFieldName } from "../../service/product";
 import { getCarousel } from "../../service/carousel";
+import { IProduct } from "../../../type/product";
 
 const IPhone: React.FC = () => {
   const [carouselData, setCarouselData] = useState<string[]>([]);
-  const [dataIphones, setDataIphones] = useState<any[]>([]);
+  const [dataIphones, setDataIphones] = useState<IProduct[]>([]);
   const [activeVersion, setActiveVersion] = useState<string>("Tất cả");
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" });
-  const [newProducts, setNewProducts] = useState<any[]>([]);
-
-  // useEffect(() => {
-  //   // const fetchData = async () => {
-  //   //   try {
-  //   //     const response = await fetch("http://localhost:3001/carousel");
-
-  //   //     if (!response.ok) {
-  //   //       throw new Error("Network response was not ok");
-  //   //     }
-  //   //     const result = await response.json();
-  //   //     setCarouselData(result.carouselhome);
-  //   //   } catch (error) {}
-  //   // };
-
-  //   // fetchData();
-  // }, []);
-
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const response = await fetch(
-  //         `http://localhost:3001/products${
-  //           activeVersion !== "Tất cả"
-  //             ? `?version=${activeVersion}`
-  //             : `?category=iphone`
-  //         }`
-  //       );
-  //       if (!response.ok) {
-  //         throw new Error("Network response was not ok");
-  //       }
-  //       const result = await response.json();
-  //       setDataIphones(result);
-  //     } catch (error) {}
-  //   };
-
-  //   fetchData();
-  // }, [activeVersion]);
+  const [newProducts, setNewProducts] = useState<IProduct[]>([]);
 
   useEffect(() => {
     window.scrollTo({
@@ -128,11 +92,11 @@ const IPhone: React.FC = () => {
                       handleOnClick(version);
                       setActiveVersion(version);
                     }}
-                    className={`flex justify-center dark:text-white text-black items-center w-[100px] h-[40px] text-[15px] hover:border-b-[1px] ${
+                    className={`flex justify-center dark:text-white text-black items-center w-[100px] h-[40px] text-[15px] hover:border-b-[1px] cursor-pointer ${
                       activeVersion === version
                         ? `${
                             !isTabletOrMobile
-                              ? "border-b-[1px] dark:border-white border-black text-white"
+                              ? "border-b-[1px] dark:border-white border-black "
                               : "bg-slate-500 rounded-xl"
                           }`
                         : ""

@@ -16,7 +16,7 @@ const Carousel: React.FC<CarouselProps> = ({ carouselData }) => {
       setCurrentIndex((prevIndex) =>
         prevIndex === carouselData.length - 1 ? 0 : prevIndex + 1
       );
-    }, 5000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [carouselData.length]);
@@ -50,7 +50,7 @@ const Carousel: React.FC<CarouselProps> = ({ carouselData }) => {
           isTabletOrMobile ? "mt-3.5 w-[95%] m-auto  h-[150px]" : ""
         } `}
       >
-        {carouselData.map((item,index) => {
+        {carouselData.map((item, index) => {
           return <img key={index} src={item} alt="" />;
         })}
       </div>

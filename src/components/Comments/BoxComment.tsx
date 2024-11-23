@@ -1,29 +1,13 @@
 import React, { memo } from "react";
 import { TiMessages } from "react-icons/ti";
-
-interface IuserComment {
-  userId: string;
-  userImg: string;
-  userName: string;
-}
+import { IComment, Reply } from "../../../type/comment";
 
 interface IBoxCommentProps {
   user: any;
   handleAddFeedback: (id: string) => void;
   valuefeedback: Record<string, string>;
   setFeedbacks: (docId: string, value: string) => void;
-  dataComment: {
-    productId: string;
-    content: string;
-    userComment: IuserComment;
-    replies: {
-      idFeedback: string;
-      content: string;
-      user_name: string;
-      user_img: string;
-    }[];
-    docId: string;
-  }[];
+  dataComment: IComment[];
 }
 
 const BoxComment: React.FC<IBoxCommentProps> = ({
@@ -71,7 +55,7 @@ const BoxComment: React.FC<IBoxCommentProps> = ({
             </div>
             <div className="ml-[10%] mt-4 flex flex-col gap-[15px]">
               {item.replies &&
-                item.replies.map((reply) => (
+                item.replies.map((reply: Reply) => (
                   <div key={reply.idFeedback}>
                     <div className="flex gap-[5px] items-center mb-[10px]">
                       <img

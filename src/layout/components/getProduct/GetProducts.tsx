@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { getProducts } from "../../../service/product";
-import { ICategory } from "../../../type";
-import GetProductItem from "./GetProductItem";
+import { IProduct } from "../../../../type/product";
+import UpdateProduct from "./UpdateProduct";
 import { ClipLoader } from "react-spinners";
 const GetProduct: React.FC = (props) => {
-  const [productData, setProductData] = useState<ICategory[]>([]);
+  const [productData, setProductData] = useState<IProduct[]>([]);
   const [renderNewData, setRenderNewData] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(true);
   useEffect(() => {
@@ -31,7 +31,7 @@ const GetProduct: React.FC = (props) => {
       </div>
     );
   return (
-    <div className="w-[90%]  mx-auto p-6 bg-white rounded-lg shadow-md">
+    <div className="w-[90%]  mx-auto p-6 bg-white rounded-lg shadow-md text-black">
       <h1 className="text-2xl font-semibold text-center text-gray-800 mb-6">
         Danh sách sản phẩm
       </h1>
@@ -43,7 +43,7 @@ const GetProduct: React.FC = (props) => {
           .filter((item) => item.category === "iphone")
           .map((product) => {
             return (
-              <GetProductItem
+              <UpdateProduct
                 setRenderNewData={setRenderNewData}
                 renderNewData={renderNewData}
                 product={product}
@@ -59,7 +59,7 @@ const GetProduct: React.FC = (props) => {
           .filter((item) => item.category === "macbook")
           .map((product) => {
             return (
-              <GetProductItem
+              <UpdateProduct
                 setRenderNewData={setRenderNewData}
                 renderNewData={renderNewData}
                 product={product}
@@ -75,7 +75,7 @@ const GetProduct: React.FC = (props) => {
           .filter((item) => item.category === "ipad")
           .map((product) => {
             return (
-              <GetProductItem
+              <UpdateProduct
                 setRenderNewData={setRenderNewData}
                 renderNewData={renderNewData}
                 product={product}
@@ -91,7 +91,7 @@ const GetProduct: React.FC = (props) => {
           .filter((item) => item.category === "watch")
           .map((product) => {
             return (
-              <GetProductItem
+              <UpdateProduct
                 product={product}
                 setRenderNewData={setRenderNewData}
                 renderNewData={renderNewData}
@@ -99,7 +99,6 @@ const GetProduct: React.FC = (props) => {
             );
           })}
       </div>
-      r
     </div>
   );
 };

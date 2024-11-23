@@ -41,7 +41,7 @@ const CartItem: React.FC<CartItemProps> = ({ productData }) => {
     );
   };
   return (
-    <div className="flex items-center gap-[20px] border-b-[1px] ">
+    <div className="flex items-center gap-[20px] border-b-[1px] dark:text-black    ">
       <div className="flex flex-col items-center gap-[10px]   ">
         <img
           className="w-[80px] h-[80px]"
@@ -50,9 +50,9 @@ const CartItem: React.FC<CartItemProps> = ({ productData }) => {
         />
         <button
           onClick={handleRemoveItem}
-          className="flex items-center text-[#ffff]   my-[4px] gap-[1px] bg-custom-gradient rounded  px-[8px]"
+          className="flex items-center my-[4px] gap-[1px] bg-custom-gradient rounded text-white px-[8px]"
         >
-          <HiMiniXMark className="text-[20px]" />
+          <HiMiniXMark className="text-[20px] " />
           XÓA
         </button>
       </div>

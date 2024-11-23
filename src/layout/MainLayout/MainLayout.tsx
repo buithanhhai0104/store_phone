@@ -7,7 +7,7 @@ interface MainLayoutProps {
 }
 function MainLayout({ children }: MainLayoutProps) {
   return (
-    <div className="bg-white dark:bg-gray-900 text-black dark:text-white">
+    <div className=" flex  flex-col bg-[#f2f4f7] dark:bg-[#3e3e3f] text-black dark:text-white">
       <Header />
       <div>{children}</div>
       <Footer />

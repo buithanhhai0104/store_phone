@@ -1,32 +1,24 @@
 import React, { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 import config from "../../../config";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { RootState } from "../../../redux/store";
-import Tippy from "@tippyjs/react/headless";
+
 // icon
 import { MdOutlineShoppingBag } from "react-icons/md";
 import { CiSearch } from "react-icons/ci";
 import { HiOutlineXMark } from "react-icons/hi2";
 import { IoReorderThree } from "react-icons/io5";
-import { TiAdjustContrast } from "react-icons/ti";
-import { BsTranslate } from "react-icons/bs";
-import { FcPrevious } from "react-icons/fc";
+import Menu from "../../../components/Menu/Menu";
 
-interface iProduct {
+interface iProductList {
   id: number;
   name: string;
   to?: string;
 }
 
-interface ICustomListItem {
-  title: string;
-  icon?: JSX.Element;
-  children?: { title: string }[];
-}
-
-const productList: iProduct[] = [
+const productList: iProductList[] = [
   { id: 1, name: "iPhone", to: config.routes.iphone },
   { id: 2, name: "Mac", to: config.routes.mac },
   { id: 3, name: "iPad", to: config.routes.ipad },
@@ -37,48 +29,13 @@ const productList: iProduct[] = [
   { id: 8, name: "TopCare" },
 ];
 
-const customList = [
-  {
-    title: "Giao diện",
-    icon: <TiAdjustContrast />,
-    children: [
-      {
-        title: "Sáng",
-      },
-      {
-        title: "Tối",
-      },
-    ],
-  },
-  {
-    title: "Ngôn ngữ",
-    icon: <BsTranslate />,
-    children: [
-      {
-        title: "Tiếng việt",
-      },
-      {
-        title: "English",
-      },
-    ],
-  },
-  {
-    title: "Đăng xuất",
-    icon: <FcPrevious />,
-  },
-];
-
 const Header: React.FC = () => {
   const [showSearch, setShowSearch] = useState<boolean>(false);
-  const user = JSON.parse(localStorage.getItem("user") || "{}");
+  const user = JSON.parse(localStorage.getItem("user") || "null");
   const [activeNavMobile, setActiveNavMobile] = useState<boolean>(false);
-  const [showCustomList, setShowCustomList] =
-    useState<ICustomListItem[]>(customList);
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" });
   const cartQuantity = useSelector((state: RootState) => state.cart.items);
-  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
-  const navigate = useNavigate();
-
+  const [headerFixed, setHeaderFixed] = useState<boolean>(false);
   const handleSearch = () => {
     setShowSearch(true);
   };
@@ -92,9 +49,18 @@ const Header: React.FC = () => {
   };
 
   useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 70) {
+        setHeaderFixed(true);
+      } else {
+        setHeaderFixed(false);
+      }
+    };
     document.addEventListener("mousedown", handleClickOutside);
+    window.addEventListener("scroll", handleScroll);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -102,30 +68,13 @@ const Header: React.FC = () => {
     setActiveNavMobile((prev) => !prev);
   };
 
-  const handleLogout = () => {
-    if (user) {
-      localStorage.removeItem("user");
-      navigate("/");
-    }
-  };
-
-  const toggleDarkMode = () => {
-    document.documentElement.classList.toggle("dark", !isDarkMode);
-    setIsDarkMode(!isDarkMode);
-  };
-
-  const handleItemClick = (item: ICustomListItem) => {
-    if (item.title === "Đăng xuất") {
-      handleLogout();
-      return;
-    }
-    if (item.title === "Giao diện") {
-      toggleDarkMode();
-    }
-  };
   return (
     <div className={showSearch ? "w-full h-[100vh] bg-screen-cover z-20" : ""}>
-      <div className="h-[60px] flex bg-[#101010]">
+      <header
+        className={`h-[60px] w-full flex bg-[#101010] ${
+          headerFixed ? "fixed z-50" : ""
+        }`}
+      >
         <div
           className={`flex justify-between items-center   gap-[20px] ${
             !isTabletOrMobile ? "min-w-[1200px] m-auto" : "w-[95%] m-auto"
@@ -199,7 +148,7 @@ const Header: React.FC = () => {
                     </div>
                   ) : null}
                 </Link>
-                {!user.id ? (
+                {!user ? (
                   <Link
                     className="bg-custom-gradient p-[5px] rounded-lg"
                     to={config.routes.login}
@@ -207,40 +156,7 @@ const Header: React.FC = () => {
                     Đăng nhập
                   </Link>
                 ) : (
-                  <Tippy
-                    interactive={true}
-                    delay={[0, 200]}
-                    render={(attrs) => (
-                      <div
-                        className="w-[180px]  bg-[#3e3e3f] p-[10px] flex  gap-[10px] flex-col justify-center items-center rounded-xl text-[#ffff] "
-                        {...attrs}
-                        tabIndex={1}
-                      >
-                        <Link
-                          className="flex w-full border-[1px] text-[18px] justify-center items-center gap-[20px] p-[10px] rounded-xl hover:bg-[#1f1f1f]"
-                          to={config.routes.productmanagement}
-                        >
-                          Quản lý
-                        </Link>
-                        {showCustomList.map((item, index) => (
-                          <button
-                            key={index}
-                            onClick={() => handleItemClick(item)}
-                            className="flex w-full border-[1px] text-[18px] items-center gap-[20px] p-[10px] rounded-xl hover:bg-[#1f1f1f]"
-                          >
-                            <span className="text-[20px]">{item.icon}</span>
-                            {item.title}
-                          </button>
-                        ))}
-                      </div>
-                    )}
-                  >
-                    <img
-                      className="w-[40px] h-[40px] rounded-full"
-                      src={user.user_img}
-                      alt={user.user_name}
-                    />
-                  </Tippy>
+                  <Menu user={user} />
                 )}
               </div>
             </>
@@ -262,7 +178,7 @@ const Header: React.FC = () => {
             </div>
           )}
         </div>
-      </div>
+      </header>
       {isTabletOrMobile && !showSearch ? (
         <ul
           className={`flex w-[100%] h-[40px] bg-custom-gradient text-[#ffffff] transition-all duration-500 ${

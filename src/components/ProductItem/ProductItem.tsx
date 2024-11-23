@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
-import { ICategory } from "../../type";
+import { IProduct } from "../../../type/product";
 
 interface IProductDataProps {
-  product: ICategory;
+  product: IProduct;
 }
 
 const ProductItem: React.FC<IProductDataProps> = ({ product }) => {
@@ -26,9 +26,7 @@ const ProductItem: React.FC<IProductDataProps> = ({ product }) => {
       />
       <h3 className=" my-[20px]">{product.model}</h3>
       <span>{product.price_vnd}</span>
-      <span className="text-[#ff9f00]">
-        {product.promotion_online ? "Online giá rẻ quá" : ""}
-      </span>
+      <span className="text-[#ff9f00]">{"Online giá rẻ quá"}</span>
     </Link>
   );
 };

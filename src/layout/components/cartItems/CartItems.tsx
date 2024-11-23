@@ -11,9 +11,9 @@ const CartItems: React.FC = () => {
   const cartItems = useSelector((state: RootState) => state.cart.items);
   const totalPrice = useSelector((state: RootState) => state.cart.totalPrice);
   return cartItems.length >= 1 ? (
-    <section className="max-w-[1000px] m-auto   ">
+    <section className="max-w-[1000px] m-auto dark:text-black   ">
       <div className="flex flex-col bg-custom-gradient mt-[50px] p-[10px] rounded-2xl ">
-        <div className="flex justify-between mb-[20px]  mt-[20px] text-[#ffff] font-semibold ">
+        <div className="flex justify-between mb-[20px]  mt-[20px]  font-semibold ">
           <Link className="flex items-center" to={config.routes.home}>
             <IoIosArrowBack />
             <span>Trở về trang chủ</span>
@@ -123,8 +123,8 @@ const CartItems: React.FC = () => {
               của TopZone
             </p>
           </span>
-          <button className="flex w-[80%] justify-center items-center text-[#ffff] bg-[#288ad6] p-[20px] rounded-xl m-auto">
-            <b>Đặt hàng</b>
+          <button className="flex w-[80%] justify-center items-center  bg-[#288ad6] p-[20px] rounded-xl m-auto">
+            <b className="text-white">Đặt hàng</b>
           </button>
           <p className="text-center">
             Bạn có thể lựa chọn các hình thức thanh toán ở bước sau

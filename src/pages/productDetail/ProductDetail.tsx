@@ -42,6 +42,10 @@ const ProductDetail: React.FC = () => {
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
   useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
     const fetchData = async () => {
       const productsDataMacbook = await getDocumentByFieldName(
         "products",
@@ -65,14 +69,14 @@ const ProductDetail: React.FC = () => {
         className={`  flex justify-center  items-center  ${
           isTabletOrMobile
             ? "flex-col gap-[30px]"
-            : "min-w-[1180px] max-w-[1180px] m-auto gap-[100px]"
+            : "min-w-[1180px] max-w-[1180px] m-auto gap-[150px]"
         }`}
       >
         <div
           className={
             isTabletOrMobile
               ? "w-[400px] h-[400px] mt-[20px]"
-              : "w-[550px] h-[550px] sticky top-[80px]"
+              : "w-[500px] h-[500px] "
           }
         >
           <img
@@ -80,19 +84,16 @@ const ProductDetail: React.FC = () => {
             alt={dataDetail?.model}
           />
         </div>
-        <div className={` ${isTabletOrMobile ? "w-[95%]" : "w-[580px]"}`}>
+        <div className={` ${isTabletOrMobile ? "w-[95%]" : "w-[580px]"} mt-5`}>
           <h1
             className={` ${
               isTabletOrMobile ? "text-[24px]" : "text-[32px]"
-            } pb-[20px] pt-[5px] text-[#ffff] font-bold`}
+            } pb-[20px] pt-[5px]  font-bold`}
           >
             {dataDetail?.model}
           </h1>
-          <div className=" flex flex-col  gap-[20px] text-[#FFFF]">
+          <div className=" flex flex-col  gap-[20px] ">
             <span>Giá và khuyên mãi tại: Hồ Chí Minh</span>
-            {!dataDetail?.promotion_online ? (
-              <strong>{dataDetail?.price_vnd}</strong>
-            ) : null}
             <div className="flex flex-col gap-[10px]">
               <span>Dung lượng</span>
               <div className="flex gap-[20px]">
@@ -101,7 +102,7 @@ const ProductDetail: React.FC = () => {
                     key={version}
                     value={version}
                     onClick={handleClickVersion}
-                    className={`py-[10px] px-[12px] bg-[#2f3033] text-[#DBDBDB] rounded-lg ${
+                    className={`py-[10px] px-[12px] bg-[#2f3033] text-white rounded-lg ${
                       activeVersion === version
                         ? "border-2 border-blue-500"
                         : ""
@@ -111,7 +112,7 @@ const ProductDetail: React.FC = () => {
                   </button>
                 ))}
               </div>
-              <div className="flex flex-col gap-[20px]">
+              <div className="flex flex-col gap-[10px]">
                 <span>Màu: {activeColor}</span>
                 <div className="flex gap-[20px]">
                   {dataDetail?.colors.map((item) => (
@@ -141,7 +142,7 @@ const ProductDetail: React.FC = () => {
           />
         </div>
       </div>
-      <div className="flex gap-[75px] mt-[20px]">
+      <div className="flex gap-[75px] mt-[30px]">
         <div className="inline-block w-full">
           <Evaluate
             id={dataDetail?.id as string}

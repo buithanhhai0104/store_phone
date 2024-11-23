@@ -3,12 +3,12 @@ import Carousel from "../../components/carousel/Carousel";
 import ProductSection from "../../components/ProductSection/ProductSection";
 import config from "../../config";
 import { getProducts } from "../../service/product";
-import { ICategory } from "../../type";
+import { IProduct } from "../../../type/product";
 import { getCarousel } from "../../service/carousel";
 
 const Home: React.FC = () => {
   const [carouselData, setCarouselData] = useState<string[]>([]);
-  const [productsData, setproductsData] = useState<ICategory[]>([]);
+  const [productsData, setproductsData] = useState<IProduct[]>([]);
   // useEffect(() => {
   //   const fetchCategoryData = async (
   //     url: string,

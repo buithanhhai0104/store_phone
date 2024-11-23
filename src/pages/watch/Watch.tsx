@@ -4,13 +4,13 @@ import { FaApple } from "react-icons/fa6";
 import ProductItem from "../../components/ProductItem/ProductItem";
 import { useMediaQuery } from "react-responsive";
 import { getDocumentByFieldName } from "../../service/product";
-import { ICategory } from "../../type";
+import { IProduct } from "../../../type/product";
 import { getCarousel } from "../../service/carousel";
 
 const Watch: React.FC = () => {
   const [carouselData, setCarouselData] = useState<string[]>([]);
-  const [dataWatches, setDataWatches] = useState<ICategory[]>([]);
-  const [newProducts, setNewProducts] = useState<ICategory[]>([]);
+  const [dataWatches, setDataWatches] = useState<IProduct[]>([]);
+  const [newProducts, setNewProducts] = useState<IProduct[]>([]);
   const [activeVersion, setActiveVersion] = useState<string>("Tất cả");
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
@@ -19,6 +19,7 @@ const Watch: React.FC = () => {
       top: 0,
       behavior: "smooth",
     });
+    // lấy dữ liệu của tất cả sản phẩm
     const fetchData = async () => {
       const ipadProducts = await getDocumentByFieldName(
         "products",
@@ -40,6 +41,7 @@ const Watch: React.FC = () => {
     fetchDataCarousel();
   }, []);
 
+  // dùng dữ liệu của tất cả sản phẩm để lọc tìm sản phẩm watch
   useEffect(() => {
     const filterData = dataWatches.filter(
       (product) => product.version === activeVersion
@@ -77,7 +79,7 @@ const Watch: React.FC = () => {
                   <li
                     key={index}
                     onClick={() => setActiveVersion(version)}
-                    className={`flex justify-center items-center dark:text-white text-black ${
+                    className={`flex justify-center items-center dark:text-white text-black cursor-pointer ${
                       version === "Tất cả"
                         ? "w-[60px] h-[40px]"
                         : "w-[150px] h-[40px]"
@@ -85,7 +87,7 @@ const Watch: React.FC = () => {
                       activeVersion === version
                         ? `${
                             !isTabletOrMobile
-                              ? "border-b-[1px] dark:border-white border-black text-white"
+                              ? "border-b-[1px] dark:border-white border-black "
                               : "bg-slate-500 rounded-xl"
                           }`
                         : ""

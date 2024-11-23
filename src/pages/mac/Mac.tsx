@@ -4,12 +4,12 @@ import Carousel from "../../components/carousel/Carousel";
 import ProductItem from "../../components/ProductItem/ProductItem";
 import { useMediaQuery } from "react-responsive";
 import { getDocumentByFieldName } from "../../service/product";
-import { ICategory } from "../../type";
+import { IProduct } from "../../../type/product";
 import { getCarousel } from "../../service/carousel";
 const Mac: React.FC = () => {
   const [carouselData, setCarouselData] = useState<string[]>([]);
-  const [dataMacbooks, setDataMacbooks] = useState<ICategory[]>([]);
-  const [newProducts, setNewProducts] = useState<ICategory[]>([]);
+  const [dataMacbooks, setDataMacbooks] = useState<IProduct[]>([]);
+  const [newProducts, setNewProducts] = useState<IProduct[]>([]);
   const [activeVersion, setActiveVersion] = useState<string>("Tất cả");
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" });
 
@@ -76,11 +76,11 @@ const Mac: React.FC = () => {
                 <li
                   key={index}
                   onClick={() => setActiveVersion(version)}
-                  className={`flex justify-center dark:text-white text-black items-center w-[100px] h-[40px] text-[15px] hover:border-b-[1px] ${
+                  className={`flex justify-center dark:text-white text-black items-center w-[100px] h-[40px] text-[15px] hover:border-b-[1px] cursor-pointer ${
                     activeVersion === version
                       ? `${
                           !isTabletOrMobile
-                            ? "border-b-[1px] dark:border-white border-black text-white"
+                            ? "border-b-[1px] dark:border-white text-black border-black  "
                             : "bg-slate-500 rounded-xl"
                         }`
                       : ""

@@ -79,8 +79,8 @@ const SavingBox: React.FC<SavingBoxProps> = ({
               src="https://cdnv2.tgdd.vn/webmwg/2024/tz/images/promote_loyalty/logo.png"
               alt="logo"
             />
-            <p className="text-[14px] ">
-              <b className="mr-1 ml-2">+17.390</b>
+            <p className="text-[14px] text-black ">
+              <b className="mr-1 ml-2 text-black">+17.390</b>
               điểm tích lũy Quà tặng VIP
             </p>
           </div>

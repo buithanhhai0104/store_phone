@@ -1,38 +1,18 @@
 import React, { useEffect, useState, useCallback } from "react";
 import { IoIosSend } from "react-icons/io";
-import BoxComment from "./BoxComment/BoxComment";
+import BoxComment from "./BoxComment";
 import { useNavigate } from "react-router-dom";
 import config from "../../config";
 import { addComment, getComment, updateComment } from "../../service/comment";
 import { v4 as uuidv4 } from "uuid";
+import { IComment, Reply } from "../../../type/comment";
 
 interface ICommentProps {
   id: string;
 }
 
-interface Reply {
-  idFeedback: string;
-  content: string;
-  user_name: string;
-  user_img: string;
-}
-
-interface IuserComment {
-  userId: string;
-  userName: string;
-  userImg: string;
-}
-
-interface Comment {
-  productId: string;
-  userComment: IuserComment;
-  replies: Reply[];
-  content: string;
-  docId: string;
-}
-
 const Comments: React.FC<ICommentProps> = ({ id }) => {
-  const [comments, setComments] = useState<Comment[]>([]);
+  const [comments, setComments] = useState<IComment[]>([]);
   const [valueComment, setValueComment] = useState<string>("");
   const [feedbacks, setFeedbacks] = useState<Record<string, string>>({});
   const user = JSON.parse(localStorage.getItem("user") || "null");
@@ -62,7 +42,7 @@ const Comments: React.FC<ICommentProps> = ({ id }) => {
     }
     if (valueComment.trim() === "" || !id) return;
 
-    const commentData: Partial<Comment> = {
+    const commentData: Partial<IComment> = {
       productId: id,
       userComment: {
         userId: user.id,
@@ -118,7 +98,7 @@ const Comments: React.FC<ICommentProps> = ({ id }) => {
   };
 
   return (
-    <div className="flex-flex-col flex-1 bg-custom-gradient mt-[20px] rounded-xl p-[10px]">
+    <div className="flex-flex-col  flex-1 bg-custom-gradient rounded-xl p-[10px]">
       <b className="text-[24px] mb-2">Hỏi và đáp</b>
       <div className="flex w-[85%] my-0 m-auto relative gap-[10px] justify-center items-center">
         <div className="flex p-[10px] bg-custom-gradient shadow-product rounded-lg mt-1 flex-1 border-[1px]">

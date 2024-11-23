@@ -3,57 +3,16 @@ import Carousel from "../../components/carousel/Carousel";
 import { FaApple } from "react-icons/fa6";
 import ProductItem from "../../components/ProductItem/ProductItem";
 import { useMediaQuery } from "react-responsive";
-import { ICategory } from "../../type";
+import { IProduct } from "../../../type/product";
 import { getDocumentByFieldName } from "../../service/product";
 import { getCarousel } from "../../service/carousel";
 
 const Ipad: React.FC = () => {
   const [carouselData, setCarouselData] = useState<string[]>([]);
-  const [dataIpads, setDataIpads] = useState<ICategory[]>([]);
-  const [newProducts, setNewProducts] = useState<ICategory[]>([]);
+  const [dataIpads, setDataIpads] = useState<IProduct[]>([]);
+  const [newProducts, setNewProducts] = useState<IProduct[]>([]);
   const [activeVersion, setActiveVersion] = useState<string>("Tất cả");
   const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" });
-
-  // useEffect(() => {
-  //   window.scrollTo({
-  //     top: 0,
-  //     behavior: "smooth",
-  //   });
-  //   const fetchData = async () => {
-  //     try {
-  //       const response = await fetch("http://localhost:3001/carousel");
-
-  //       if (!response.ok) {
-  //         throw new Error("Network response was not ok");
-  //       }
-  //       const result = await response.json();
-  //       setCarouselData(result.carousel_ipads);
-  //     } catch (error) {}
-  //   };
-
-  //   fetchData();
-  // }, []);
-
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const response = await fetch(
-  //         `http://localhost:3001/products${
-  //           activeVersion !== "Tất cả"
-  //             ? `?version=${activeVersion}`
-  //             : "?category=ipad"
-  //         }`
-  //       );
-  //       if (!response.ok) {
-  //         throw new Error("Network response was not ok");
-  //       }
-  //       const result = await response.json();
-  //       setDataIphones(result);
-  //     } catch (error) {}
-  //   };
-
-  //   fetchData();
-  // }, [activeVersion]);
 
   useEffect(() => {
     window.scrollTo({
@@ -118,11 +77,11 @@ const Ipad: React.FC = () => {
                   <li
                     key={index}
                     onClick={() => setActiveVersion(version)}
-                    className={`flex justify-center dark:text-white text-black items-center w-[100px] h-[40px] text-[15px] hover:border-b-[1px] ${
+                    className={`flex justify-center dark:text-white text-black items-center w-[100px] h-[40px] text-[15px] hover:border-b-[1px] cursor-pointer ${
                       activeVersion === version
                         ? `${
                             !isTabletOrMobile
-                              ? "border-b-[1px] dark:border-white border-black text-white"
+                              ? "border-b-[1px] dark:border-white border-black "
                               : "bg-slate-500 rounded-xl"
                           }`
                         : ""

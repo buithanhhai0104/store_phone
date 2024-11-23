@@ -2,10 +2,10 @@ import React, { useRef, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
-import { ICategory } from "../../type";
+import { IProduct } from "../../../type/product";
 
 type ProductsProps = {
-  products: ICategory[];
+  products: IProduct[];
 };
 
 const SlideProduct: React.FC<ProductsProps> = ({ products }) => {
@@ -24,7 +24,7 @@ const SlideProduct: React.FC<ProductsProps> = ({ products }) => {
   }, [currentIndex]);
 
   const nextSlide = () => {
-    if (currentIndex < products.length / 6) {
+    if (currentIndex < products.length / 12) {
       setCurrentIndex(currentIndex + 1);
     }
   };
@@ -45,7 +45,7 @@ const SlideProduct: React.FC<ProductsProps> = ({ products }) => {
             <Link
               to={`/:${item.id}`}
               key={item.id}
-              className="flex items-center flex-col w-[280px] flex-shrink-0  dark:bg-white bg-[#2b2a2a] text-white dark:text-black py-[30px]  rounded-3xl hover:shadow-product m-[4px]"
+              className="flex items-center flex-col w-[280px] flex-shrink-0  dark:bg-[#323232] bg-[#2b2a2a] text-white dark:text-white py-[30px]  rounded-3xl hover:shadow-product m-[4px]"
             >
               <img
                 className="w-[250px] h-[250px]"
@@ -54,9 +54,7 @@ const SlideProduct: React.FC<ProductsProps> = ({ products }) => {
               />
               <h3 className=" my-[20px]">{item.model}</h3>
               <span>{item.price_vnd}</span>
-              <span className="text-[#ff9f00]">
-                {item.promotion_online ? "Online giá rẻ quá" : ""}
-              </span>
+              <span className="text-[#ff9f00]">{"Online giá rẻ quá"}</span>
             </Link>
           );
         })}

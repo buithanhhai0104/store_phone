@@ -6,6 +6,7 @@ import {
   getDocs,
   doc,
   updateDoc,
+  deleteDoc,
 } from "firebase/firestore";
 import { db } from "../firebase";
 
@@ -14,8 +15,8 @@ export const addProduct = async (product: any) => {
     await addDoc(collection(db, "products"), {
       ...product,
     });
-  } catch (e) {
-    console.error("Error adding document: ", e);
+  } catch (error) {
+    console.error("Lỗi khi thêm sản phẩm", error);
   }
 };
 
@@ -43,6 +44,15 @@ export const updateProduct = async (docId: string, productRepair: any) => {
     });
   } catch (error) {
     console.log(error);
+  }
+};
+
+export const deleteProduct = async (docId: string) => {
+  try {
+    const docRef = doc(db, "products", docId);
+    await deleteDoc(docRef);
+  } catch (error) {
+    console.log("Lỗi khi xóa sản phẩm:", error);
   }
 };
 
